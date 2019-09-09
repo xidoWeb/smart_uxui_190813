@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- media.html -->
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<!--[if lte IE 9]>
+		<script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<title>웹기초 이해하기</title>
+	<!-- CSS -->
+	<style></style>
+</head>
+<body>
+	<!-- layout -->
+	<h1>웹기초 이해하기</h1>
+	<h2>비디오 및 오디오 파일 불러오기</h2>
+	<!-- 파일불러오기: src
+		 재생장치: controls
+		 자동재생: autoplay
+		 미리불러오기: preload
+		 음소거 : muted
+	 -->
+
+	<audio controls preload>
+		<source src="./media/audio/EPIK_HIGH-LOVEDRUNK.ogg" type="audio/ogg" />
+		<source src="./media/audio/EPIK_HIGH-LOVEDRUNK.mp3" type="audio/mp3" />
+		<p>여기서 음악을 들으시면 안됩니다.<br />
+		   <a href="http://google.com/chrome">지원하는 브라우저</a>를 이용하세요.
+		</p>
+	</audio>
+<!-- ==================================== -->
+	<video controls preload muted poster="./img/suwon_cityhall_map.gif">
+		<source src="./media/video/akmu_Dont_Cross_Your_Leg.webm" type="video/webm" />
+		<source src="./media/video/akmu_Dont_Cross_Your_Leg.mp4" type="video/mp4" />
+		<p>여기는 영상이 나오지 않습니다.<br />
+		   <a href="http://google.com/chrome">지원하는 브라우저</a>를 이용하세요.
+		</p>
+	</video>
+
+
+	<!-- script -->
+	<script></script>
+</body>
+</html>

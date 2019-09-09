@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- sementic_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--[if lte IE 9]>
+    <script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title>웹기초 이해하기</title>
+  <!-- css -->
+  <style></style>
+</head>
+<body>
+  <!-- layout -->
+  <h1>웹기초이해하기</h1>
+  <h2>의미를 부여하여 제작하는 시멘틱구조이해하기</h2>
+  <!-- ================================================ -->
+  <div>
+    <h3>기본형 시멘틱구조</h3>
+<!-- 
+  div: div는 영역을 가질 수 있는 형태이지만, 의미없이 사용하는 분할 영역으로 쓰인다.
+        그렇기 때문에 하나의 페이지에서 각각의 의미를 부여하여 제작하기에는 다소 어렵다.
+   header: 사이트의 주요한 내용을 담는 곳으로, 로고, 전체 네비게이션을 담는곳
+   nav : 각각의 페이지로 이동하는 경로를 모아놓은 곳
+   main: 문서의 주요내용을 정의할때 사용, article,header,nav,footer의 하위(후손요소)로 사용X
+   aside : 있으면 좋지만, 꼭 있어야하는 기능은 아닌 것을 모아놓은 곳
+   setction : 다양한 문서들중 관계가 있는 문서를 분리하는 역할(작은 웹페이지), 별도의 다른 주제
+   article : 내용이 독립적으로 분류되어있고 설명 있는 영역(뉴스, 글내용, 공지사항)
+   footer : 페이지의 정보를 요약,정리하여 담은 곳(회사주소, 이용약관, copyright)
+
+   - 단, 시멘틱구조는 IE에서는 인지 할 수 없는 요소, css에서 display:block으로 강제 블럭처리
+   - 하나더, 해당 시멘틱 구조는 반드시 이름을 달아주어야 한다.
+   - 그리고, 시멘틱구조는 그 구조자체로는 의미를 부여할 수 있지만, 
+             제목이 반영되지 않았기 때문에 의미에 맞는 제목을 같이 작성해 주어야 한다.
+ -->
+
+    <div class="wrap">
+      <header id="headBox">
+        <h1>사이트 이름/ 기능</h1>
+        <nav id="gnbBox">
+          <h2>전체 네비게이션</h2>
+        </nav>
+      </header>
+       
+      <main id="contentBox">
+        <h2>본문 내용</h2>
+
+        <aside id="sideBox">
+          <h3>보조영역</h3>
+        </aside>
+
+        <section id="viewBox">
+          <h3>광고영역</h3>
+        </section>
+
+        <article id="newsBox">
+          <h3>공지사항</h3>
+        </article>
+      </main>
+
+      <footer id="footBox">
+        <h2>회사정보</h2>
+      </footer>
+    </div>
+
+  </div>
+
+  <!-- ================================================ -->
+  <!-- script -->
+  <script></script>
+</body>
+</html>
+
+
+<!-- 
+  이름을 작성하는 요령:
+  - 이름은 영문 소문자를 기준, 첫글자는 무조건 영문소문시작(_ $)
+  - _와 $를 제외한 특수문자는 사용할 수 없다.
+
+   camelCase : 뒤에오는 단어의 첫글자를 대문자로 사용하는 방법
+   snake_bar(under_bar) : 단어와 단어의 사이에 _를 이용하여 구분방법
+   hipen-bar : 단어와 단어 사이에 -을 붙여 구분하는 방법
+..................................................................
+   PascalCase : 첫글자를 대문자로 시작하여, 각 단어의 첫글자를 대문자로
+   _hidden : 첫글자를 _를 작성하여 사용
+-->

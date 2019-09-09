@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- form_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+
+  <!--[if lte IE 9]>
+    <script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+
+  <title>웹 기초 이해하기</title>
+
+  <!-- CSS ==========================  -->
+  <style>
+    
+    .hidden{font-size:0;}
+  </style>
+</head>
+<body>
+  <!-- layout =======================  -->
+  <h1>웹기초이해하기</h1>
+  <h2>form 기초1</h2>
+
+  <h3>form이란?</h3>
+  <p>form이란, 양방향 통신이 가능한 형식으로, 필요한 기능을 입력 또는 선택했을 경우<br />
+     원하는 의사전달을 가능하도록 요청하는 기능
+  </p>
+  <p><strong>예제</strong>: 검색, id/pw, sns 메신저 보내기, 댓글달기, 회원가입, 주문, 설문조사, 동의체크</p>
+  <p><strong>form사용시 주의사항</strong>: 백엔드 개발자와 협의를 많이하는 영역이기에 보다 더 정확하게 처리하는 것이 중요</p>
+  <hr />
+  
+  <h3>form기본양식</h3>
+  <!-- form을 사용하겠다는 유무처리 :
+       method: 정보를 다루는 성격- 공개(get), 보안(post)
+         get - 자료가 많다. 오픈자료. 쉽게 접근가능, 가볍다
+         post - 필요한 자료만 있음, 비공개, 쉽게 접근 불가능, 무겁다
+
+       action: 작성 및 처리한 자료를 넘겨주는 경로( url )
+  -->
+
+  <form method="get" action="#">
+    <h4>구역 형태</h4>
+    <fieldset>
+      <legend>구역의 제목</legend>
+
+      <label for="yourName">
+        <span class="hidden">사용자의 </span>  이름
+        <span class="hidden">을 입력해 주세요.</span>
+      </label>
+      <input type="text" id="yourName" name="" value="" />
+      <!-- 
+        type: input요소의 기능, 형태를 설정 => 목적에 맞는 type을 선정
+        id: html문서에서 한번만 사용기 가능한 이름, form 내부에서 label과의 연결
+        name: action을 통해 전달되는 이름, 관리용 이름
+        value: 전달하려는 값을 저장하는 임시 공간
+
+        input은 크기를 가질 수 있는, inline요소이다.
+       -->
+
+    </fieldset>
+
+  </form>
+
+
+  <!-- style ========================  -->
+  <script></script>
+</body>
+
+</html>

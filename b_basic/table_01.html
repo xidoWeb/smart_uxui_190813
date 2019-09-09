@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- table_01.html -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>웹기초 이해하기-table</title>
+    <style>
+      table,tr,td,th{border-width:1px; border-style:solid; border-color:#acf;
+                  border-spacing:0; border-collapse:collapse;}
+      table{width:800px; height:600px;}
+    </style>
+  </head>
+  <body>
+    <h1>웹기초 코드 이해하기</h1>
+    <h2>table 이해하기</h2>
+
+    <table>
+      <caption>테이블 제목</caption>
+      <tr>
+        <th>내용</th> <th>내용</th> <th>내용</th> <th>내용</th>
+      </tr>
+      <tr>
+        <td>내용</td> <td colspan="3">내용</td>   
+      </tr>
+      <tr>
+        <td>내용</td> <td rowspan="2">내용</td>   <td>내용</td> <td>내용</td>
+      </tr>
+      <tr>
+        <td>내용</td>                            <td>내용</td> <td>내용</td>
+      </tr>
+    </table>
+<hr />
+
+    <table>
+      <caption>표 테스트</caption>
+      <tr>
+        <td>1-1</td> 
+        <td>1-2</td> 
+        <td>1-3</td> 
+        <td>1-4</td> 
+        <td>1-5</td> 
+      </tr>
+      <tr>
+        <td colspan="2">2-1</td>  
+        <td>2-3</td> 
+        <td>2-4</td> 
+        <td rowspan="4">2-5</td> 
+      </tr>
+      <tr>
+        <td rowspan="2">3-1</td> 
+        <td colspan="3">3-2</td>   
+      </tr>
+      <tr>             
+        <td colspan="2" rowspan="2">4-2</td>  
+        <td>4-4</td>
+      </tr>
+      <tr>
+        <td>5-1</td> 
+        <td>5-4</td>
+      </tr>
+    </table>
+
+  </body>
+</html>

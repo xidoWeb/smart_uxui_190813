@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- table_02.html -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>웹 기초 이해하기</title>
+	<style>
+		table{width:600px;}
+		table, tr, th,td{border-width:1px; border-style:solid; border-color:#f50;
+										border-spacing:0; border-collapse: collapse;}
+
+		.hidden{display:block; width:0; height:0; overflow:hidden;}
+		.one{width:150px; background-color:#059; color:#fff;}
+		.two{background-color:#fd0; text-align:center;}
+	</style>
+</head>
+<body>
+	<h1>웹 기초 이해하기</h1>
+	<h2>표이해하기2</h2>
+
+	<table summary="이천십구년 기준 음식에대한 정보 파악하기">
+		<caption>
+			<span class="hidden">2019 기준 </span>
+			음식
+			<span class="hidden">에대한 정보 파악하기</span>
+		</caption>
+
+		<tr> <th class="one">순서</th> <th class="two">음식이름</th> <th class="two">내용</th> <th>가격</th> </tr>
+		<tr> <th class="one">1</th>	<td class="two">곱창</td> <td class="two">소,돼지의 창자중 일부</td> <td>15000원</td>	</tr>
+		<tr> <th class="one">2</th>	<td class="two">대창</td> <td class="two">부드럽고 맛나는 부위</td> <td>20000원</td>	</tr>
+		<tr> <th class="one">3</th>	<td class="two">막창</td> <td class="two">나오자마 먹어야하는 부위</td> <td>12000원</td>	</tr>
+	</table>
+
+
+
+
+	<table summary="2019년 세계 스마트폰 제조사 제품과 성능 파악하기">
+		<caption>
+			<span class="hidden">2019년 세계 </span>
+			스마트폰 제조사
+			<span class="hidden"> 제품과 성능 파악하기</span>
+		</caption>
+
+		<colgroup>
+			<col class="one" />
+			<col class="two" span="2" />
+			<col class="one">
+		</colgroup>
+
+		<thead>
+			<tr> <th>제조사</th> <th>제품명</th>    <th>성능</th> <th>무선충전유무</th> <th>가격</th> </tr>
+		</thead>
+		
+		<tfoot>
+			<tr> <td>3개회사</td> <td>2019모두 출시</td>    <td>최신</td> <td>가능</td> <td>비싼가격대</td> </tr>
+		</tfoot>
+
+		<tbody>
+			<tr> <td>애플</td>   <td>아이폰 11</td> <td>최신</td> <td>가능</td>    <td>200만원</td> </tr>
+			<tr> <td>삼성</td>   <td>노트 10</td>   <td>최신</td> <td>가능</td> <td>129만원</td> </tr>
+			<tr> <td>엘지</td>   <td>v50</td>       <td>조금된거</td><td>가능</td> <td>129만원</td> </tr>
+			<tr> <td>샤오미</td> <td>미믹스4</td>    <td>아직미정</td> <td>가능</td> <td>80만원</td> </tr>
+		<tbody>
+
+
+	</table>
+</body>
+</html>

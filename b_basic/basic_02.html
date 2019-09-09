@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- basic_02.html -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>웹페이지 기초이해하기</title>
+    <style>
+      span{background-color:#fa0;}
+      /*
+      strong{font-weight:normal; color:#acf;}
+      em{font-style:normal; font-size:1.3rem;}
+      ins{text-decoration:none;}
+      ins:hover{color:#afc;}
+      del{text-decoration:none; font-size:0.5rem;}
+      */
+      img{width:1260px; height:930px;}
+    </style>
+  </head>
+  <body>
+    <h1>웹페이지 기초이해하기</h1>
+    <h2>내용 및 강조의 표현</h2>
+    <p>내용에 일부 영역을 잡아서 별도의 추가 표현을 해보려 합니다. <br />
+       글씨를 <b>굵게</b>, <i>기울기</i>, <u>밑줄</u>, <s>취소선</s>을 처리 및 
+       <span>일부만 별도의 색</span>을 처리, <br />
+       하지만 이는 모두! 특별한 의미가 없으므로, 실제 사용에는 권장하지 않습니다.<br />
+       심지어, s는 현재 완전히 삭제된 요소
+    </p>
+    <p>내용에 단순하게 표현하는 것이 아닌, 더욱 디테일한 강조의 표현을 할경우
+      <strong>위험,경고, 확실한 강조의 표기</strong>,  
+      <em>알림의 표기, 인지 하도록 처리</em>, 
+      <ins>체크메세지, 기억하게표기</ins>, 
+      <del>처리후표기</del> 같은 내용을 작성하는 것은 따로있다.<br />
+      내용을 <mark>주의력을 높이기위해, 표기하는 방법</mark>이며,
+      좀더 의미있는 코드로 다가가기 위한 형태로서 접근성표기로 따지면, 컴퓨터의 읽기의 형태조차 다르게 표현하고, 
+      그것에 따른의미를 부여하도록 제작하는 시멘틱 코드로 제작하자 의도가 있으며,
+      <span>span의 경우는 단순하게 시각형태만 처리하는 inline요소의 div형식, 의미는 없다.</span>
+    </p>
+
+
+    <h2>링크, 이미지</h2>
+    <p><a href="./index.html">index로 이동</a></p>
+    <p><a href="./basic_01.html#content">
+      basic_01의 내용부분으로 이동
+    </a></p>
+
+    <div>
+      <img src="./img/suwon_cityhall_map.gif" alt="정확한 이미지의 의도에 맞는 설명" />
+    </div>
+  </body>
+</html>
