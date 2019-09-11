@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* clearfix.css */
+
+.clear_step_01{
+  margin:0 auto;
+  margin-bottom:50px;
+  width:100%; max-width:600px;
+  height:400px; background-color:#ccc;
+  border-bottom:2px solid #333;
+}
+.step_01_insert{float:left; width:120px; height:120px;background-color:#fa0;}
+.step_01_insert:nth-of-type(2n){
+ background-color: #acf; 
+}
+
+/* ============================== */
+.clear_step_02 {
+  margin:0 auto;
+  margin-bottom:100px;
+  margin-top:150px; 
+  width:600px; height:auto;
+  background-color:#ccf;
+  border-bottom:2px solid #333;
+}
+
+.step_02_insert {
+  float:left; width:110px; height:120px; background-color:#afc;}
+.step_02_insert:nth-of-type(2n){
+  background-color: #85f;}
+.last{ clear:both; }
+
+
+
+.clear_step_03{margin:0 auto;
+  padding: 0; list-style:none;
+  width: 800px; height: auto; background-color: #fac;
+  margin-bottom:500px;}
+
+.clear_step_03>li{
+  float:left;
+  width:130px; height:130px;
+  border:1px solid #333;
+  background-color:#caa;}
+
+.clearfix::after,
+.clearfix:after{ content:" ";
+  display:block; 
+  width:0; height:0; clear:both;}
+
+/*  ============================ */
+p{margin:auto; width:300px; height:150px;
+  background-color:#afc;}
+
+p::before, 
+p:before{content:"안본 눈 "; display:block; 
+         color:#f00; font-weight:bold;}
+p:after, 
+p::after{content:"1달전 으로..."; display:block; 
+         color:#00f; font-size:2rem;}

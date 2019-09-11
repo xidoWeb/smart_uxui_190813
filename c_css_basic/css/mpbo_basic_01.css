@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* mpbo_basic_01.css */
+
+h1 {padding:1rem; background-color:#0af; 
+    border-bottom: 1px solid #333; margin-bottom:1rem;}
+h2{ background-color:#333; color:#fff;}
+
+.basic {width:800px; height:600px; border:3px solid #333; 
+      margin:auto;}
+.basic > h3 {margin:0; width:100%; height:50px; 
+    border-bottom:2px solid #333; text-align:center;}
+
+/* margin ======================================= */
+.margin > ul {margin:0; padding:0; list-style:none;}
+
+.margin > ul > li{width:50px; height:50px; 
+    box-sizing:border-box; border:2px solid #377;
+    text-align:center; line-height:50px;
+    float:left; }
+
+.margin > ul > li:nth-child(2n){background-color:#af0;}
+
+.margin > ul > li:nth-child(1) {margin:30px;}
+.margin > ul > li:nth-child(2) {margin:30px 10px;}
+.margin > ul > li:nth-child(3) {margin:10px 30px 50px;}
+.margin > ul > li:nth-child(4) {margin:10px 30px 50px 80px;}
+
+/* 
+ margin: 여백을 주어 공간을 만드는것, 공간의 형태는 투명한 영역을 나타냄
+         1개  => "위, 우, 아래, 좌" 모두 적용
+         2개  => "위아래, 좌우" 적용
+         3개  => "위, 좌우, 아래" 적용
+         4개  => "위, 우, 아래, 좌" 순서로 시계방향으로 적용
+         * 2개이상 사용할 경우, 띄어쓰기로 구분하여 사용
+         auto => 위아래:0, 좌우:균등하게 맞추어라(가운데배치)
+         * 단, auto를 사용시 float과 함께 사용하면, 가운데 오지 않는다.
+
+*/
+
+hr {margin: 0; width: 100%; clear:both;}
+
+.margin > ol {list-style:none; padding: 0; margin: 0; 
+  width: 100%; height:300px; background-color: #dda;}
+
+.margin > ol > li {width:50px; height:50px; background-color:#377;}
+.margin > ol > li:nth-child(2n){background-color: #fff;}
+
+.margin > ol > li:nth-child(1){margin:20px;}
+.margin > ol > li:nth-child(2){margin-top:10px;}
+.margin > ol > li:nth-child(3){margin:20px; margin-right:50px;}
+
+/* padding ======================================================= */
+.padding > ul{margin: 0; padding: 0; list-style:none;
+  width:100%; height:500px; background-color: #ddd;}
+
+.padding > ul > li{width:60px; height:60px; background-color: #fa0;}
+
+.padding > ul > li:nth-child(2n){background-color: #0cc;
+    color:#fff;}
+
+.padding > ul{padding-top:50px;}
+.padding > ul > li:nth-child(1){padding:10px;}
+.padding > ul > li:nth-child(2){padding:20px 50px;}
+.padding > ul > li:nth-child(3){padding:20px 10px 40px;}
+.padding > ul > li:nth-child(4){padding:20px 10px 50px 40px;}
+
+.padding > ul > li:nth-child(5){padding-top: 40px;
+  background-color:transparent;}
+.padding > ul > li:nth-child(5) > span{
+  display:block; width:100%; height:100%; background-color: #3a7;}
+
+/* border ========================== */
+.border > ul {margin: 0; padding: 0; list-style:none;}
+
+.border > ul > li {width:70px; height:70px; background-color: #ccd;
+float:left; margin:1rem;}
+.border > ul > li:nth-child(1){
+  border-width:5px; border-style:solid; border-color:#061;
+}
+.border > ul > li:nth-child(2){ border:5px dotted #faf;}
+.border > ul > li:nth-child(3){ 
+  border:5px dotted #faf; 
+  border-top:3px solid #f00;
+  border-bottom-color:#333; 
+  border-left-width:10px;
+  border-right-color:transparent;}
+
+.border > ul > li:nth-child(4){ border:20px solid #ccd; }
+
+/* option(tip) ========================= */
+
+.option{margin:50px; width:200px; height:200px; background-color:#ccc; 
+
+padding:25px;
+border:25px solid #777;
+/* box-sizing:border-box; */
+}
+
+.outline > p {
+  margin:auto;
+  width:300px; height:300px;  background-color:#fa9;
+  outline:20px solid #3f5;
+  outline-offset:30px;
+}
