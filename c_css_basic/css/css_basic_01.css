@@ -63,3 +63,13 @@ visibility: display속성과 유사한 기능을 가지고 있다. 하지만 기
 overflow: 지정된 크기를 기준으로 내부의 영역이 넘친다면, 어떻게 처리할 것인가를 판단하는 내용
           hidden(넘칠때 숨기는기능) || visible(기본형, 넘칠때 보이게 만드는기능) || auto || scroll
 */
+
+.over > .seven {height:30px; white-space:nowrap;  
+                text-overflow: ellipsis; overflow:hidden; }
+
+/* 
+white-space: 임의 공백이아닌, 의도하지 않은 공백을 처리하는 방법
+             pre(실제 코드에서 작성한 형태대로 공백을 주어라)  || pre-line(실제 코드에서 작성한 줄바꿈처리와 동일하게 해라) ||nowrap(여백을 모두 삭제)  || unset(기본, 크기에 맞게 줄바꿈 처리) ...
+text-overflow: overflow와 유사하지만, 넘치는영역이 글자일 경우에 처리방법, 대체로 overflow와 함께 사용
+             ellipsis(넘칠경우 말줄임표를 처리)  ||  unset(기본형으로 처리)
+*/
