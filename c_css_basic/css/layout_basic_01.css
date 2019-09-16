@@ -1,3 +1,18 @@
 @charset "UTF-8";
 /* layout_basic_01.css */
 
+/* reset ===== */
+html, body, 
+h1,h2,h3,h4,h5,h6,
+hr {margin:0; padding:0; border:0;}
+hr{border-top:1px solid #333;}
+
+/* design ===== */
+body {background-color:#337;}
+h1,h2{color:#fff; text-align:center;}
+h1>a{color:inherit;}
+hr{border-color:#fff;}
+
+#box {margin:100px auto; width:600px; height:500px; 
+    background-color:#afa;}
+
