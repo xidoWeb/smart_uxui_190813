@@ -13,19 +13,36 @@
   <title>웹 페이지 기초 이해하기</title>
 </head>
 <body>
-  <h1><a href="../index.html">웹페이지 기초 이해하기</a></h1>
-  <h2>layout 기초 이해하기2</h2>
+  
+ 
 <hr />
 
   <div id="wrap">
-    <header id="headBox"> headBox</header>
+    <header id="headBox"> 
+      <h1><a href="../index.html">웹페이지 기초 이해하기</a></h1>
+      <h2 class="hidden">layout 기초 이해하기2</h2>
+
+      <div class="nav_area">
+        <h3 class="hidden">navigation</h3>
+        <nav id="unb">
+          <h4>unb</h4>
+        </nav>
+        <nav id="gnb">
+          <h4>gnb</h4>
+        </nav>
+      </div>
+    </header>
     <!-- // #headBox==================== -->
 
-    <section id="viewBox"> viewBox</section>
+    <section id="viewBox"> 
+      <h2>광고 내용</h2>
+    </section>
     <!-- // #viewBox==================== -->
 
     <article id="contentBox"> 
+      <h2 class="hidden">본문 내용</h2>
       <div class="lnb_side">
+        <h3 class="hidden">aide 내용</h3>
         <ul>
           <li>01</li>
           <li>02</li>
@@ -33,15 +50,24 @@
           <li>04</li>
         </ul>
       </div>
-      <div class="lnb_list"></div>
+      <div class="lnb_list">
+        <h3>상품 목록</h3>
+      </div>
       <div class="lnb_content">
-        <div class="con_01"></div>
-        <div class="con_02"></div>
+        <h3 class="hidden">상품 설명</h3>
+        <div class="con_01">
+          <h4>대표상품 1 설명</h4>
+        </div>
+        <div class="con_02">
+          <h4>대표상품 2 설명</h4>
+        </div>
       </div>
     </article>
     <!-- // #contentBox==================== -->
 
-    <footer id="footBox"> footBox</footer>
+    <footer id="footBox">
+      <h2>infomation company</h2>
+    </footer>
     <!-- // #footBox==================== -->    
   </div>
   
