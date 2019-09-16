@@ -25,18 +25,11 @@ hr{border-color:#fff;}
 #mainBox:after,
 #mainBox::after {content:" "; display:block; width: 0; height: 0; clear:both;}
 
-.side_area {
-  width:-webkit-calc(100% / 3); /* chrome, safari, vivaldi, chromium edge */
-  width:   -moz-calc(100% / 3); /* fire fox */
-  width:    -ms-calc(100% / 3); /* microsofe : IE, edge */
-  width:     -o-calc(100% / 3); /* opera */
-  width:        calc(100% / 3); /* 공용 */ 
-    width:33.333333%; height:300px; 
-    background-color:#7fa; float:left;}
-.article_area {width:calc(100% / 3); width:33.333333%; height:300px; 
-    background-color:#777; float:left;}
-.cont_area {width:calc(100% / 3); width:33.333333%; height:300px; 
-    background-color:#077; float:left;}
+.con_wrap{float:left; width:70%; height:300px; background-color: #fff;}
+  .article_area {width:100%; height:150px; background-color:#777;}    
+  .cont_area {width:100%; height:150px; background-color:#077;}
+
+.side_area {width:30%; height:300px; background-color:#7fa; float:right;}
 
 #footBox {width:100%; height:100px; background-color:#0af;}
 
