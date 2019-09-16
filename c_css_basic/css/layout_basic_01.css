@@ -4,14 +4,13 @@
 /* reset ===== */
 html, body, 
 h1,h2,h3,h4,h5,h6,
-hr {margin:0; padding:0; border:0;}
+hr {margin:0; padding:0; border:0; behavior: url(../ie/PIE/PIE.htc);}
 hr{border-top:1px solid #333;}
 ol,ul{margin:0; padding:0; list-style:none;}
 
 header,nav, main, footer, article, section, aside {
   display:block;}
 
-  container {display:block;}
 
 /* design ===== */
 body {background-color:#337;}
@@ -26,10 +25,22 @@ hr{border-color:#fff;}
 #mainBox:after,
 #mainBox::after {content:" "; display:block; width: 0; height: 0; clear:both;}
 
-.side_area {width:33.333333%; height:300px; background-color:#7fa;
-  float:left;}
-.article_area {width:33.333334%; height:300px; background-color:#777;
-  float:left;}
-.cont_area {width:33.333333%; height:300px; background-color:#077; float:left;}
+.side_area {
+  width:-webkit-calc(100% / 3); /* chrome, safari, vivaldi, chromium edge */
+  width:   -moz-calc(100% / 3); /* fire fox */
+  width:    -ms-calc(100% / 3); /* microsofe : IE, edge */
+  width:     -o-calc(100% / 3); /* opera */
+  width:        calc(100% / 3); /* 공용 */ 
+    width:33.333333%; height:300px; 
+    background-color:#7fa; float:left;}
+.article_area {width:calc(100% / 3); width:33.333333%; height:300px; 
+    background-color:#777; float:left;}
+.cont_area {width:calc(100% / 3); width:33.333333%; height:300px; 
+    background-color:#077; float:left;}
 
 #footBox {width:100%; height:100px; background-color:#0af;}
+
+/* 
+  벤더 프리픽스: 
+    아직 권고에 들지 못하는 (표준으로 승인되지 않은) 최신 기능들을 각 브라우저에서 사용할 수 있도록 내장되어 있다면, 이를 강제로 쓰게 만드는 기능
+*/
