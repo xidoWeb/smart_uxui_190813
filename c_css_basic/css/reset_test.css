@@ -26,4 +26,12 @@ button{border:0; cursor:pointer; background-color:transparent; border:1px solid 
 
 hr{margin:0; padding:0; border-bottom:1px solid #f06;} 
 
-header, footer, aside, nav, section, article, figure, figcaption{display:block;}
+/* html5 ======================================================================  */
+main, header, footer, aside, nav, section, article, figure, figcaption{display:block;}
+
+/* form ======================================================================  */
+form, fieldset, legend{margin:0; padding:0; border:0;}
+legend{position:absolute; width:0; height:0; overflow:hidden;}
+input{box-sizing:border-box; text-indent:0.5rem; cursor: pointer;}
+button{border:0; background-color:#07f; color:#fff; cursor:pointer;}
+select, text-area{box-sizing:border-box;}
