@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* position_basic_01.css */
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6, 
+ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;}
+ul,ol,li{list-style:none;}
+
+/* common */
+.clearfix:after,
+.clearfix::after {content:" "; display:block; width:0; height:0;
+      clear:both;}
+
+/* layout */
+body{height:3000px;}
+#wrap {margin:auto; width: 800px; height: 1200px;
+      background-color:#acf; 
+      background-image:linear-gradient(#acf, #5fc);
+     padding:30px; box-sizing:border-box;}
+
+.position {width:100%; height:auto; 
+  border:2px solid #333; box-sizing: border-box;}
+.position > li{width:100px; height:100px; 
+  text-align: center; line-height:100px; font-size:1.2rem;
+  font-weight: bold; float:left;}
+
+.basic {background-color:#555;}
+.static {background-color:#f0c;}
+.fixed {background-color:#fc0;}
+.absolute {background-color:#0aa;}
+.relative {background-color:#aaf;}
+.sticky {background-color:#cf0;}
+
