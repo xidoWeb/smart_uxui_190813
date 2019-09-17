@@ -18,15 +18,40 @@ body{height:3000px;}
      padding:30px; box-sizing:border-box;}
 
 .position {width:100%; height:auto; 
-  border:2px solid #333; box-sizing: border-box;}
+  border:2px solid #333; box-sizing: border-box;
+  position:relative;
+}
 .position > li{width:100px; height:100px; 
   text-align: center; line-height:100px; font-size:1.2rem;
   font-weight: bold; float:left;}
 
 .basic {background-color:#555;}
-.static {background-color:#f0c;}
-.fixed {background-color:#fc0;}
-.absolute {background-color:#0aa;}
-.relative {background-color:#aaf;}
-.sticky {background-color:#cf0;}
+.static {background-color:#f0c;
+  position:static; top:200px; right:10000px; z-index:-5000;}
+/* position:static;  => position: 기본형; 위치를 표기방법과, z-index 모두 적용 안됨!!!! */
+
+.fixed {background-color:#fc0;
+  position:fixed; top:100px; right:0; z-index:-100;}
+/* position:fixed; => 브라우저에서 어느위치든 관계없이, 화면에 붙어서 고정시키는 형태 */
+
+.absolute {background-color:#0aa;
+  position:absolute; top:100px; right:50px; z-index:200;}
+/* position:absolute; => 브라우저에서 원하는 위치에 배치가능, 스크롤시, 일반형태처럼 스크롤 처리된다. 
+                         자신의 조상(부모격)에 해당하는 아이에 position을 주면, 해당 개체에 종속된다.
+*/
+
+.relative {background-color:#aaf;
+  position:relative; top:150px; left:50px; z-index:-100;}
+  /* position:relative; => 브라우저에서 위치값으로 변경하지 않는한 변화는 없다, 
+                           하지만, z-index, top,left,right,bottom 모두 적용이 가능
+  */
+.sticky {background-color:#cf0;
+  position:-webkit-sticky; 
+  position:-moz-sticky; 
+  position:-ms-sticky; 
+  position:-o-sticky; 
+  position:sticky; 
+  behavior: url("../ie/PIE/PIE.htc");
+  top:10px;
+}
 

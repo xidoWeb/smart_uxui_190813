@@ -28,6 +28,25 @@
     </ul>
   </div>
 <!-- script ========================== -->
-<script></script>
+<script src="http://unpkg.com/jquery"></script>
+<script>
+  (function($){
+    var val;
+    var stick = $('.sticky');  // document.getElementsByclassName('sticky')
+    var st_offsetT = stick.offset().top;
+    var st_offsetL = stick.offset().left;
+
+    $(window).on('scroll', function(){
+      val = $(window).scrollTop();
+      
+      if(val >= st_offsetT){
+        stick.css({position:'fixed', top:0, left: st_offsetL});
+      }else{
+        stick.removeAttr('style');
+      }
+    });
+
+  })(jQuery);
+</script>
 </body>
 </html>
