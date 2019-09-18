@@ -2,8 +2,18 @@
 /* layout_03_nhc_go_kr.css */
 
 /** 천연기념물센터  data summary 
-  * 
+  * position사용시 가운데 배치하는 방법:
+    방법 1-1. margin:auto; top:0; bottom:0;   => 위,아래 가운데
+    방법 1-2. margin:auto; left:0; right:0;   => 좌,우 가운데
+
+    방법 2-1. (높이값이 정해져 있을경우) top:50%; margin-top: -높이값의 절반크기;  => 위,아래 가운데
+    방법 2-2. (가로값이 정해져 있을경우) left:50%; margin-left: -가로값의 절반크기;  => 좌,우 가운데
+
+    방법 3-1. (최신브라우저일경우) top:50%; transform:translateY(-50%); => 위,아래 가운데
+    방법 3-2. (최신브라우저일경우) left:50%; transform:translateX(-50%); => 좌,우 가운데
 **/
+
+
 /* common */
 .clearfix:after,
 .clearfix::after {content:" "; display: block; clear:both; width: 0; height: 0; }
@@ -30,7 +40,7 @@
   .view_area {width: 100%; height: 855px; background-color:#ccc}
 
   .con_area {width: 100%; padding-top:45px; box-sizing:border-box;}
-  .con_area>h2 {width:100%; height:60px; margin-bottom:17px; 
+  .con_area>h3 {width:100%; height:60px; margin-bottom:17px; 
       background-color:rgba(255, 255, 255, 0.7);
       text-align: center; font-size:60px; line-height:60px; }
   .con_area>p{width: 100%; height: 28px; background-color:rgba(255,255,255,0.3);
