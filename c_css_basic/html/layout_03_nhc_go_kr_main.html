@@ -35,31 +35,34 @@
           <h2 class="hidden">사용자 편의용 네비게이션 영역</h2>
         </nav>
       </div>
-      <!--  ___________________________________ -->
-      <aside class="page_scroll">
-        <h2 class="hidden">각 위치별 안내 설명</h2>
-      </aside>
+ 
     </header>
 
     <main id="conBox">
       <h2 class="hidden">기념물 센터 상세 내용</h2>
-
-      <div class="view_area">
+      <!--  ___________________________________ -->
+      <aside class="page_scroll">
+        <h2 class="hidden">각 위치별 안내 설명</h2>
+        <ul>
+          <li><a href="#view"> <span class="hidden">광고영역</span> </a></li>
+          <li><a href="#news"> <span class="hidden">센터 소식</span> </a></li>
+          <li><a href="#media"> <span class="hidden">전시관 동영상</span> </a></li>
+          <li><a href="#counter"> <span class="hidden">숫자로보는 천연기념물</span> </a></li>
+        </ul>
+      </aside>
+      <div class="view_area" id="view">
         <h3 class="hidden">광고영역</h3>
-      </div><!-- // .view_area -->
-      
-      <div class="news_area con_area">
+      </div><!-- // .view_area ========================================== -->      
+      <div class="news_area con_area" id="news">
         <h3>센터 소식</h3>
         <div class="content"></div>
-      </div><!-- // .news_area -->
-
-      <div class="media_area con_area">
+      </div><!-- // .news_area ========================================== -->
+      <div class="media_area con_area" id="media">
         <h3>전시관 <abbr title="virture reality">VR</abbr></h3>
         <p>천연기념물센터 전시관을 <abbr title="virture reality">VR</abbr>로 감상할 수 있습니다.</p>
         <div class="media"></div>
-      </div><!-- // .media_area -->
-
-      <div class="counter_area con_area">
+      </div><!-- // .media_area ========================================== -->
+      <div class="counter_area con_area" id="counter">
         <h3>숫자로보는 천연기념물</h3>
         <p>천연기념물 중에 궁금한 사항을 알기쉽게 숫자로 알아 볼 수 있습니다.</p>
         <div class="content"></div>

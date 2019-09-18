@@ -37,11 +37,26 @@
     .unb{float:right; width: 350px; height: 40px; padding:0 65px; box-sizing:border-box;
       background-color: #fac;}
 
-  .page_scroll {position:fixed; margin:auto; top:0; bottom:0; right:20px; z-index:500;
-                width: 40px; height: 230px; background-color: rgba(0,0,0,0.7);}
+ 
 
 /*  #conBox================================================ */
 #conBox{width:100%; height:auto;}
+
+  .page_scroll {position:fixed; margin:auto; top:0; bottom:0; right:20px; z-index:500;
+              width: 40px; height: 230px; background-color: rgba(0,0,0,0.7);}
+  .page_scroll >ul{margin:auto; padding-top:5px; width: 20px; height: 148px; background-color: #07f;}
+  .page_scroll >ul >li{width: 20px; height: 20px; margin-bottom:20px;}
+  .page_scroll >ul >li:last-child{margin-bottom: 0;}
+  .page_scroll >ul >li >a{display:block; width:100%; height:100%; border:2px solid #fff; box-sizing:border-box;
+                        border-radius:100%;}
+
+
+  .page_scroll:after{content:" "; display:block; position: absolute; left:0; right:0; margin:auto;
+                    width:20px; height:55px; border-radius:5px; border:2px solid #fff;
+                    animation:mouseMv 700ms linear alternate infinite;}
+                    
+  @keyframes mouseMv {    0% {bottom:10px;}    100% {bottom:0; }   }                    
+
   .view_area {width: 100%; height: 855px; background-color:#ccc}
 
   .con_area {width: 100%; padding-top:45px; box-sizing:border-box;}
@@ -73,4 +88,3 @@
         padding-top: 20px; padding-bottom: 60px; 
         background-color:#555;}
 #footBox > .content{width: 1200px; height: 90px; margin:auto; background-color: #fac;}
-
