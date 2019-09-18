@@ -21,7 +21,7 @@ normalise css: reset CSS + common CSS
 a{color:#777; text-decoration:none;}
 a:hover{color:#f07;}
 a:focus{outline:2px solid #f06;}
-abbr{text-decoration:none; text-transform:uppercase;}
+abbr{text-decoration:none; text-transform:uppercase;} 
 button{border:0; cursor:pointer; background-color:transparent; border:1px solid #f06;}
 button:hover{background-color:#fa0;}
 button:focus{outline:2px solid #f06;}

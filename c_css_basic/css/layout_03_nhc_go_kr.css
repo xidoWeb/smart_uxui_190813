@@ -12,19 +12,45 @@
 
 /* layout */
 /*  #wrap================================================ */
-#wrap {width:1900px; height:auto; margin:auto;}
- 
+#wrap {width:100%; min-width:1200px; height:auto; margin:auto;}
+
 /*  #headBox================================================ */
-#headBox{width:100%; height:120px; background-color:#555;}
+#headBox{width:100%; height:auto;}
+  .unb_area{width: 100%; height:auto; background-color: #aaa;}
+    .unb{float:right; width: 350px; height: 40px; padding:0 65px; box-sizing:border-box;
+      background-color: #fac;}
+  .banner_area{position:relative; width: 100%; height: 80px; background-color: #fff;}
+    h1{float:left; width: 280px; height: 80px; background-color: #fac;}
+    #gnb{position:absolute; top:0; left:0; right:0; margin:auto;
+      width: 950px; height: 80px; background-color: #0ac;}
+    .site_map{float:right; width: 240px; height: 80px; background-color: #caf;}
 
 /*  #conBox================================================ */
 #conBox{width:100%; height:auto;}
   .view_area {width: 100%; height: 855px; background-color:#ccc}
-  .news_area {width: 100%; height: 895px; background-color:#999}
-  .media_area {width: 100%; height: 850px; background-color:#ccc}
-  .counter_area {width: 100%; height: 710px; background-color:#777}
-  
+
+  .con_area {width: 100%; padding-top:45px; box-sizing:border-box;}
+  .con_area>h2 {width:100%; height:60px; margin-bottom:17px; 
+      background-color:rgba(255, 255, 255, 0.7);
+      text-align: center; font-size:60px; line-height:60px; }
+  .con_area>p{width: 100%; height: 28px; background-color:rgba(255,255,255,0.3);
+      text-align: center; font-size:24px; line-height:28px; }
+
+  .news_area { height: 895px;  background-color:#999}
+    .news_area > .content {width:1200px; height:650px; margin:auto; margin-top: 30px;
+      background-color:#fac;}
+
+  .media_area {height: 850px; background-color:#ccc}
+    .media_area> .media {width:950px; height:530px; margin:auto; margin-top: 30px;
+      background-color:#fac;}
+
+  .counter_area {height: 710px; background-color:#777;}
+    .counter_area > .content {width:1100px; height:390px; margin:auto; margin-top: 80px;
+      background-color:#fac;}
 
   /*  #footBox================================================ */
-#footBox{width:100%; height: 170px; background-color:#555;}
+#footBox{width:100%; height:auto; 
+        padding-top: 20px; padding-bottom: 60px; box-sizing: border-box;
+        background-color:#555;}
+#footBox > .content{width: 1200px; height: 90px; margin:auto; background-color: #fac;}
 
