@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* layout_03_nhc_go_kr.css */
+
+/** 천연기념물센터  data summary 
+  * 
+**/
+/* common */
+.clearfix:after,
+.clearfix::after {content:" "; display: block; clear:both; width: 0; height: 0; }
+
+.hidden {display: block; overflow: hidden; position: absolute; width: 0; height: 0; }
+
+/* layout */
+/*  #wrap================================================ */
+#wrap {width:1900px; height:auto; margin:auto;}
+ 
+/*  #headBox================================================ */
+#headBox{width:100%; height:120px; background-color:#555;}
+
+/*  #conBox================================================ */
+#conBox{width:100%; height:auto;}
+  .view_area {width: 100%; height: 855px; background-color:#ccc}
+  .news_area {width: 100%; height: 895px; background-color:#999}
+  .media_area {width: 100%; height: 850px; background-color:#ccc}
+  .counter_area {width: 100%; height: 710px; background-color:#777}
+  
+
+  /*  #footBox================================================ */
+#footBox{width:100%; height: 170px; background-color:#555;}
+
