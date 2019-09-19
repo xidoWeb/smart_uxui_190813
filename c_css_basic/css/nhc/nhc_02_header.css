@@ -26,6 +26,8 @@
   .unb_area{position:absolute; top:0; left:0; width: 100%; height:auto; background-color: #aaa;}
     .unb{float:right; width: 350px; height: 40px; padding:0 20px; box-sizing:border-box;
       background-color: #fac;}
-      .sns{float:left; width:34px; height:40px; background-color: #fff;}
+      .sns{float:left; width:34px; height:40px;}
+      .sns > a {display:block; height: 100%; font-size: 2rem; line-height: 40px; color:#05a;}
+
       .unb_list{float:right; width:260px; height:40px; background-color: #fff;}
  

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- lineHeight_test_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--[if IE]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/PIE/PIE.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../css/reset_test.css">
+  <title>Document</title>
+  <style>
+  .text_box{ position:relative; width: 300px; height: 40px; margin:30px auto; 
+             background-color: #7cf; text-align: center;}
+  .text_box > span{display: block; position: absolute; top: 0; bottom: 0; margin:auto;
+                   width:100%; height:5px; background-color: #f8f;}
+  .text_box > span > b{display: block; height: 40px; transform:translateY(-50%);
+                       line-height:150%;}                   
+  </style>
+</head>
+<body>
+  <!-- layout ================================================== -->
+  <div class="text_box">
+    <span>
+      <b>line <br /> text</b>
+    </span>
+  </div>
+  <!-- script ================================================== -->
+  <script></script>
+</body>
+</html>
