@@ -1,0 +1,8 @@
+/* nhc_03_footer.css */
+
+  /*  #footBox================================================ */
+#footBox{width:100%; height:auto; 
+        padding-top: 20px; padding-bottom: 60px; 
+        background-color:#555;}
+#footBox > .content{width: 1200px; height: 90px; margin:auto; background-color: #fac;}
+

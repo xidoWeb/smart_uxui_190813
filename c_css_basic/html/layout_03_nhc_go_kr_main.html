@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/reset_test.css">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+
   <link rel="stylesheet" href="../css/layout_03_nhc_go_kr.css">
 
   <!--[if IE]>
@@ -24,15 +26,27 @@
         <h1>천연기념물 센터</h1>
         <nav id="gnb">
           <h2 class="hidden">웹페이지 전체 네비게이션 영역</h2>
+          <!-- ul>li*6>a -->
+          <ul>
+            <li><a href="#">관람정보</a></li>
+            <li><a href="#">전시</a></li>
+            <li><a href="#">교육.행사</a></li>
+            <li><a href="#">소식.참여</a></li>
+            <li><a href="#">자료실</a></li>
+            <li><a href="#">센터소개</a></li>
+          </ul>
         </nav>
         <aside class="site_map">
           <h2 class="hidden">추가 확인 영역</h2>
+          
         </aside>
       </div>
       <!--  ___________________________________ -->
       <div class="unb_area clearfix">
         <nav class="unb">
           <h2 class="hidden">사용자 편의용 네비게이션 영역</h2>
+          <div class="sns"></div>
+          <ul class="unb_list"></ul>
         </nav>
       </div>
  
@@ -42,7 +56,7 @@
       <h2 class="hidden">기념물 센터 상세 내용</h2>
       <!--  ___________________________________ -->
       <aside class="page_scroll">
-        <h2 class="hidden">각 위치별 안내 설명</h2>
+        <h3 class="hidden">각 위치별 안내 설명</h3>
         <ul>
           <li><a href="#view"> <span class="hidden">광고영역</span> </a></li>
           <li><a href="#news"> <span class="hidden">센터 소식</span> </a></li>
@@ -50,23 +64,57 @@
           <li><a href="#counter"> <span class="hidden">숫자로보는 천연기념물</span> </a></li>
         </ul>
       </aside>
-      <div class="view_area" id="view">
+      <section class="view_area" id="view">
         <h3 class="hidden">광고영역</h3>
-      </div><!-- // .view_area ========================================== -->      
-      <div class="news_area con_area" id="news">
+        <nav class="indicator float_btn">
+          <h4 class="hidden">광고 전체 내용 요약</h4>
+          <ul>
+            <li><a href="#">식물 전시존</a></li>
+            <li><a href="#">동물 전시존</a></li>
+            <li><a href="#">지질 전시존</a></li>
+            <li><a href="#">천연보호구역</a></li>
+            <li><a href="#">명승 전시존</a></li>
+            <li><a href="#">한반도의 자연유산</a></li>
+          </ul>
+        </nav>
+        <div class="next_btn arrow_btn"> 
+          <button type="button">
+            <i class="fas fa-chevron-right"></i>
+            <span class="hidden">다음 광고 내용보기</span>
+          </button> 
+        </div>
+        <div class="prev_btn arrow_btn"> 
+          <button type="button">
+            <i class="fas fa-chevron-left"></i>
+            <span class="hidden">이전 광고 내용보기</span></button> 
+        </div>
+
+        <article class="view_zone">
+          <h4 class="hidden">식물전시존</h4>
+          <p>
+            오랜역사를 간직하 노거수가 있는 <br />
+            <em>식물 전시존</em>
+          </p>
+        </article>
+
+      </section><!-- // .view_area ========================================== -->  
+
+      <article class="news_area con_area" id="news">
         <h3>센터 소식</h3>
         <div class="content"></div>
-      </div><!-- // .news_area ========================================== -->
-      <div class="media_area con_area" id="media">
+      </article><!-- // .news_area ========================================== -->
+
+      <article class="media_area con_area" id="media">
         <h3>전시관 <abbr title="virture reality">VR</abbr></h3>
         <p>천연기념물센터 전시관을 <abbr title="virture reality">VR</abbr>로 감상할 수 있습니다.</p>
         <div class="media"></div>
-      </div><!-- // .media_area ========================================== -->
-      <div class="counter_area con_area" id="counter">
+      </article><!-- // .media_area ========================================== -->
+
+      <aside class="counter_area con_area" id="counter">
         <h3>숫자로보는 천연기념물</h3>
         <p>천연기념물 중에 궁금한 사항을 알기쉽게 숫자로 알아 볼 수 있습니다.</p>
         <div class="content"></div>
-      </div><!-- // .counter_area -->
+      </aside><!-- // .counter_area -->
 
       <div class="top_button">
         <a href="#headBox"> <span class="hidden">화면 상단으로 이동</span> </a>
