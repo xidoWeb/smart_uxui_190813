@@ -59,8 +59,19 @@
 
       .center_info{width:100%; height:330px; margin-bottom:40px; background-color:rgba(0,0,0,0.3);}
       .center_info > div{float:left; width:280px; height:100%; margin-right:30px; background-color: #aca;}
-      .center_info > .info_board_01{width:580px;}
+      .center_info > .info_board_01{position:relative; width:580px;}
       .center_info > .info_board_03{margin-right:0;}
+
+      /* ********************************************************  */
+        .info_board_01 > h5{float:left; margin-right:2px; width: 120px; height: 40px; 
+                            background-color: #fff; text-align: center; line-height:40px;}
+        .info_board_01 > h5.action {background-color: #f55; color:#fff; font-weight:bold;}
+
+        .info_board_01 > .info_01_con{display:none; position:absolute; left:0; bottom:0; 
+                            width:100%; height:260px; background-color: #afc;}
+        .info_board_01 > .info_01_con.action {display:block;}
+
+      /* ********************************************************  */
 
       .title_zone {width:100%; height:44px; margin-bottom:6px; background-color: #fff;}
       .title_zone > h5 {float:left; height:100%; line-height:44px; font-size:24px; font-size:1.5rem;}
@@ -70,8 +81,29 @@
 
       .content_zone {width:100%; height:280px; background-color:#fff;}
 
-      .program_guide{width:100%; height:280px; background-color:rgba(0,0,0,0.3);}
+      .program_guide{width:100%; height:280px; background-color:rgba(0,0,0,0.3);}       
+        .program_guide > ul > li {width: 280px; margin-right:26px;}
 
+        .program_guide > ul > li a{position:relative; padding:40px; box-sizing:border-box; 
+          color:#fff; background-color: #07a; }
+
+        .program_guide > ul > li a:after,
+        .program_guide > ul > li a::after {content:" "; display:block; 
+          position:absolute;  top: 0; left: 0; border:0 solid #039;
+          width: 100%; height: 100%; box-sizing: border-box;
+          transition:border 300ms ease;}
+
+        .program_guide > ul > li a:hover:after{border-width:30px;}
+
+        .program_guide .icon {width: 100%; height: 64px; margin-bottom: 10px; 
+            font-size:64px; font-size: 4rem; line-height: 64px;}
+        .program_guide dl {width: 100%; height:auto;}
+        .program_guide dl dt {width: 100%; height: 28px; margin-bottom: 16px;
+            font-size:16px; font-size: 1.625rem; font-weight:bold; line-height:28px;}
+        .program_guide dl dd {width: 100%; height:auto; font-size:14px; 
+              letter-spacing:-0.0825rem; letter-spacing:-1.5px;  /* word-spacing:-5px; */}
+
+        
 /* .media_area =================================================== */
   .media_area {height: 850px; background-color:#ccc}
     .media_area> .media {width:950px; height:530px; margin:auto; margin-top: 30px;
