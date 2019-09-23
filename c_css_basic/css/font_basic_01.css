@@ -1,18 +1,65 @@
 @charset "UTF-8";
 /* font_basic_01.css */
 /** 서체 사용법에 대한이해
-  * font-weight
-  * font-style
-  * line-height
-  * font-family
-  * letter-spacing
-  * word-spacing
-  * text-indent
-  * text-align
-  * text-transform
-  * font-stretch
-  * color
-  * ::first-letter
+  * font-weight    : 굵기 =>  100~900, light, thin, normal, regular, bold, black..
+                  : 기본형(normal-400), light(300), bold(600)
+  * font-style     : 기울기(italic), 기본형(normal)
+  * line-height    : 행간(기본-120%), 단위를 입력하지 않아도 동작(단, 1을 100%로 인지)
+  * font-family    : 서체이름 하나의 서체를 지정하고 해당서체가 없을경우 ,로구분하여 여러개의 서체를 지정
+  * letter-spacing : 글자와 글자 사이의 간격- 기본은 '0' 자간이 작아질경우 -값으로 간격을 넓히려면 +값으로
+  * word-spacing   : 단어와 단어 사이의 간격- 기본은 '0'
+  * text-indent    : 들여쓰기 => (첫줄 들여쓰기)
+  * text-align     : 글자의 정렬 => 
+                      left(왼쪽정렬) | right(오른쪽정렬) | center(가운데정렬) | justify(양쪽정렬)
+  * text-transform : 영문의 경우 강제로 대문자/소문자로 변환해야하는 경우
+                      lowercase(소문자변환) | uppercase(대문자변환) | capitalize(각단어 첫글자만 대문자)
+  * text-decoration : 텍스트 줄 표기
+                      underline(밑줄) | overline(윗줄) | none ...
+  * text-decoration-color : 줄표기에 대한 색상변경  ....
+  * font-stretch    : 장평 글자하나의 넓이(일부 브라우저에서만 동작)
+  * color           : 글자색
+
+  * word-break      : 일정영역을 넘쳤을경우 처리방법
+                      => normal  | break-all | keep-all
+
+  * 슈도코드: css3이미지만 아직 일부만 지원 -----------------------------------------
+  * ::first-letter  : 첫글자에 대한 설정
+  * ::first-line    : 첫줄에 대한 설정
+
+  * 효과주기: 그림자효과 -------------------------------------------------------
+  * text-shadow     : X축 Y축 blur color;
 **/
- 
- 
+h2{border-bottom:2px solid #333;}
+ h4{margin-top:2rem;}
+ p{padding:1rem; background-color: #fcc;}
+
+.font_01 {font-weight:900;}
+.font_02 {font-weight:900; font-style:italic;}
+.font_03 {line-height:2;}
+.font_04 {letter-spacing:2rem;}
+.font_05 {word-spacing:-0.125rem;}
+.font_06 {font-family:serif;
+          font-size:1.2rem;}
+  /* font:weight style size/line family; */
+.font_07 {font:bold normal 1.3rem / 130% 'myriad pro';}     
+.font_08 {text-indent:3rem; padding-left:2rem;}     
+.font_09 {word-break:normal; text-align:center;
+          text-transform:capitalize;}
+
+.font_10::first-letter {text-transform:uppercase;
+      color:#fff; font-weight:bold; font-size:3rem;
+      -webkit-initial-letter:3;
+    }
+
+.font_10::first-line{color:#f00;}
+
+.font_10{color:#fff; font-size:3rem; font-weight:bold;
+        text-shadow:0.3rem 0.1rem 0.2rem #fa0,
+                    0.5rem 0.3rem 0.2rem #f00,
+                    1rem 1rem 0 #000,
+                    -0.1rem -0.1rem 0.1rem rgba(0,0,0,0.5);
+
+        box-shadow:0.5rem 0.5rem 0.5rem #333 inset,
+                   1rem 1rem 0 #0af;
+                   margin:3rem;
+}
