@@ -11,7 +11,7 @@ normalise css: reset CSS + common CSS
 
  /* 1. body, html ...... */
  html,body{margin:0; padding:0; width:100%; height:100%; color:#333;
-          font-family:"Noto Sans KR", "myriad pro", arial, "돋움", dotum, sans-serif;}
+          font-family:"Gothic A1", sans-serif;}
  h1,h2,h3,h4,h5,h6, 
  ul,li,ol,dl,dt,dd,
  p,pre,img{margin: 0; padding: 0; border:0;} 
