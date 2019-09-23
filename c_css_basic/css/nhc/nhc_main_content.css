@@ -79,7 +79,7 @@
         .info_01_con > ul > li > p {float: left; width: 80px; height: 100%; 
             background-color: #fa0; text-align: center; color:#fff;
             padding:10px; box-sizing: border-box;}
-        .info_01_con > ul > li > p span{font-weight: bold; font-size: 1.3rem;}
+        .info_01_con > ul > li > p .big{font-weight: bold; font-size: 1.3rem;}
 
         .info_01_con > ul > li > dl {float:right; width: 490px; height: 100%;}
 
