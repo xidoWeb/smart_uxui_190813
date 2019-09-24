@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* code_result_190924.html */
+
+#conBox{padding:1rem; background-color: #dfdfdf;}
+
+h3{margin-top:1rem; margin-bottom:0.5rem;}
+
+.box_wrap{margin:auto; width: 100%; min-width:300px; 
+  border:1px solid #333; margin-bottom:1rem;}
+
+
+
+/* 1번 풀이 =============================== */
+#wrap_01 {width: 600px; height:auto; padding: 10px; background-color: #ccc;}
+#headBox_01{width:100%; height:100px; background-color:#fac;}
+#contentBox_01{width:100%; height:200px; background-color:#cca;}
+#footBox_01{width:100%; height:100px; background-color:#caf;}
+
+/* 2번 풀이 =============================== */
+#wrap_02 {width:auto; height:auto; padding:10px; background-color: #ccc;}
+#wrap_02:after, #wrap_02::after {
+  content:" "; display:block; width:0; height:0; clear:both;}
+
+#headBox_02{float:left; width:20%; height:600px; background-color: #fac;}
+#contentBox_02{float:left; width:60%; height:600px; background-color: #7cf;}
+#footBox_02{float:left; width:20%; height:600px; background-color: #caf;}
+
+/* 3번 풀이 =============================== */
+#wrap_03 {width:600px; height:600px; margin:auto; padding:10px; background-color: #ccc;}
+#headBox_03{float:left; width:80%; height:300px; background-color: #fac; }
+#contentBox_03{float:left; width:80%; height:300px; background-color: #7cf; }
+#footBox_03{float:right; width:20%; height:600px; margin-top:-300px; background-color: #caf;}
+
+/* 4번 풀이 =============================== */
+.wrap {position:relative; width: 800px; height: 600px; background-color: #ff00aa;}
+.modal {position:absolute; top:30%; left:50%; margin-left:-250px; width: 500px; height: 150px; background-color: #00aaff;}
+
+/* 5번 풀이 =============================== */
+.wrap_02 {position:relative; width: 800px; height: 600px; background-color: #ff00aa;}
+.side_indicator{position:absolute; top:50%; transform:translateY(-50%); right:30px;
+  width: 50px; height:auto; background-color: #00aaff;}
+
+.side_indicator > ul{width: 100%; height:auto; padding:10px; box-sizing:border-box;}
+.side_indicator > ul > li{width:30px; height:30px; margin-bottom:30px;}
+.side_indicator > ul > li:last-child{margin-bottom:0;}
+
+.side_indicator > ul > li > a{display:block; width:100%; height:100%; background-color: #fff; 
+  border-radius:30px;}
+.side_indicator > ul > li > a > span{display:block; width: 0; height: 0; overflow: hidden;}
+
