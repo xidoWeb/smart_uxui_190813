@@ -87,10 +87,42 @@ h3{margin-top:1rem; margin-bottom:0.5rem;}
 /* border-radius */
 .bdr{width: 100%; height:auto; background-color: #9a3;}
 .bdr:after{content:" "; display: block; clear:both;}
-.bdr > li {float:left; width: 150px; height: 150px; background-color: #fff; margin:1rem; font-size:2rem; text-align:center; line-height:150px;}
+.bdr > li {float:left; width: 150px; height: 150px; background-color: #fff; margin:1rem; font-size:2rem;  
+  text-align: center; line-height: 30px;}
 
 .bdr > li:nth-child(1){border-radius:100px}
 .bdr > li:nth-child(2){border-radius:10% 50%;}
 .bdr > li:nth-child(3){width:200px; border-radius:50%;}
 .bdr > li:nth-child(4){border-radius:10px 30px 50px 0;}
 .bdr > li:nth-child(5){border-top-left-radius:20px;}
+.bdr > li:nth-child(6){border-radius:10px 30px 50px;}
+.bdr > li:nth-child(7){border-top-left-radius:70px; border-bottom-left-radius:100px;}
+.bdr > li:nth-child(8){border-top-left-radius:50px 150px;}
+
+/* 삼각형만들기 */
+.bdr > li:nth-child(9){box-sizing:border-box; background-color:transparent;
+      border:75px solid transparent; border-bottom-color:#0af; }
+
+/* margin:10px 50px; 위아래  왼오른 */
+/* border-radius:10px 50px;  (상단왼 하단오른) (상오른 하왼) */
+
+/* margin:10px 20px 30px 40px;   위 오른쪽 아래 왼쪽 */
+/* border-radius: 10px 20px 30px 40px; 상좌 상우 하우 하좌 */
+
+/* border-radius:
+   모서리는 하나의 선만 존재하는 것이 아닌 두개의 선의 연결로 처리
+   위아래를 먼저 작성, 왼오른 뒤에 작성 
+   -------------------------------------------------------
+   border-top-left-radius:;
+   border-top-right-radius:;
+   border-bottom-right-radius:;
+   border-border-left-radius:;
+*/
+
+.line_height{position: relative; 
+    width: 400px; height: 100px; 
+    background-color: #999;}
+
+.line_height > p {position: absolute; top:50%; left: 0;
+  transform:translateY(-50%);
+  width: 100%; height:auto; background-color: #fff;}

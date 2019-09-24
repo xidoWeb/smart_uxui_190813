@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* unit_01.css */
+/** Guide  data summary 
+  * 
+**/
+ 
+.unit_wrap_01{width: 100%; height: 400px; background-color: #ccf;}
+.unit_narr{background-color: #ccc; margin-bottom:1rem;}
+.unit_wrap_01 > div{float:left; margin:10px; background-color: #fff; font-size:1rem; font-weight:300;}
+  p{background-color: #fa0;}
+  span{display:block; background-color: #0cf;}
+  i{display:block; background-color: #afa; color:#333;}
+  
+  /* px단위 ====================================================== */
+ .box_01 {width:300px; height:300px; font-size:20px;}
+ .box_01 p{width:150px; height:150px; font-size:10px;}
+ .box_01 span{width:200px; height:200px; font-size:15px;}
+ .box_01 i{width:100px; height:100px; font-size:8px;}
+
+ /* pt단위(계산작업시 사용할뿐 실사용은 하지 않는다.) ========= */
+ .box_02 {background-color: #9c9 !important; 
+          width:225pt; height:225pt; font-size:15pt;}
+ .box_02 p {width:112.5pt; height:112.5pt; font-size:7.5pt;}
+ .box_02 span {width:150pt; height:150pt; font-size:11.25pt;}
+ .box_02 i {width:75pt; height:75pt; font-size:6pt;} 
+
+  /* %단위 ========================================= */
+ .unit_wrap_01  .box_03 {background-color: #af4; 
+            width:300px; height:300px; font-size:125%;}
+ .box_03 p {width:50%; height:50%; font-size:50%;}
+ .box_03 span {width:130%; height:130%; font-size:130%;}
+ .box_03 i {width:50%; height:50%; font-size:50%}
+
+ /* em 단위 ================================= */
+.unit_wrap_01 .box_04{background-color: #f7a;
+    width:18.75em; height:18.75em; font-size:1.25em;}
+.box_04 p{width:9.375em; height:9.375em; font-size:0.625em;}
+.box_04 span{width:12.5em; height: 12.5em;}
+.box_04 i{width:6.25em; height: 6.25em;}
+
+
+:root{font-size:20px; background-color: #fa0;}
+:root:after{content:" 안녕하세요?"; }
+
+/* rem 단위 ================================= */
+.unit_wrap_01 .box_05{background-color: #f7a;
+    width:18.75rem; height:18.75rem; font-size:1.25rem;}
+.box_05 p{width:9.375rem; height:9.375rem; font-size:0.625rem;}
+.box_05 span{width:12.5rem; height: 12.5rem;}
+.box_05 i{width:6.25rem; height: 6.25rem;}
+
+/*
+ 단위: vw, vh, v-min, v-max
+ 반응형웹 설정: @media 쿼리
+   ================================================ */
