@@ -48,3 +48,28 @@ h3{margin-top:1rem; margin-bottom:0.5rem;}
   border-radius:30px;}
 .side_indicator > ul > li > a > span{display:block; width: 0; height: 0; overflow: hidden;}
 
+/* 6번 ============================ */
+.wrap_03 {position:relative; width: 800px; height: 600px; 
+  background-color: #fa6;}
+
+.side_indicator_02{position:absolute; right:30px; 
+  top:50%; transform:translateY(-50%); width: 50px; height:auto;
+  min-height:100px; background-color: #04f;}
+
+
+.side_indicator_02>ul{width:auto; height:auto; padding:10px;}
+
+.side_indicator_02>ul>li{ width:100%; height:30px; margin-bottom:30px;}
+
+.side_indicator_02>ul>li:last-child{margin-bottom:0;} 
+
+.side_indicator_02>ul>li>a{display:block; position:relative;  width: 100%; height: 100%; 
+  background-color: #fff; border-radius:100%;}
+
+  .side_indicator_02>ul>li>a>span{display:block;  position:absolute; top:0; right:50px; 
+    width:0; height:100%; overflow:hidden; /* margin-left:-350px; */
+    background-color: #0cf; text-align:right; padding:5px;
+    transition:all 300ms ease; opacity:0; white-space: nowrap;}
+
+  .side_indicator_02>ul>li>a:hover > span,
+  .side_indicator_02>ul>li>a:focus > span {width:300px; background-color: #fff; opacity:1;}
