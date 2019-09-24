@@ -56,7 +56,6 @@ h3{margin-top:1rem; margin-bottom:0.5rem;}
   top:50%; transform:translateY(-50%); width: 50px; height:auto;
   min-height:100px; background-color: #04f;}
 
-
 .side_indicator_02>ul{width:auto; height:auto; padding:10px;}
 
 .side_indicator_02>ul>li{ width:100%; height:30px; margin-bottom:30px;}
@@ -73,3 +72,15 @@ h3{margin-top:1rem; margin-bottom:0.5rem;}
 
   .side_indicator_02>ul>li>a:hover > span,
   .side_indicator_02>ul>li>a:focus > span {width:300px; background-color: #fff; opacity:1;}
+
+  /* 7번 ========================== */
+.wrap_04{position:relative; width: 800px; height: 600px; background-color: #a88;}
+
+.title_box{position:absolute; top:30%; left:20px; z-index:200; width: 450px; height: 200px; background-color:rgba(255,5,255,0.5); color:#fff; padding: 20px; box-sizing: border-box;}
+.title_box>h1{font-size:1.5rem; font-size:24px; text-transform: capitalize;}
+.title_box>p{font-size:1rem;}
+
+.img_01{position:absolute; right:220px; bottom:0; z-index:100; width: 250px; height: 400px; background-color: #399;}
+.img_02{position:absolute; right:20px; bottom:0; width: 250px; height: 500px; background-color: #9a7;}
+
+/* border-radius */
