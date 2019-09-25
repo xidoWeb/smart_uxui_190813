@@ -1,0 +1,14 @@
+
+
+html,body{width: 100%; height: 100%;}
+
+#wrap{width: 100%; height: 100%; background-color: #ccc;
+      color:#000; text-shadow:0.2rem 0.2rem 0.2rem #181818;}
+
+@media screen and (max-width:480px) {
+  #wrap{width:50%; background-color:#fca;  text-shadow:none;}
+}
+
+@media screen and (min-width:481px) and (max-width:800px){
+  #wrap{width:50%; height:50%; background-color:#2a7; text-shadow:none;}
+}
