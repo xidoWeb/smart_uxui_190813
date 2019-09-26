@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* fileData.css */
+/** 
+- design 기준: 480px
+@media screen and (max-width:479px) {}
+- design 기준: 480px
+@media screen and (min-width:480px)  a nd (max-width:767px) {}
+- 디자인 기준 : 768px
+@media screen and (min-width:768px)  and (max-width:959px){}
+- design 기준: 960 
+@media screen and (min-width:960px) {}
+
+* 작업순서: 
+1. 큰틀 체크(반응형일시- 모바일먼저작업)
+2. 각 범위의 큰형태가 틀어지지 않게 체크
+3. 중간범의 형태들 내용잡고, 큰틀의 높이값 한번더 체크
+4. 숨겨진 기능들(큰범위)을 미리 세팅 후 확인
+5. 링크, 상세내용들을 체크
+6. 이미지처리, 애니메이션, 제어 등의 기능을 처리
+**/
+
+/* - 공통영역 ==================================================== */
+#wrap{width:100%; min-width:320px; height:auto; min-height:500px; padding-top:60px;}
+  #headBox{position:fixed; top:0; left:0; z-index:1000; width: 100%; min-width:320px; height: 60px; 
+    background-color: #555;}
+    .area_wrap{margin:auto; width: 100%; max-width:960px; height: 40px; background-color: #fff;}
+  #contentBox{width: 100%; height: auto;}
+    .view_area{width: 100%; height:720px; background-color:#0cf}
+    .tip_area{margin:auto; width: 100%; max-width:960px; height:720px; background-color:#0b4}
+    .info_area{margin:auto; width: 100%; max-width:960px; height:720px; background-color:#0ad}
+
+  #footBox{width: 100%; height:60px; background-color: #a43;}
+
+ 
+/* - design 기준: 480px ==================================================== */
+@media screen and (max-width:479px) {
+}
+
+/* - design 기준: 480px ==================================================== */
+@media screen and (min-width:480px)  and (max-width:767px) {
+}
+
+/* - 디자인 기준 : 768px ==================================================== */
+@media screen and (min-width:768px) and (max-width:959px) {
+   #footBox{height:120px;}
+}
+
+/* - design 기준: 960  ==================================================== */
+@media screen and (min-width:960px) {
+  #footBox{width:100%; height:120px;}
+}
