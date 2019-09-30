@@ -29,13 +29,81 @@
 
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
+  <title>js 기초 이해하기</title>
 
-  <title>문서 제목</title>
+  <script type="text/javascript">
+  // 1. script작성위치1: head내부에 css 뒤에 작성하는 것을 권장
+  </script>
+
 </head>
 <body>
   <!-- layout ======================= -->
-  #wrap>header#headBox>h1>a{제목}^^main#contentBox>h2{부제}^footer#footBox>h2{정보}
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="../content.html">js 기초 이해하기</a></h1>
+    </header>
+    <!-- ========================== -->
+    <script>
+      // 1. script작성위치2: body내부 어디든 작성가능
+      // 2. 권장하는 위치는 아니다.
+    </script>
+    <!-- ========================== -->
+
+    <main id="contentBox">
+      <h2>javascript란?</h2>
+      <p>자바스크립트란, 객체기반의 스크립트 프로그래밍 언어.<br />
+         주로 웹에 특화되어있는 프로그랭 언어이다.
+         과거, 자바의 아류이자 초급언어라는 저급한 언어라는 칭호를 들은적이 있지만
+         현재(2019년)는 가장 인기있는 언어중의 하나<br />
+      </p>
+      <p>
+        객체기반, 객체/함수지향, 일급객체로 불리우는 언어이며, <br />
+        과거 웹에서 HTML, CSS만 제어하던 시절을 넘어서 현재
+        앱을 제작하기도하며, 서버를 컨트롤 하기도하는 다양한 분야에서 쓰이기도 하는 언어.
+      </p>
+      <p>
+        자바스크립트는 <abbr title="유럽 컴퓨터 연합">ECMA Script</abbr> 를 표준언어 체계를 따르고 있으며, ECMA표준은 매년 6월 17일에 새로운 표준을 선언하고있음.
+      </p>
+      <p>
+        유사 언어는,<br /> 
+        Type script, Dart, Elm, Coffee Script, Action Script 등이 있다.
+      </p>
+      <p><strong>자바스크립트에서 인기있는 라이브러리, 프레임워크</strong><br />
+        <span>jQuery, AngularJs, ReactJs, VueJs, handlebarJs, ember, polymer, d3Js .... </span>
+      </p>
+
+    </main>
+  </div>
   <!-- script ======================= -->
-  <script></script>
+  <script>
+    // 1. script 작성위치3: body내부 마지막 위치
+  </script>
+
+  <!-- * 1-1. script 작성위치4 : 외부문서로 불러오기 
+       단, 외부문서를 불러오는 script의 경우 script요소(태그) 내부에는 
+       내용이 작성되지 않는다. -->
+
+  <script src="../../js/src/js_basic_01.js"></script>
+
+
+  <!-- 
+    javscript에서는 검증 이라는 기능이 존재
+    검증은 어떠한 과정을 중간에 확인하는 기능
+    
+    document.write()  =>  브라우저에 내용을 입력해서 확인(html코드가 사라질 수 있음)
+    alert()           =>  메세지창을 띄워서 확인(매번확인을 눌러줘야한다.)  
+    console.log()     =>  개발자모드에서 확인[console 탭메뉴] (찾기힘들다??)
+
+   -->
+
+   <!-- 검증기능 테스트해보기 -->
+   <script>
+     document.write("브라우저 내부, body에 내용이 작성 확인!!!!");
+
+     alert("메세지 창에서 결과물을 확인!!!!");
+
+     console.log("콘솔창에서 결과를 확인");
+   </script>
+   
 </body>
 </html>
