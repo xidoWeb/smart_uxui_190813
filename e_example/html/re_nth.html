@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <title>Document</title>
+  <style>
+    .n_child{padding: 1rem; background-color: #acc;}
+    .n_child>ul{border:1px solid #333; background-color: #fff;}
+    .n_child>ul>li{margin:0.2rem; border:1px solid #333;}
+    .n_child>ul>li:nth-child(4n){margin-bottom:2rem; background-color: #fa0;}
+    .n_child>ul>li:nth-child(4n-2){background-color: #af0;}
+    .n_child>ul>li:nth-child(4n+1){text-indent:3rem;}
+    .n_child>ul>li:nth-child(4n+3){font-size:2rem;}
+    .n_child>ul>li:nth-of-type(4n){border-left:3px solid #f00;}
+    .n_child{display:none;}
+/* 
+    nth-child  처음부터 연속되어진 동일한 성격(type, class)일 경우에 사용가능
+    nth-of-type 형제중에 중간에 다른 요소가 섞여있어도, 
+                동일한 요소일때는 순서로 인지하여 사용가능
+*/
+  .n-type {padding: 1rem; background-color: #ca7;}
+  .n-type > * {border:1px solid #777; margin:0.3rem;}
+  p:nth-of-type(3n){background-color: #fff;}
+
+/* 
+    :nth-child(){}
+    :first-child{}
+    :last-child{}
+    :nth-last-child(){}  => 뒤에서부터 역순으로
+
+    :nth-of-type(){}
+    :firt-of-type{}
+    :last-of-type{}
+    :nth-last-of-type(){} => 뒤에서 부터 역순으로 동일요소
+*/
+/* 
+  * {}
+  div, a, p{}
+  .box{}
+  #box{}
+  ul a{}
+  ul > li{}
+  dt + dd {}   => 인접형제선택자
+  dt ~ dd {}   => 형제선택자
+  a[href="*"]{}  => 속성선택자
+  li:nth-child(){}  => nth선택자
+  p:nth-of-type(){}  => nth선택자
+  슈도코드(의사전달)
+  a:hover{}
+  a:focus{}
+  a:active{}
+  a:visited{}
+  a::before{content:"";}
+  a::after{content:"";}
+*/
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <h1>웹기초</h1>
+  <h2>nth-child</h2>
+  <div class="n_child">
+    <ul>
+      <li>li_01</li>
+      <li>li_02</li>
+      <li>li_03</li>
+      <li>li_04</li>
+      <li>li_05</li>
+      <li>li_06</li>
+      <li>li_07</li>
+      <li>li_08</li>
+      <li>li_09</li>
+      <li>li_10</li>
+      <li>li_11</li>
+      <li>li_12</li>
+      <li>li_13</li>
+      <li>li_14</li>
+      <li>li_15</li>
+      <li>li_16</li>
+      <li>li_17</li>
+      <li>li_18</li>
+      <li>li_19</li>
+      <li>li_20</li>
+    </ul>
+  </div>
+  <!-- ========================== -->
+  <h2>nth-of-type</h2>
+  <div class="n-type">
+    <h3 class="nth">제목 중간에 하나</h3>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_01</p>
+    <p>p요소성격의 동일한 class를 가진 p_02</p>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_03</p>
+    <div>div 하나</div>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_04</p>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_05</p>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_06</p>
+    <pre class="nth"> pre요소 1</pre>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_07</p>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_08</p>
+    <button  class="nth" type="button">버튼 삽입</button>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_09</p>
+    <p class="nth">p요소성격의 동일한 class를 가진 p_10</p>
+  </div>
+</body>
+</html>

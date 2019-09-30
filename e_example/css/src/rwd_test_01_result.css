@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* rwd_test_01_result.css */
+/** 반응형웹 기준  
+  * pc: 769px ~ 960px
+  * tablet: 481px ~ 768px
+  * mobile: ~ 480px
+
+  * vw 높이계산방법: 기준이되는 크기에서
+                 (높이값 / 기준가로값 * 100)vw
+  * vw 높이 설정시: min-height, max-height를 사용여부를 판단할것
+**/
+ 
+ #wrap{width: 100%; max-width:60rem; height: auto; background-color: #fd4;}
+ #headBox{position:relative; width: 100%; height: 9.375rem; background-color: #c3f;}
+ h1{width: 6.25rem; height: 9.375rem; background-color: #8f8; transition:all 200ms ease;}
+ .menu_btn{display:none; position:absolute; top:0; bottom:0; right:1.75rem; margin:auto; width: 45px; height: 45px;}
+ .menu_btn>button{width: 100%; height: 100%; background-color: #fff;}
+
+ #contentBox{width: 100%; height:auto;}
+  #viewBox{position:relative; left:50%; margin-left:-50vw; width:100vw; 
+    height:46.875vw; max-height:28.125rem; background-color: #fdd;
+    background-image: url("../../img/london.jpg");
+    background-repeat: no-repeat;    
+    background-position: 50%  50%;  
+    background-size:cover;  }
+
+  #listBox{width:100%; height:auto; background-color: #765;}
+    #listBox > ul {width:inherit; height:inherit;}
+    #listBox > ul > li {float:left; width:25%; height:37.5rem;}
+    #listBox > ul > li:nth-child(2n+1) {background-color:#f84;}
+    #listBox > ul > li:nth-child(2n) {background-color:#f5f;}
+
+  #infoBox{display:none; width:100%; height:auto; }
+    .news{width:100%; height:6.25rem; background-color: #fa0;}
+    .check{width:100%; height:12.5rem; background-color: #f70;}
+
+  #footBox{width: 100%; height: 6.25rem; background-color: #af1;}
+    #footBox>h2{width: 6.25rem; height: 100%; background-color: #03f;
+        transition:all 200ms ease;}
+
+ /* 768 ====================================================  */
+@media screen and (min-width:481px) and (max-width:768px) {
+  #contentBox{height:auto;}
+    #viewBox{height:39.0625vw; max-height: 18.75rem;}
+    #listBox > ul > li {height:25rem;}
+    #infoBox{display:block;}
+  }
+  
+  /*  480 ====================================================  */
+@media screen and (max-width:480px) {
+  #wrap{min-width:15rem;}
+  #headBox{height: 6.25rem;}
+  h1{width: 100%; height: 100%;}
+  .menu_btn{display:block;}
+  #contentBox{height:auto;}
+    #viewBox{height: 25rem;}
+    #listBox > ul > li {width:50%; height:12.5rem;}
+    #listBox > ul > li:nth-child(3) {background-color: #ccc;}
+    #listBox > ul > li:nth-child(4) {background-color: #afc;}
+    #infoBox{display:block;}
+    #footBox>h2{width:50%; min-width:9.375rem; margin:auto;}
+}

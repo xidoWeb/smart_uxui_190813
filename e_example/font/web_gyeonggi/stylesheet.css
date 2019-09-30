@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'gyeonggi';
+    src: url('hinted-GyeonggiTitleM.eot');
+    src: url('hinted-GyeonggiTitleM.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleM.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleM.woff') format('woff'),
+        url('hinted-GyeonggiTitleM.ttf') format('truetype'),
+        url('hinted-GyeonggiTitleM.svg#GyeonggiTitleM') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gyeonggi';
+    src: url('hinted-GyeonggiTitleB.eot');
+    src: url('hinted-GyeonggiTitleB.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleB.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleB.woff') format('woff'),
+        url('hinted-GyeonggiTitleB.ttf') format('truetype'),
+        url('hinted-GyeonggiTitleB.svg#GyeonggiTitleB') format('svg');
+    font-weight:bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'gyeonggi';
+    src: url('hinted-GyeonggiTitleL.eot');
+    src: url('hinted-GyeonggiTitleL.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleL.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleL.woff') format('woff'),
+        url('hinted-GyeonggiTitleL.ttf') format('truetype'),
+        url('hinted-GyeonggiTitleL.svg#GyeonggiTitleL') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
