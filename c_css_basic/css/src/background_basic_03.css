@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* background_basic_03.css */
+/** Guide  data summary 
+  * 
+**/
+ 
+ #contentBox{width: 800px; height:auto; margin:auto;}
+
+  #contentBox>div {width:100%; height:500px;
+    margin-bottom:2rem; background-color: #ccc;
+    background-image:url("../../img/nature_h_02.jpg");
+    background-position: 50% 50%; 
+    background-repeat: no-repeat; background-size:cover;
+    border:50px dotted #fa0; box-sizing:border-box;
+    background-color: #acf; padding:40px;}
+
+  .clip_1{background-clip:border-box;}
+  .clip_2{background-clip:padding-box;}
+  .clip_3{background-clip:content-box;}
+
+  .origin_1{background-origin:border-box;}
+  .origin_2{background-origin:padding-box;}
+  .origin_3{background-origin:content-box;}

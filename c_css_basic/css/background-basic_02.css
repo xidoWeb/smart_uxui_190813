@@ -27,3 +27,56 @@ background-attachment:  배경이미지를 고정 처리의 유무를 판단
 
 * 주의사항: fixed처리시 background-position의 위치값이 브라우저기준으로 처리됨.  
 */
+
+
+#gradientBox{width: 800px; height:auto; margin:auto; margin-top:2rem; 
+    border:3px solid #333;}
+#gradientBox>div{width: 100%; height: 500px; margin-bottom:1rem;}
+#gradientBox>div:last-of-type{margin-bottom:0; border-bottom:1px solid #333;}
+.gr_01{background-color:#34f; 
+       background-image:linear-gradient(#fa0, #0af);}
+.gr_02{background-color:#f4f; 
+       background-image:linear-gradient(-30deg, #f90, #faf);}
+.gr_03{background-color:#3af; 
+  background-image:linear-gradient(30deg, #0af 30%, #fac 40%);}
+.gr_04{background-color:#f14; 
+    background-image:linear-gradient(-45deg, #fac 30%, #86f 30%, 
+                                             #86f 80%, #171717 80%);}
+
+.gr_04:hover{background-image:linear-gradient(-45deg, #f00 30%, #f6f 30%, 
+                                             #86f 80%, #fac 80%);}
+
+.gr_05{position:relative; z-index: 0;
+      background-image: linear-gradient(-45deg, #fac, #acf);}
+
+.gr_05:after{content:""; display:block; position:absolute; top: 0; left: 0;
+            z-index: -1;
+            width: 100%; height: 100%; opacity:0; transition:all 300ms ease;
+            background-image: linear-gradient(-45deg, #0ac, #a0f);}
+
+ .gr_05:hover:after{opacity: 1;}
+
+
+ .gr_06{background-image:radial-gradient(circle, #Fa0 50%, #a0f 70%);}
+ .gr_07{background-image:radial-gradient(ellipse, #Fa0 50%, #a0f 70%);}
+ .gr_08{background-image:radial-gradient(circle at 10% 10%, #Fa0 10px, #a0f 30%);}
+
+ /* 
+  background-image: 
+          url()  | linear-gradient()  | radial-gradient()
+  ==============================================================
+    url()   => 이미지 삽입
+    linear-gradient()  => 직선형의 그라데이션효과(각도(deg), 색 위치(%), 색 위치(%) ...)
+    radial-gradient() => 원형의 그라데이션효과(원형모양[circle | ellipse] 및 
+                                                 위치(at x좌표 y좌표), 색1 위치(%), 색2 위치(%) ... )
+    url()을 제외한 gradient는 벤더프리픽스를 사용해야 함
+    background-imga:-webkit-radial-gradient();
+    background-imga:-moz-radial-gradient();
+    background-imga:-ms-radial-gradient();
+    background-imga:-o-radial-gradient();
+    background-imga:radial-gradient();
+ 
+ */
+
+
+
