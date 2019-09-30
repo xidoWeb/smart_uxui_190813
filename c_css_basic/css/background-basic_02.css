@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#contentBox{width: 800px; height:auto; margin:auto;
+            border:2px solid #333; box-sizing: border-box; }
+  #contentBox > div{width:100%; height:500px;
+    background-repeat: no-repeat; background-position: 50% 50%;}
+
+  .box_01{background-image:url("../img/nature_h_01.jpg");
+        background-attachment:local;}
+  .box_02{background-image:url("../img/nature_v_01.jpg");
+        background-attachment: fixed;}
+  .box_03{background-image:url("../img/nature_h_02.jpg");
+        background-attachment: scroll;}
+
+
+  #contentBox>div{overflow:hidden; overflow-y:auto; 
+                border-bottom:4px solid #fff;}        
+ #contentBox>div>h3{width:100%; height:70px; 
+                background-color:rgba(255,100,0,0.3);}
+ #contentBox>div>ul{width: 100%; padding-left:1rem; box-sizing: border-box;}
+ #contentBox>div>ul>li{list-style:decimal; height:50px; margin-bottom:20px;
+    background-color:rgba(255,255,255,0.3); }
+
+/* 
+background-attachment:  배경이미지를 고정 처리의 유무를 판단
+        local(기본형)  | fixed(고정) | scroll(요소내부에 스크롤시 고정)    
+
+* 주의사항: fixed처리시 background-position의 위치값이 브라우저기준으로 처리됨.  
+*/
