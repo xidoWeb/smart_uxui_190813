@@ -44,11 +44,35 @@
 /* #viewBox ==================================================== */
     #viewBox{float:right; width:730px; height:710px; 
       padding:50px; box-sizing: border-box;
-      background-color: #adadad;}
-      .view_link{float:right; width:610px; height:595px; background-color:#555;}
+      background-color: #adadad;
+      background-image: url("../../img/gcass/view_pattern.png");  
+      background-repeat:repeat-x; background-position: 0 -10px;}
+
+      .view_link{float:right; width:610px; height:595px;}
       .view_link > a{position:relative;}
-        .com_img{position:absolute; bottom:0; left:0; width: 330px; height: 520px; background-color: #ddd;}
-        .text_img{float:right; width: 353px; height: 554px; background-color: #fac;}
+        .com_img{position:absolute; bottom:0; left:0; width: 330px; height: 520px;
+                background-image: url("../../img/gcass/com_img.png"); 
+                background-position: 0 0; background-repeat: no-repeat;              
+               /* transition:all 300ms ease 500ms; */
+                transition-property:left;
+                transition-duration:500ms;
+                transition-timing-function:cubic-bezier(0.29,-1.37, 0, 0.4);
+                /* linear | ease | ease-in | ease-out | ease-in-out */
+                /* transition-delay:500ms; */
+                  }
+
+/** transition, animation, js-animate 기능에서 
+    시간에따른 흐름의 형태 파악하는 사이트 
+      https://easings.net/
+      https://cubic-bezier.com/ 
+*/
+
+
+        .view_link > a:hover .com_img{left:100px;}       
+
+        .text_img{float:right; width: 353px; height: 554px;
+                background-image: url("../../img/gcass/text_img.png"); 
+                background-position: 0 0; background-repeat: no-repeat;}
 
 /* #sideBox =================================================== */
     #sideBox{position:absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #888;}
