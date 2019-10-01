@@ -11,27 +11,33 @@
 /* #headBox ----------------------------- */
     #headBox{float:left; width: 250px; height:710px; 
       padding:50px 50px 100px 20px; box-sizing:border-box; background-color:#777;}
-      h1{width: 100%; height: 110px; background-color: #acf;}
-      h1>a{display:block; width: 100%; height: 100%;}
+      h1{width: 100%; height: 110px;}
+      h1>a{background-color: #acf;}
 
     #gnb{width: 100%; height:auto; margin-top:35px;}
     #gnb>ul{width: 100%; height:auto;}
     #gnb>ul>li{width: 100%; height: 40px; margin-bottom:24px;}
     #gnb>ul>li:nth-last-child(2){margin-bottom: 10px;}
     #gnb>ul>li:last-child{height: 112px; margin-bottom: 0;}
-    #gnb>ul>li>a{display:block; width:100%; height:100%; background-color:#caa;}
+    #gnb>ul>li>a{background-color:#caa;}
 
 /* #viewBox ==================================================== */
     #viewBox{float:right; width:730px; height:710px; 
       padding:50px; box-sizing: border-box;
       background-color: #adadad;}
-      .view_link{position:relative; float:right; width:610px; height:595px; background-color:#555;}
-      .view_link > a{ display:block; width: 100%; height: 100%;}
+      .view_link{float:right; width:610px; height:595px; background-color:#555;}
+      .view_link > a{position:relative;}
         .com_img{position:absolute; bottom:0; left:0; width: 330px; height: 520px; background-color: #ddd;}
         .text_img{float:right; width: 353px; height: 554px; background-color: #fac;}
 
-
+/* #sideBox =================================================== */
     #sideBox{position:absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #888;}
+    .lnb{float:right; width: 435px; height: 100%;/*  background-color:inherit; */}
+    .lnb > li {float: left; width: 96px; height: 100%; background-color: #acc;}
+    .lnb > li:last-child {width: 243px;}
+    .lnb > li > a {display: block; width: 100%; height: 100%;}
+
+/* #footBox ================================ */
   #footBox{width: 100%; height:110px; border-top:1px solid #999;
      background-color:#f7f;}
  
