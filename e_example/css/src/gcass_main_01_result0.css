@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* gcass_main_01_result.css */
+/** Guide  data summary 
+  * 
+**/
+
+#wrap{width: 980px; height: 850px;}
+  .temp{position:relative; width: 100%; height:auto; padding-top:30px;}
+  .temp:after{content:" "; display:block; width: 0; height: 0; clear:both;}
+
+    #headBox{float:left; width: 250px; height:710px; background-color: #777;}
+    #viewBox{float:right; width:730px; height:710px; background-color: #adadad;}
+    #sideBox{position:absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #888;}
+  #footBox{width: 100%; height:110px; border-top:1px solid #999;
+     background-color:#f7f;}
+ 
+ 
