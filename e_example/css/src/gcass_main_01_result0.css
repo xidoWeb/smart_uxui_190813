@@ -8,18 +8,38 @@
   .temp{position:relative; width: 100%; height:auto; padding-top:30px;}
   .temp:after{content:" "; display:block; width: 0; height: 0; clear:both;}
 
+
+
 /* #headBox ----------------------------- */
     #headBox{float:left; width: 250px; height:710px; 
       padding:50px 50px 100px 20px; box-sizing:border-box; background-color:#777;}
       h1{width: 100%; height: 110px;}
-      h1>a{background-color: #acf;}
+      h1>a{display:block; width:100%; height:100%;
+          background-image: url("../../img/gcass/gcass_logo.png");
+          background-repeat: no-repeat;
+          background-position:50% 50%;}
 
     #gnb{width: 100%; height:auto; margin-top:35px;}
     #gnb>ul{width: 100%; height:auto;}
     #gnb>ul>li{width: 100%; height: 40px; margin-bottom:24px;}
     #gnb>ul>li:nth-last-child(2){margin-bottom: 10px;}
     #gnb>ul>li:last-child{height: 112px; margin-bottom: 0;}
-    #gnb>ul>li>a{background-color:#caa;}
+    #gnb>ul>li>a{background-image: url("../../img/gcass/gnb.png");
+                background-repeat: no-repeat;
+                background-position-x: 10px;}
+
+    #gnb>ul>li>a:hover,
+    #gnb>ul>li>a:focus{background-image: url("../../img/gcass/gnb_on.png");
+                      outline:none; }           
+              
+    #gnb>ul>li:nth-child(1) > a {background-position-y:2px;}
+    #gnb>ul>li:nth-child(2) > a {background-position-y:-60px;}
+    #gnb>ul>li:nth-child(3) > a {background-position-y:-122px;}
+    #gnb>ul>li:nth-child(4) > a {background-position-y:-184px;}
+    #gnb>ul>li:nth-child(5) > a {background-position-y:-246px;}
+    #gnb>ul>li:nth-child(6) > a {background-position-y:-294px;}
+
+
 
 /* #viewBox ==================================================== */
     #viewBox{float:right; width:730px; height:710px; 
@@ -35,7 +55,13 @@
     .lnb{float:right; width: 435px; height: 100%;/*  background-color:inherit; */}
     .lnb > li {float: left; width: 96px; height: 100%; background-color: #acc;}
     .lnb > li:last-child {width: 243px;}
-    .lnb > li > a {display: block; width: 100%; height: 100%;}
+    .lnb > li > a {display: block; width: 100%; height: 100%;
+          background-image: url("../../img/gcass/subBox.png");
+          background-position:0 0;
+          background-repeat: no-repeat;}
+
+    .lnb > li:nth-child(2) > a {background-position-x:-96px;}    
+    .lnb > li:nth-child(3) > a {background-position-x:100%;}
 
 /* #footBox ================================ */
   #footBox{position:relative; width: 100%; height:110px; 
@@ -84,8 +110,7 @@
 
                           background-image:url("../../img/gcass/family_arrow.png");
                           background-repeat:no-repeat;
-                          background-position: 50% 50%;
-                        }
+                          background-position: 50% 50%;}
 
     .family_area > dl > dd>a{display: block; width: 100%; height: 100%;}
     .family_area dl span{display: block; position:absolute; top: 50%; left:0;
