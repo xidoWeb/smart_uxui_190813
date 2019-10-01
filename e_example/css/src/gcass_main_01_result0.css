@@ -11,13 +11,17 @@
 
 
 /* #headBox ----------------------------- */
-    #headBox{float:left; width: 250px; height:710px; 
+    #headBox{ float:left; width: 250px; height:710px; 
       padding:50px 50px 100px 20px; box-sizing:border-box; background-color:#777;}
       h1{width: 100%; height: 110px;}
       h1>a{display:block; width:100%; height:100%;
           background-image: url("../../img/gcass/gcass_logo.png");
           background-repeat: no-repeat;
           background-position:50% 50%;}
+
+    
+
+    
 
     #gnb{width: 100%; height:auto; margin-top:35px;}
     #gnb>ul{width: 100%; height:auto;}
@@ -75,7 +79,13 @@
                 background-position: 0 0; background-repeat: no-repeat;}
 
 /* #sideBox =================================================== */
-    #sideBox{position:absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #888;}
+  #sideBox{ position:absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 30px; background-color: #888;} 
+
+  #sideBox:before{content:" "; display: block; 
+        position:absolute; top: 0; left:50%; z-index:-100; margin-left:-50vw;
+        width:100vw; height:100%; background-color:inherit;}        
+
+
     .lnb{float:right; width: 435px; height: 100%;/*  background-color:inherit; */}
     .lnb > li {float: left; width: 96px; height: 100%; background-color: #acc;}
     .lnb > li:last-child {width: 243px;}
@@ -89,7 +99,7 @@
 
 /* #footBox ================================ */
   #footBox{position:relative; width: 100%; height:110px; 
-    padding:15px 40px 25px; box-sizing:border-box; background-color:#f7f;
+    padding:15px 40px 25px; box-sizing:border-box; 
     font-family: 'Noto Sans KR', sans-serif;
     font-size:0.75rem; line-height:120%; font-weight:normal; }
 
@@ -98,19 +108,23 @@
                 border-top:1px solid #999;}
 
  #footBox>h2{float:left; width: 72px; height: 50px; margin-right: 46px; 
-              background-color: #452;}
+            background-image: url("../../img/gcass/footer_logo.png");
+            background-repeat: no-repeat; background-position: 50% 50%; }
+
   .info{float:left; width: 70px; height: 50px; margin-right: 26px; 
-        padding-top:15px; box-sizing: border-box;
-        background-color: #faa;}
+        padding-top:15px; box-sizing: border-box;}
   .info > li {width: 45%; height: 100%; float: left;}
   .info > li:last-child {float:right;}
-  /* .info > li > a {} */
+  .info > li > a {display:block; width: 100%; height: 100%;
+              background-image: url("../../img/gcass/location_and_sns.png");
+              background-repeat: no-repeat; background-position:5px 0;}
+  .info > li:nth-child(2) > a{background-position-x:105%;}
 
-  .info_company{float:left; width: 330px; height: 50px; background-color: #acc;}
+  .info_company{float:left; width: 330px; height: 50px;}
     .info_company>p{font-style:normal;}
 
-  .family_area{position:relative; float:right; width: 300px; height: 150px; 
-    margin-top:-66px; background-color: #f4a;}
+  .family_area{position:relative; float:right; width:300px; height:150px; 
+    margin-top:-66px;}
   
     .family_area > dl {width: 100%; height:auto; 
                       font-size:1rem; text-indent:1rem;}
