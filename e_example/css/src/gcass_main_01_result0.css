@@ -38,7 +38,67 @@
     .lnb > li > a {display: block; width: 100%; height: 100%;}
 
 /* #footBox ================================ */
-  #footBox{width: 100%; height:110px; border-top:1px solid #999;
-     background-color:#f7f;}
- 
- 
+  #footBox{position:relative; width: 100%; height:110px; 
+    padding:15px 40px 25px; box-sizing:border-box; background-color:#f7f;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:0.75rem; line-height:120%; font-weight:normal; }
+
+  #footBox:before{content:" "; display: block; 
+                position:absolute; top:0; left:0; z-index:100; width: 100%; 
+                border-top:1px solid #999;}
+
+ #footBox>h2{float:left; width: 72px; height: 50px; margin-right: 46px; 
+              background-color: #452;}
+  .info{float:left; width: 70px; height: 50px; margin-right: 26px; 
+        padding-top:15px; box-sizing: border-box;
+        background-color: #faa;}
+  .info > li {width: 45%; height: 100%; float: left;}
+  .info > li:last-child {float:right;}
+  /* .info > li > a {} */
+
+  .info_company{float:left; width: 330px; height: 50px; background-color: #acc;}
+    .info_company>p{font-style:normal;}
+
+  .family_area{position:relative; float:right; width: 300px; height: 150px; 
+    margin-top:-66px; background-color: #f4a;}
+  
+    .family_area > dl {width: 100%; height:auto; 
+                      font-size:1rem; text-indent:1rem;}
+    .family_area > dl:after{
+      content:" "; display: block; width: 0; height: 0; clear:both; }
+
+    .family_area > dl > dt{position:relative; float: left; width: 96px; height: 50px;
+                          background-color: #555; color:#fff;
+                          letter-spacing:-0.1rem;}
+    .family_area > dl > dd{position:relative; float: left; width:204px; height: 50px; 
+                          background-color: #fff30d; color:#555;}
+
+    .family_area > dl > dt:nth-of-type(1),
+    .family_area > dl > dd:nth-of-type(1){height:51px;}
+
+    .family_area > dl > dt:after{content:"\f0da"; display:block; position: absolute;
+                          top:0; bottom:0; margin:auto; right:5px; 
+                          /* font-family: 'Font Awesome 5 Free'; font-weight: 900;
+                          text-indent:0.5rem; */
+                          width:12px; height:12px; color:#fff; font-size:1rem;
+
+                          background-image:url("../../img/gcass/family_arrow.png");
+                          background-repeat:no-repeat;
+                          background-position: 50% 50%;
+                        }
+
+    .family_area > dl > dd>a{display: block; width: 100%; height: 100%;}
+    .family_area dl span{display: block; position:absolute; top: 50%; left:0;
+          transform:translateY(-50%); width: 100%; height:auto; 
+          text-transform:uppercase;}
+      
+    .family_area > p {width: 100%; height: 20px; margin-top: 5px; text-align: right;}
+
+
+/* 
+  transform: 형태를 변형시키는 기능을 가지고있다.
+            X, Y, Z축 모두 변형이 가능 
+            translate() | rotate(?deg) | skew(?deg) | scale()
+  transform-origin: 형태를 변형시킬때의 축을 설정하는 것
+  perspective: transform사용된 부모요소에서 설정하는 것으로 원근법을 적용 체크
+*/
