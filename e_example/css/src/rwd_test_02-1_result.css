@@ -12,18 +12,19 @@
 **/
 /* ==========================================================  */
 /* 공통 */
-#wrap{width: 100%; min-width:480px; height:auto; background-color: #acc;}
-  #headBox{position:fixed; top:0; left:0; z-index:1000; width: 100%; height:60px; background-color: #777;}
-  #contentBox{width: 100%; height:auto; padding-top:60px; background-color: #85a;}
+#wrap{width: 100%; min-width:480px; height:auto;}
+  #headBox{position:fixed; top:0; left:0; z-index:1000; width: 100%; height:60px; 
+    padding:10px 20px; box-sizing:border-box; background-color: #777;}
+  .area_wrap{width: 100%; height: 100%; margin:auto; background-color: #acc;}
+
+  #contentBox{width: 100%; height:auto; padding-top:60px;}
     .view_area{width:100%; height:720px; background-color:#acf;}
-    .tip_area{width:100%; height:720px; background-color:#a6f;}
-    .info_area{width:100%; height:720px; background-color:#fcf;}
+    .tip_area{width:100%; height:720px; margin:auto; background-color:#a6f;}
+    .info_area{width:100%; height:720px; margin:auto; background-color:#fcf;}
 
-  #footBox {width: 100%; height: 60px; background-color: #333;}
+  #footBox {width: 100%; height: 60px; box-sizing:border-box; background-color: #333;}
 
 
-/* - design 기준: 480px */
-@media screen and (max-width:479px) {}
 
 /* - design 기준: 480px */
 @media screen and (min-width:480px)  and (max-width:767px) {}
@@ -33,12 +34,19 @@
     .view_area{height:450px;}
     .tip_area{height:210px;}
     .info_area{height:540px;}
+
     #footBox {height: 120px;}
 }
 
 /* - design 기준: 960px  */
 @media screen and (min-width:960px) {
-    #footBox {height: 120px;}
+    .area_wrap{width:80%; min-width:960px;}
+
+    .view_area{height:450px; height:46.875vw; max-height:800px;}
+    .tip_area{width:80%; min-width:960px; max-width:2000px; height:210px; height:21.875vw; max-height:420px;}
+    .info_area{width:80%; min-width:960px; max-width:2000px; height:540px;}
+
+    #footBox {height: 120px; padding-top:16px;}
 }
 
  
