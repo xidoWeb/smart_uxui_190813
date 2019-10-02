@@ -1,0 +1,19 @@
+/* rwd_test_02_tablet_768.css */
+
+/* - 디자인 기준 : 768px */
+@media screen and (min-width:768px)  and (max-width:959px) {
+/* #headBox ======================================== */
+
+    h1{width:174px;}
+/* #contentBox ==================================================== */
+    .view_area{height:450px;}
+    .tip_area{height:210px;}
+    .info_area:after,
+    .info_area::after{content:" "; display: block; width: 0; height: 0; clear:both;}
+    .info_area>div{float:left; width:50%; height:540px;}
+    .info_02{display:block;}
+
+  /* #footBox ============================================ */
+    #footBox {height: 120px;}
+
+}/* @media screen and 768px ~ 959px */
