@@ -107,4 +107,89 @@ console.log(now_year_month_date);
 
 
 
+/*
+var now = 1207;
+now += 1;
+now += 1;
+console.log(now);
 
+now++;
+now++;
+now++;
+now++;
+console.log(now);
+
+now--;
+now--;
+now--;
+now--;
+console.log(now);
+
+++now;
+++now;
+++now;
+++now;
+console.log(now);
+
+--now;
+--now;
+--now;
+--now;
+--now;
+console.log(now);
+*/
+/*
+ * 증감연산자
+   1씩 더하거나, 빼는 기능
+ * 1씩 더하거나, 뺄때 (++,--)는 앞(전치연산) 또는 뒤(후치연사)에 붙일 수 있다.
+
+ * 전치는 먼저 연산후 결과를 도출
+ * 후치는 먼저 결과를 도출후 연산
+
+*/
+/* 
+var myi = 100;
+console.log(myi);
+console.log(++myi);
+console.log(++myi);
+console.log(--myi);
+console.log(--myi);
+console.log("결과:", myi);
+console.log(myi++);
+console.log(myi++);
+console.log(myi++);
+console.log(myi++);
+console.log("결과2:", myi);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log("결과3:", myi);
+console.log(++myi);
+console.log(myi++);
+console.log(myi--);
+console.log(myi++);
+console.log("결과4:", myi);
+
+ */
+
+
+ var ls = 07;
+ var tx = "번방의 선물";
+
+var myMv = ls + tx;
+
+ls = 10.0002;
+tx = "번가 5번지";
+myMv = ls + tx;
+
+(ls < 10) ? (myMv = "0" + ls + tx) : (myMv = ls + tx);
+
+console.log(myMv);
+
+
+var myN = parseInt(myMv);
+console.log(myN);
