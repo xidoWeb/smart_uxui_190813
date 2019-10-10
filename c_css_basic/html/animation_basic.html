@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- transform_basic.html -->
+<!-- animation_basic.html -->
 <html lang="ko-KR">
 <head>
   <noscript>
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../font/web_gyeonggi/stylesheet.css">
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
-  <link rel="stylesheet" href="../css/src/transform_basic.css">
+  <link rel="stylesheet" href="../css/src/animation_basic.css">
 
   <!--[if IE]>
     <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
@@ -30,67 +30,33 @@
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <title>웹기초이해하기2</title>
+  <title>웹 기초이해하기2</title>
 </head>
 <body>
   <!-- layout ======================= -->
   <div id="wrap">
     <header id="headBox">
-      <h1><a href="../index.html">웹기초 이해하기2</a></h1>
+      <h1><a href="../index.html">웹 기초이해하기2</a></h1>
     </header>
     <main id="contentBox">
-      <h2>transform</h2>
-      <p>translate, scale, rotate, skew, transform-origin, perspective</p>
-      <div class="box translate">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
+      <h2>animation</h2>
+      <p>animation은 크게 2개의 영역으로 분류되어 있다.</p>
+      <ul>
+        <li>animation의 기능을 어떻게 처리할 것인가?: 이름, 시간, 반복여부, 지연시간, 방향...</li>
+        <li>각 시간별 변경되는 내용: 각 구간별 흐름 0% 일때 <br />
+          (처리되는내용, 50%일때 처리되는내용...)</li>
+      </ul>
+      <hr />
+
+      <div class="ani_one">
+        <div class="test">굴러가는 공을 만들기</div>
       </div>
-      <div class="box scale">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
-      </div>
-      <div class="box rotate">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
-      </div>
-      <div class="box skew">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li><span>text in skew</span></li>
-        </ul>
-      </div>
-      <div class="box origin">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
-      </div>
-      <div class="box perspective">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
-      </div>
+
+        <div class="myani">ani</div>
     </main>
+
   </div>
+
   <!-- script ======================= -->
   <script></script>
 </body>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <style>
+        li{ width:50px; height:50px; background:#777; color:#fff; 
+            margin:10px; -webkit-border-radius:15px; float:left; 
+            display:block; list-style:none; text-align:center; 
+            font:15px bold "myriad pro"; line-height:50px;}
+       
+        li:nth-child(1){-webkit-transition:all .3s linear;}
+        li:nth-child(1):hover{-webkit-transform:rotate(50deg);}
+        
+        li:nth-child(2){-webkit-transition:all .3s linear;}
+        li:nth-child(2):hover{-webkit-transform:translate(0,-40px);}
+        
+        li:nth-child(3){-webkit-transition:all .3s linear;}
+        li:nth-child(3):hover{-webkit-transform:scale(.5);}
+        
+        li:nth-child(4){-webkit-transition:all .3s linear;}
+        li:nth-child(4):hover{-webkit-transform:scale(1.5);}
+        
+        li:nth-child(5){-webkit-transition:all .3s linear;}
+        li:nth-child(5):hover{
+            -webkit-box-shadow:5px 5px 5px rgba(0,0,0,.5);}
+       
+        li:nth-child(6){-webkit-transition:all .3s linear;}
+        li:nth-child(6):hover{background:#00a;}
+        
+        li:nth-child(7){-webkit-transition:all .3s linear;}
+        li:nth-child(7):hover{-webkit-transform:perspective(100px) rotateX(45deg);}
+        
+        li:nth-child(8){-webkit-transition:all .3s linear;}
+        li:nth-child(8):hover{-webkit-transform:perspective(100px) rotateY(45deg);}
+        
+        li:nth-child(9){-webkit-transition:all .3s linear;}
+        li:nth-child(9):hover{-webkit-transform:rotate(360deg);}
+        li:nth-child(10){-webkit-transition:opacity 1s ease-in;
+                     opacity:1;}
+        li:nth-child(10):hover{opacity:0.3;}
+        li:nth-child(11){-webkit-transition:opacity .8s ease-in;
+                     opacity:0.4;}
+        li:nth-child(11):hover{opacity:1;}
+        li:nth-child(12){-webkit-transition:all 1s ease-in-out ;}
+        li:nth-child(12):hover{background:#00f;width:200px;}
+        li:nth-child(13){
+            -webkit-transition:-webkit-transform 1s ease-in-out;}
+        li:nth-child(13):hover{
+            -webkit-animation:spin 1s  alternate infinite linear;}
+         @-webkit-keyframes spin{
+                      0%{-webkit-transform:rotate(0deg);}
+                      100%{-webkit-transform:rotate(180deg);}
+                      }
+        li:nth-child(14){
+            -webkit-transition:-webkit-transform 5s ease-in-out; }
+        li:nth-child(14):hover{
+            -webkit-animation:colorize 3s alternate infinite linear;}
+        @-webkit-keyframes colorize{
+            0%{background:#333;} 
+            50%{background:#ff0;} 
+            100%{background:#00f;}
+        }
+        li:nth-child(15){
+            -webkit-transition:all 3s ease-in-out;}
+        li:nth-child(15):hover{
+           -webkit-animation:shape 1s alternate infinite ease-in-out;
+           }
+            
+            @-webkit-keyframes shape{
+                100%{-webkit-border-radius:50%;
+                background:#ff0;
+                -webkit-transform:rotate(180deg);
+                opacity:.3;}
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li> 01 </li>
+        <li> 02 </li>
+        <li> 03 </li>
+        <li> 04 </li>
+        <li> 05 </li>
+        <li> 06 </li>
+        <li> 07 </li>
+        <li> 08 </li>
+        <li> 09 </li>
+        <li> 10 </li>
+        <li> 11 </li>
+        <li> 12 </li>
+        <li> 13 </li>
+        <li> 14 </li>
+        <li> 15 </li>
+    </ul>
+</body>
+</html>
