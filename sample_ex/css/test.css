@@ -1,8 +1,0 @@
-/* test.css */
-body { width: 100%; height: 100%; }
-
-h1 { background-color: #fcc; }
-
-h2 { border: 1px solid #fcc; background-color: #111; }
-
-p { font-size: 1rem; background-image: -webkit-linear-gradient(45deg, #fa0, #acf); background-image: -o-linear-gradient(45deg, #fa0, #acf); background-image: linear-gradient(45deg, #fa0, #acf); }

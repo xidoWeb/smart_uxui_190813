@@ -1,0 +1,44 @@
+// basic_02.scss
+/* basic_02.css */  
+$base:"../../img/main/";
+$url1: $base + "icon/";
+$url2: $base + "model/";
+$url3:"../../img/main/nature/";
+$url4:"../../img/main/box/";
+
+$myUrl : ("icon", "model","nature1", "box");
+
+.icon_01{background-image: url($url1 + "login1.jpg");}
+.icon_02{background-image: url($base + "model/login2.jpg");}
+.icon_03{background-image: url($base + nth($myUrl,3) +"/login3.jpg");}
+
+/*
+%box{display:block; width:100%; height:100%;}
+
+ul{ @extend %box; }
+li{ @extend %box; }
+
+.box:after{content:" "; @extend %box;}
+.box::after{content:" "; @extend %box;}
+*/
+
+@mixin mybox($u, $r:no-repeat) {
+  display:block; width:100%; height:100%;
+  background-image: url( $u ); 
+  background-repeat: $r;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-attachment: fixed;
+}
+// @mixin을 불러올때에는 @include name();
+
+.my_01{float: left; @include mybox($base+"i.jpg", repeat-x); }
+#wrap {@include mybox($base+'j.jpg'); }
+#headBox {@include mybox($base+'k.png'); }
+
+
+@mixin unit($u){
+  width:$u + px; width:($u / 16) + rem;
+}
+.testUnit{ @include unit(960); }
+

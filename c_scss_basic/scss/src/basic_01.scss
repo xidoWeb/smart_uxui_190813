@@ -1,0 +1,47 @@
+/* 변수 */
+// scss 전용 주석 
+// --output-style 
+// nested, expanded, compact, compressed
+// $ node-sass --watch --output-style compact scss --output css
+
+
+
+$textColor : #171717;
+
+html,body{color:$textColor;}
+h1{color:$textColor;}
+
+// #headBox h1 a{color:$textColor;}
+// #headBox h1 a:hover{color:lighten($textColor, 30%);}
+// #headBox h1 a:active{color:darken($textColor, 30%);}
+
+#headBox h1 a{ color:$textColor;
+  &:hover{color:lighten($textColor, 30%);}
+  &:active{color:darken($textColor, 30%);} 
+  &:focus{color:$textColor;}
+}
+
+// .product_list ul li a span{}
+// .product_list{width: 100%;}
+// .product_list>ul{width: 90%;}
+// .product_list>ul>li{width: 100%;}
+// .product_list>ul>li>a{display: block; width: 100%;}
+// .product_list>ul>li>a>span{display: block; width: 0;}
+
+.product_list{width:100%;
+  & > ul {width:90%;
+    & > li{width: 100%;
+      &:nth-child(1){background-color: #fff;}
+      &:nth-child(1):after,
+      &:nth-child(1)::after{content:"1234";}
+
+      & > a{display:block; width:100%;
+        &:hover{color:rgba($textColor, 0.5);}
+        &:active{color:$textColor;}
+        &:focus{color:$textColor;}
+        & > span {display:block; width:0;}
+      }
+    } // .product_list > ul > li
+  } // .product_list >ul
+} // .product_list
+
