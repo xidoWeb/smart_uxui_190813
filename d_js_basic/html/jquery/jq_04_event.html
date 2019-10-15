@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- jq_04_event.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="웹페이지 실습 연습하기">
+  <meta name="keyword" content="html, css, js, web, design, 웹디자인, xido, 시도웹">
+  <meta name="author" content="xido 강사">
+  <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
+
+  <link rel="stylesheet" href="../../font/web_gyeonggi/stylesheet.css">
+  <link rel="stylesheet" href="../../css/base/reset.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <link rel="stylesheet" href="../../css/src/jq_04_event.css">
+
+  <!--[if IE]>
+    <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../../ie/PIE/PIE.js"></script>
+    <script src="../../ie/respond/dest/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../../favicon.png">
+
+  <title>javascript 기초이해하기</title>
+
+</head>
+<body>
+  <noscript>
+    <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br />
+      자바스크립트의 기능을 활성화 해주세요.</p>
+    <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
+  </noscript>
+
+  <!-- layout ======================= -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="../content.html">javascript 기초이해하기</a></h1>
+    </header>
+    <main id="contentBox">
+      <h2>이벤트 이해하기</h2>
+      <p>이벤트란? 웹서비스를 이용했을경우, 발생되는 다양한 상황 또는 다양한 처리들을 의미</p>
+      <ul>
+        <li>클릭</li>
+        <li>더블 클릭</li>
+        <li>다른 클릭</li>
+        <li>마우스 휠</li>
+        <li>마우스 이동
+          <div class="ball"></div>
+        </li>
+        <li>키보드키 누르기  
+          <input type="text" name="inText"placeholder="내용을 입력하세요." />
+        </li>
+        <li>브라우저 스크롤 이동</li>
+        <li>브라우저 크기가 변경</li>
+      </ul>
+      <p>링크기능 또는 버튼의 기능을가진 요소는, 기본 이벤트가 할당되어있다.</p>
+    </main>
+  </div>
+
+
+
+  <!-- script ======================= -->
+  <script src="../../js/base/jquery-3.4.1.min.js"></script>
+  <script src="../../js/base/jquery-ui.min.js"></script>
+  <script src="../../js/src/jquery/jq_04_event.js"></script>
+</body>
+</html>

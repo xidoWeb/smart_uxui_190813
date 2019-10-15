@@ -1,0 +1,17 @@
+/* jq_04_event */
+
+#wrap{width: 900px; height:auto; margin:auto; background-color: #ddd;}
+#headBox{width: 100%; height:auto}
+h1{padding: 1rem; background-color: #0af;}
+
+#contentBox{width: 100%; height:auto;}
+h2{padding: 0.3rem; border-bottom:1px solid #35f;}
+
+#contentBox p{width: 100%; height:auto; min-height:50px; margin-top:1rem; background-color: #acc;}
+#contentBox ul{width: 100%; height:auto; box-sizing: border-box; padding:0.5rem;}
+#contentBox ul>li{width: 100%; height: 100px; background-color: #fa0; box-sizing: border-box; padding:1rem; margin-bottom:1rem; border:1px solid #333;
+position: relative;}
+
+
+.ball{width: 20px; height: 20px; z-index: 100; background-color: #fff; border-radius:100%;
+      position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin:auto;}
