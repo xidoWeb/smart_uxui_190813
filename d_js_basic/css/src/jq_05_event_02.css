@@ -1,0 +1,20 @@
+/* jq_05_event_02.css */
+
+#wrap{width: 90%; min-width:800px;
+  height:auto; min-height:500px; margin:auto;
+  background-color: #ccc;}
+
+#headBox{padding: 1rem; background-color: #acf;}
+#contentBox{width: 100%; height:auto;
+  padding: 0.5rem; box-sizing:border-box; background-color: #fca;}
+#contentBox>h2{width: 100%; height:40px; 
+  padding: 0.5em; box-sizing:border-box; text-align: center; font-size:1.5rem;}
+#contentBox>p{width: 100%; height: 50px;
+  border-bottom: 1px solid #171717;}
+
+.menu{width: 90%; height:1500px;  border:1px solid #0af;}
+.menu>ul{width: 100%; height: 100%;}
+.menu>ul>li{float: left; padding: 1rem; margin-right: 0.5rem;
+  background-color: #fff;}
+.top_link{width: 100px; height: 70px;}
+.top_link>button{width: 100%; height: 100%; background-color: #067; font-size: 1.2rem;} 
