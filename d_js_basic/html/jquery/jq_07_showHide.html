@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- jq_05_event_02.html -->
+<!-- jq_07_showHide.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../font/web_gyeonggi/stylesheet.css">
   <link rel="stylesheet" href="../../css/base/reset.css">
   <link rel="stylesheet" href="../../css/base/common.css">
-  <link rel="stylesheet" href="../../css/src/jq_05_event_02.css">
+  <link rel="stylesheet" href="../../css/src/jq_07_showHide.css">
 
   <!--[if IE]>
     <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
@@ -38,24 +38,47 @@
       <h1><a href="../content.html">javascript 기초이해하기</a></h1>
     </header>
     <main id="contentBox">
-      <h2>jquery 기초이해하기</h2>
-      <p>focus, hover, scroll, resize, load</p>
+      <h2>jQuery 기초 개념이해하기</h2>
+      <p>내용 보이기 및 사라지기</p>
+      <p>CSS: display:block; display:none;</p>
+      <ul>
+        <li>show, hide</li>
+        <li>fadeIn, fadeOut</li>
+        <li>slideDown, slideUp</li>
+        <li>css기능을 통해 처리: addClass, removeClass</li>
+      </ul>
 
-      <div class="menu">
-        <ul>
-          <li><a href="#">link_0</a></li>
-          <li><a href="#">link_1</a></li>
-          <li><a href="#">link_2</a></li>
+      <div class="exam">
+        <div class="view">
+          <div class="view_area"></div>
+        </div>
+<!-- ================================================ -->
+        <ul class="showHide">
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
         </ul>
-      </div>
-      <div class="top_link">
-        <button type="button">상단으로 이동</button>
+        <ul class="fade">
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+        </ul>
+        <ul class="slide">
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+        </ul>
+        <ul class="class_control">
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+        </ul>
       </div>
     </main>
   </div>
   <!-- script ======================= -->
   <script src="../../js/base/jquery-3.4.1.min.js"></script>
-  <!-- <script src="../../js/base/jquery-ui.min.js"></script> -->
-  <script src="../../js/src/jquery/jq_05_event_02.js"></script>
+  <script src="../../js/base/jquery-ui.min.js"></script>
+  <script src="../../js/src/jquery/jq_07_showHide.js"></script>
 </body>
 </html>

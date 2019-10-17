@@ -1,0 +1,11 @@
+/* jq_07_showHide.css */
+
+.exam{width: 90%; min-width:900px; height:auto; min-height:500px; border:1px solid #333;}
+.view{width: 100%; height:300px; background-color: #acc;}
+.view_area{width: 100%; height: 100%; background-color: #07f;}
+.view_area.act{display:none;}
+
+.exam ul{width: 100%; height: 60px; margin-bottom:10px;}
+.exam li{float:left; width:150px; height:60px; background-color: #aca; 
+        transition:all 300ms ease; margin-right:10px;}
+.exam li:hover{background-color: #fff; font-size:1.3rem;}
