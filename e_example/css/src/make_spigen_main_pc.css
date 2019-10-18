@@ -23,8 +23,8 @@
  /* #gnb ++++++++++++++++++++++++ */
  #gnb{position:absolute; top:0; left:0; right:0; margin:auto; 
       width:760px; height:100px; background-color: #adf;}
-  #gnb>h2{width: 0; height: 0; overflow: hidden;}    
-  #gnb>ul{position:relative; width: 100%; height:auto; 
+  .web_navigation>h2{width: 0; height: 0; overflow: hidden;}    
+  .web_navigation>ul{position:relative; width: 100%; height:auto; 
       padding-bottom:20px; background-color: #fff;}
   
    #gnb>ul:before,
@@ -32,14 +32,14 @@
     position: absolute; z-index:-1; top: 0; left:50%; margin-left:-50vw;
     width: 100vw; height: 100%; background-color: inherit;}
 
-  #gnb>ul:after,
-  #gnb>ul::after{content:" "; display: block; width: 0; height: 0; clear:both;}
+  .web_navigation>ul:after,
+  .web_navigation>ul::after{content:" "; display: block; width: 0; height: 0; clear:both;}
 
-  #gnb>ul>li{float: left; width:25%; height:auto; padding:0 5px; 
+  .web_navigation>ul>li{float: left; width:25%; height:auto; padding:0 5px; 
             box-sizing:border-box; text-align: center;}
-  #gnb dl{width: 100%; height:auto;}
-  #gnb dt{width: 100%; height:100px;}
-  #gnb dt>a{display:block; position:relative; z-index:100; 
+  .web_navigation dl{width: 100%; height:auto;}
+  .web_navigation dt{width: 100%; height:100px;}
+  .web_navigation dt>a{display:block; position:relative; z-index:100; 
             width:100%; height: 100%;
             box-sizing: border-box; padding-top:30px; 
             color:#171717; font-size:1.2rem; text-transform:capitalize;}
@@ -53,8 +53,8 @@
   #gnb dt>a:hover:after,
   #gnb dt>a:focus:after {width:100%;}
 
-  #gnb dd{width: 100%; height:auto; padding-top:1rem;}
-  #gnb dd>a{display:block; width: 100%; height:auto; padding:5px 0; 
+  .web_navigation dd{width: 100%; height:auto; padding-top:1rem;}
+  .web_navigation dd>a{display:block; width: 100%; height:auto; padding:5px 0; 
            margin-bottom:5px; color:#333; text-transform:capitalize;}
 
  .gnb_btn{position:relative; z-index:200; float:right; width: 44px; height: 44px; background-color: #ccc;}
@@ -63,6 +63,13 @@
     position:fixed; top: 0; left: 0; z-index:2000;
     padding-top:200px; box-sizing:border-box;
     background-color: rgb(255, 94, 0,0.9);}
+    .close_gnb_btn{width:60px; height:60px; margin:auto; margin-bottom:10px;
+                  background-color: #fff;}
+    .side_gnb_area{width:760px; height:auto; min-height:400px; margin:auto;}
+    .side_gnb_area ul{background-color:transparent;}
+    .side_gnb_area dl a{font-size:1.3rem; color:#fff;}
+    .side_gnb_area dt>a{font-size:2rem; font-weight:bold;}
+
 
 /*  #viewBox ========================================*/
 #viewBox{width: 100%; height: 100%; padding-top:100px; 
