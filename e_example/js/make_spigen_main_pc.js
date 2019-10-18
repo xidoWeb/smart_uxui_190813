@@ -37,30 +37,23 @@
 // #gnb에 마우스 올렸을 경우 dd를 나오게 만들기
 
 const addAction = function () {
-  $(this).find(gnbTitleLink).addClass('action');
+  let li = $(this).parents('li');
+  li.find(gnbTitleLink).addClass('action');
+  li.siblings().find(gnbTitleLink).removeClass('action');
   gnbDd.stop().slideDown();
 }
-
 const removeAction = function () {
-  $(this).find(gnbTitleLink).removeClass('action');
+  $(this).parents('li').find(gnbTitleLink).removeClass('action');
   gnbDd.stop().slideUp();
 }
-
   gnbDl.on('mouseenter', addAction);
   gnbDl.on('mouseleave', removeAction);
-  
 
 // #gnb에 dt에 focus 처리되면 dd가 나타나게 만들기
 // a, button, form(input, textarea, select)
-
-
-  gnbTitleLink.on('focus', function(){
-    gnbDd.stop().slideDown();
-  });
-
-  gnbListLink.eq(-1).on('blur', function(){
-    gnbDd.stop().slideUp();
-  });
+  gnbTitleLink.on('focus', addAction);
+  gnbListLink.on('blur', addAction);
+  gnbListLink.eq(-1).on('blur', removeAction);
 
 
 
