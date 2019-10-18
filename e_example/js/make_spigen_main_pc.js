@@ -36,17 +36,19 @@
 
 // #gnb에 마우스 올렸을 경우 dd를 나오게 만들기
 
-
-
-gnbTitleLink.on('mouseenter', function(){
-  $(this).addClass('action');
+const addAction = function () {
+  $(this).find(gnbTitleLink).addClass('action');
   gnbDd.stop().slideDown();
-});
+}
 
-gnb.on('mouseleave', function(){
-  gnbTitleLink.removeClass('action');
+const removeAction = function () {
+  $(this).find(gnbTitleLink).removeClass('action');
   gnbDd.stop().slideUp();
-});
+}
+
+  gnbDl.on('mouseenter', addAction);
+  gnbDl.on('mouseleave', removeAction);
+  
 
 // #gnb에 dt에 focus 처리되면 dd가 나타나게 만들기
 // a, button, form(input, textarea, select)
