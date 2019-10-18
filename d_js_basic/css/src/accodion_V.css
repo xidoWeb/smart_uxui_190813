@@ -6,7 +6,7 @@
 #gnb>h2{width: 0; height: 0; overflow: hidden;}
 #gnb>ul{width: 100%; height:40px; background-color: #ccf;}
 #gnb>ul:after{content:" "; display: block; clear:both;}
-#gnb>ul>li{float:left; width:10%; height:auto; margin-right:1%; background-color:#9cf;}
+#gnb>ul>li{float:left; width:11.5%; height:auto; margin-right:1%; background-color:#9cf;}
 
 
 #gnb>ul ul{display:none; width: 100%; height:auto; }
