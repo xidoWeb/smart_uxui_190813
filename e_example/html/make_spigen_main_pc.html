@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- make_spigen_main_pc.html -->
+<html lang="ko-KR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="웹페이지 실습 연습하기">
+  <meta name="keyword" content="html, css, js, web, design, 웹디자인, xido, 시도웹">
+  <meta name="author" content="xido 강사">
+  <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
+
+  <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../font/web_gyeonggi/stylesheet.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/make_spigen_main_pc.css">
+
+  <!--[if IE]>
+    <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../../ie/PIE/PIE.js"></script>
+    <script src="../../ie/respond/dest/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../../favicon.png">
+
+  <title>문서 제목</title>
+</head>
+<body>
+  <noscript>
+    <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br />
+    자바스크립트의 기능을 활성화 해주세요.</p>
+    <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
+  </noscript>
+  <!-- layout ======================= -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1 class="hidden_wrap"><a href="#"><span>슈피겐 코리아</span></a></h1>
+
+      <nav id="gnb">
+        <h2>spigen global navigation</h2>
+        <!-- ul>li*4>dl>(dt>a[href="#"]{link})+dd>a[href="#"]{sub_link}*3 -->
+        <!-- ul>li*4>dl>(dt>a[href="#"]{link})+dd>ul>li*3>a[href="#"]{sub_link}-->
+        <ul>
+          <li>
+            <dl>
+              <dt><a href="#">link</a></dt>
+              <dd>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt><a href="#">link</a></dt>
+              <dd>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt><a href="#">link</a></dt>
+              <dd>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt><a href="#">link</a></dt>
+              <dd>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+                <a href="#">sub_link</a>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="gnb_btn">
+        <button type="button"><span class="hidden">전체 메뉴 확인버튼</span></button>
+        <div class="side_gnb">
+          <div class="close_gnb_btn">
+            <button type="button"></button>
+          </div>
+          <div class="side_gnb_area"></div>
+        </div>
+      </div>
+    </header>
+    <section id="viewBox"></section>
+    <article id="conBox">
+      <h2 class="hidden">본문내용</h2>
+      <div class="media_blog"></div>
+      <div class="about_company"></div>
+    </article>
+    <footer id="footBox"></footer>
+  </div>
+
+  <!-- script ======================= -->
+  <script src="../js/base/jquery-3.4.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/make_spigen_main_pc.js"></script>
+</body>
+</html>
