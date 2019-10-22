@@ -24,8 +24,7 @@
  #gnb{position:absolute; top:0; left:0; right:0; margin:auto; 
       width:760px; height:100px; background-color: #adf;}
   .web_navigation>h2{width: 0; height: 0; overflow: hidden;}    
-  .web_navigation>ul{position:relative; width: 100%; height:auto; 
-      padding-bottom:20px; background-color: #fff;}
+  .web_navigation>ul{position:relative; width: 100%; height:auto; background-color: #fff;}
   
    #gnb>ul:before,
    #gnb>ul::before{content:" "; display: block; 
@@ -38,11 +37,26 @@
   .web_navigation>ul>li{float: left; width:25%; height:auto; padding:0 5px; 
             box-sizing:border-box; text-align: center;}
   .web_navigation dl{width: 100%; height:auto;}
-  .web_navigation dt{width: 100%; height:100px;}
+  .web_navigation dt{position:relative; width: 100%; height:100px;}
+
+  .web_navigation dt:before,
+  .web_navigation dt::before{content:" "; display:block;
+                             position:absolute; right:-6px; top:0; bottom:10px; margin:auto;
+                             width:0; height:20px; border-right:2px solid #aaa;}
+
+  .web_navigation>ul>li:last-child dt:before,
+  .web_navigation>ul>li:last-child dt::before{display: none;}
+
   .web_navigation dt>a{display:block; position:relative; z-index:100; 
             width:100%; height: 100%;
             box-sizing: border-box; padding-top:30px; 
-            color:#171717; font-size:1.2rem; text-transform:capitalize;}
+            color:#171717; font-size:1.2rem; text-transform:capitalize;
+            outline:0; }
+
+/* marin(외부여백), padding(안쪽여백), 
+border(외곽선-부피를 가지는, 부분을사용가능), 
+outline(외곽선-부피를 가지지않음-안개같은형상, 부분을 사용할 수 없는 형태) */
+
 
   #gnb dt>a:after,
   #gnb dt>a::after{content:" "; display: block; 
@@ -57,10 +71,16 @@
   #gnb dt>a.action::after {width:100%;}
 
   #gnb dd{display: none;}
-  .web_navigation dd{width: 100%; height:auto; padding-top:1rem;}
+  .web_navigation dd{width: 100%; height:auto; padding-top:1rem; padding-bottom:20px; }
   
   .web_navigation dd>a{display:block; width: 100%; height:auto; padding:5px 0; 
-           margin-bottom:5px; color:#333; text-transform:capitalize;}
+           margin-bottom:5px; color:#333; text-transform:capitalize;
+          transition:all 300ms ease; text-decoration-color: rgba(255, 119, 0, 0);}
+
+  .web_navigation dd>a:hover,
+  .web_navigation dd>a:focus{outline: 0; text-decoration:underline; color:#f70;
+                            text-decoration-color: rgba(255, 119, 0, 1); font-weight: bold;}
+
 
   .gnb_btn{position:relative; z-index:200; float:right; width:44px; height:44px;}
   .gnb_btn>button{width: 100%; height:100%; background-color: transparent;
