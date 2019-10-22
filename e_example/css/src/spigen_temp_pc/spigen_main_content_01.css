@@ -13,7 +13,31 @@
 .title_area>p{font-size:1.125rem; color:#777; word-break: keep-all;}
 
 .content_area{float: left; width:calc(100% - 550px); height:100%; 
-  padding:40px; box-sizing: border-box;
+  padding:40px; padding-bottom:7px; padding-right:10px; box-sizing: border-box;
   background-color: #acf;}
 
+.content_area>dl{position:relative; width: 100%; height: 100%; 
+               background-color: #fff;}
+
+.content_area>dl>dt{float: left; width: 100px; height: 40px; }
+.content_area>dl>dt:first-child{margin-right: 5px;}
+
+.content_area>dl>dt>button{width: 100%; height: 100%; box-sizing: border-box;
+                           border:2px solid #454545; color:#454545;
+                           background-color:transparent;
+                           transition:all 300ms ease;}
+
+.content_area>dl>dt>button.action{border-color:#f70; 
+                                 background-color: #f70; color:#fff;}
+
+.content_area>dl>dd{display:none; position: absolute; left:0; bottom:0; 
+                width: 100%; height:calc(100% - 50px); min-height:200px;
+                background-color: #f8a;}
+.content_area>dl>dd:nth-of-type(2){background-color: #8a5;}
+
+/* .content_area>dl>dd.action{display: block;} */
+.content_area>dl>dd:first-of-type{display: block;}
+
 .about_company{width: 100%; height: 50%; background-color: #aff;}
+
+
