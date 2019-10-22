@@ -77,25 +77,16 @@ const removeAction = function () {
   gnbListLink.on('blur', addAction);
   gnbListLink.eq(-1).on('blur', removeAction);
 
-// .side_gnb_area 내부의 마지막 a요소에서 blur처리되면, .close_gnb_btn위치로 다시 focus 처리되어라
+// .side_gnb_area 내부의 마지막 a요소에서 blur처리되면, 
+// .close_gnb_btn위치로 다시 focus 처리되어라
+// 단, 전체 페이지에서 추가로 focus 처리되는 항목이 있어야 가능
+
 const sideLink = sideGnbArea.find('a');
 const sideLastLink = sideLink.eq(-1);
-sideLastLink.css({'fontSize':'2rem'});
 
-// ***** 문제있음 focus 처리안됨 =============================================
-  // $('h1').find('a').on('focus');  //  focus가 잡히면
-  // $('h1').find('a').focus();  // focus를 잡아라!
-/* 
-  sideLastLink.on('focus',function(){
-    closeGnbBtn.attr({ 'tabindex': 1 });
-    $(this).attr({tabindex:0});
-  });
-
-  sideLastLink.on('blur', function(){
-    console.log('blur 처리되었습니다.');
+  sideLastLink.on('blur', function () {
     closeGnbBtn.focus();
-  }); */
-// ***** 문제있음 ==============================================================
+  }); 
 
 
 // .side_gnb_area 에서 키보드  esc 키를 누르면, 빠져 나가고, 이전의 위치로 돌아가라
