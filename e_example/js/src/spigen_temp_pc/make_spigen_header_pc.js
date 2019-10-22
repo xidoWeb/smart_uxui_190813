@@ -26,11 +26,28 @@
 
   openGnbBtn.on('click', function(e){
     e.preventDefault();
-    sideGnb.fadeIn(time/2);
+    sideGnb.stop().fadeIn(time/2, function(){
+      closeGnbBtn.focus();
+      $(this).on('keyup', function(e){
+        // esc => 27
+        console.log(e.key.toLowerCase() );
+
+        // 영문글자를 강제로 대/소문자로 치환하는 함수
+        // 대문자로 변환  toUpperCase()
+        // 소문자로 변환  toLowerCase()
+
+        if( e.keyCode  ==  27 ){ 
+          sideGnb.fadeOut(time); 
+          openGnbBtn.focus();
+        }
+      });
+    });   
   });
+
   closeGnbBtn.on('click', function (e) {
     e.preventDefault();
     sideGnb.fadeOut(time);
+    openGnbBtn.focus();
   });
 
 
@@ -41,13 +58,18 @@ const addAction = function () {
   li.find(gnbTitleLink).addClass('action');
   li.siblings().find(gnbTitleLink).removeClass('action');
   gnbDd.stop().slideDown();
-}
+};
+
 const removeAction = function () {
   $(this).parents('li').find(gnbTitleLink).removeClass('action');
   gnbDd.stop().slideUp();
-}
+};
+
+/*
   gnbDl.on('mouseenter', addAction);
   gnbDl.on('mouseleave', removeAction);
+*/
+  gnbDl.on({ 'mouseenter': addAction, 'mouseleave': removeAction});
 
 // #gnb에 dt에 focus 처리되면 dd가 나타나게 만들기
 // a, button, form(input, textarea, select)
@@ -55,6 +77,28 @@ const removeAction = function () {
   gnbListLink.on('blur', addAction);
   gnbListLink.eq(-1).on('blur', removeAction);
 
+// .side_gnb_area 내부의 마지막 a요소에서 blur처리되면, .close_gnb_btn위치로 다시 focus 처리되어라
+const sideLink = sideGnbArea.find('a');
+const sideLastLink = sideLink.eq(-1);
+sideLastLink.css({'fontSize':'2rem'});
 
+// ***** 문제있음 focus 처리안됨 =============================================
+  // $('h1').find('a').on('focus');  //  focus가 잡히면
+  // $('h1').find('a').focus();  // focus를 잡아라!
+/* 
+  sideLastLink.on('focus',function(){
+    closeGnbBtn.attr({ 'tabindex': 1 });
+    $(this).attr({tabindex:0});
+  });
+
+  sideLastLink.on('blur', function(){
+    console.log('blur 처리되었습니다.');
+    closeGnbBtn.focus();
+  }); */
+// ***** 문제있음 ==============================================================
+
+
+// .side_gnb_area 에서 키보드  esc 키를 누르면, 빠져 나가고, 이전의 위치로 돌아가라
+// -> .side_gnb_area가 보이는 곳에서 수행
 
 })(jQuery);

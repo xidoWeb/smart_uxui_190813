@@ -1,0 +1,7 @@
+/* spigen_maini_content_01.css */
+
+/*  #conBox ========================================*/
+#conBox{width: 100%; height: 100%; padding-top:100px; 
+        box-sizing:border-box; background-color: #ddd;}
+.media_blog{width: 100%; height: 50%; background-color: inherit;}
+.about_company{width: 100%; height: 50%; background-color: #aff;}
