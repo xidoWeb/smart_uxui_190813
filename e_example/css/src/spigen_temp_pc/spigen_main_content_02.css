@@ -1,0 +1,66 @@
+/* spigen_main_content_02.css */
+
+#conBox2{position: relative; z-index:100;
+    width: 100%; height: 100%; padding-top:100px; box-sizing:border-box;
+    background-image: url("../../../img/spigen/con_i_02.jpg");
+    background-repeat: no-repeat; background-position:50% 50%; 
+    background-size: cover;}
+#conBox2:before{content:" "; display: block; 
+              position: absolute; top: 0; left: 0; z-index:-1;
+              width: 100%; height: 100%; 
+              background-color:rgba(255,71,0,0.8);/* filter: darkness(60%); */}
+
+#conBox2>h2{width: 100%; height:40px; 
+           padding:20px 0; text-transform:uppercase;
+           font-size:2.5rem; color:#fff; text-align: center; 
+           font-weight:900; }
+#conBox2>p{width: 100%; text-align: center; color:#fff; font-size: 1.2rem;
+           margin-bottom: 30px;}
+#conBox2>ul{width:95%; min-width:1300px; 
+           height:450px; /* 450 / 1920 * 100 */  height:23.4375vw; min-height:350px;
+           margin:auto; background-color: #acc; }
+
+#conBox2>ul>li{float: left; width:32%; height:100%; background-color: #fff;
+              margin-right:2%; overflow:hidden;}
+#conBox2>ul>li:last-child{margin-right:0;}
+#conBox2>ul>li>a{display: block; width: 100%; height: 100%; 
+  background-repeat: no-repeat; background-position:50% 50%; background-size: cover;}
+
+#conBox2>ul>li:nth-child(1)>a{background-image:url(../../../img/spigen/con_i_01.jpg);}
+#conBox2>ul>li:nth-child(2)>a{background-image:url(../../../img/spigen/con_i_02.jpg);}
+#conBox2>ul>li:nth-child(3)>a{background-image:url(../../../img/spigen/con_i_03.jpg);}
+
+#conBox2>ul>li>a>dl{width: 100%; height: 100%; background-color:rgba(0,0,0,0.7);
+                   padding:0 10%; box-sizing: border-box;
+                   transform:translateY(80%); transition:all 300ms ease;}
+
+#conBox2>ul>li>a>dl>dt{width: 100%; height: 50px; text-align: center;
+                      font-size: 1.4rem; color:#fff; text-transform: uppercase;
+                      font-weight: 900; padding-top:2vh;
+                      transition:all 300ms ease;}
+
+#conBox2>ul>li>a>dl>dd{width: 100%; height:auto; text-align: center;
+                       font-size:1.4rem; color:#fff; word-break:keep-all;
+                       opacity: 0; transition:all 300ms ease; }
+/*
+#conBox2>ul>li>a:focus dl,
+#conBox2>ul>li>a:hover dl{transform:translateY(0);}
+#conBox2>ul>li>a:focus dt,
+#conBox2>ul>li>a:hover dt{padding-top:15vh; color:#f30;}
+#conBox2>ul>li>a:focus dd,
+#conBox2>ul>li>a:hover dd{opacity:1;}
+*/
+#conBox2>ul>li>a.action dl{transform:translateY(0);}
+#conBox2>ul>li>a.action dt{padding-top:15vh; color:#f30;}
+#conBox2>ul>li>a.action dd{opacity:1;}
+
+/* .top_move_btn */
+.top_move_btn{display:none; position: fixed; right:50%; bottom:30px; 
+  z-index:1000; margin-right:-45rem;
+  width: 100px; height: 100px;}
+.top_move_btn>button{width: 100%; height: 100%; 
+                    font-size:4rem; color:#fff; 
+                    background-color: #f70;}
+.top_move_btn>button:focus,
+.top_move_btn>button:hover{background-color: #fff;
+                          color:#f30}
