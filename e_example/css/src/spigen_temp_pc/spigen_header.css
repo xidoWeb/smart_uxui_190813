@@ -43,8 +43,8 @@
                              position:absolute; right:-6px; top:0; bottom:10px; margin:auto;
                              width:0; height:20px; border-right:2px solid #aaa;}
 
-  .web_navigation>ul>li:last-child dt:before,
-  .web_navigation>ul>li:last-child dt::before{display: none;}
+  #gnb>ul>li:last-child dt:before,
+  #gnb>ul>li:last-child dt::before{display: none;}
 
   .web_navigation dt>a{display:block; position:relative; z-index:100; 
             width:100%; height: 100%;
@@ -63,8 +63,8 @@ outline(외곽선-부피를 가지지않음-안개같은형상, 부분을 사용
               width:0; height:0; border-bottom:4px solid #f70;
               transition:width 300ms ease;}
 
-  #gnb dt>a:hover:after,
-  #gnb dt>a:focus:after {width:100%;}
+  /* #gnb dt>a:hover:after,
+  #gnb dt>a:focus:after {width:100%;} */
 
   #gnb dt>a.action:after,
   #gnb dt>a.action::after {width:100%;}
