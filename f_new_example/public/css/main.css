@@ -1,4 +1,14 @@
+@charset "UTF-8";
 /* main.css */
+/* 
+@include horizontal_slide_banner('.my_banner',4){
+  $url:'../img/mybanner/';
+  $imgName:'mybanner_';
+  $count : 4;
+  @include  horizon_banner_img($count, $imgName, $url:$url, $file:'png');
+  // 기타 div 및 하위  내용을 삽입
+} 
+*/
 @import url("../_basic/var");
 @import url("../_basic/mixin");
 @import url("../_basic/etc");
@@ -50,6 +60,10 @@
 
 .slide_form .guide > div p { font-size: 1.2rem; color: #fff; font-weight: bold; margin-bottom: 1rem; }
 
-.slide_form .guide > div .link_btn { width: 260px; height: 40px; padding: 0.5rem; background-color: #f06; border-radius: 40px; line-height: 40px; text-align: center; }
+.slide_form .guide > div .link_btn { width: 260px; height: 50px; margin-left: 5rem; padding: 0.2rem; line-height: 50px; text-align: center; background-color: #f06; border-radius: 40px; }
 
-.slide_form .guide > div .link_btn > a { color: #fff; font-weight: 900; font-size: 1.3rem; }
+.slide_form .guide > div .link_btn > a { display: block; width: 100%; height: 100%; color: #fff; font-weight: 900; font-size: 1.3rem; background-color: #f06; border-radius: 40px; }
+
+.slide_form .guide > div .link_btn > a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.slide_form .guide > div .link_btn > a:hover, .slide_form .guide > div .link_btn > a:focus { background-color: #333; }

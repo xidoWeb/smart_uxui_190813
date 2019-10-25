@@ -47,3 +47,53 @@
 
 } // @mixin indicator_type_01
 // ===================================================================
+
+
+//* 가로형 슬라이드배너 스타일1 ========================================
+
+@mixin horizontal_slide_banner($bannerName,$c,$w:100%,$h:100%,$view:false){
+// $bannerName : (필수)광고 슬라이드 배너를 처리하고있는 영역의 이름(기본틀)
+// .guide : (필수)$bannerName 자식요소 가로슬라이드 내용을 담을 긴박스의 이름
+// .guide의 자식요소는 div로 설정되어 있음 (필수)
+// $c : (필수)가로형 슬라이드 배너의 갯수(기본)
+
+// $w : 기본틀의 가로값 
+// $h : 기본틀의 세로값
+// $view : true이면 기본틀에서 overflow: visible
+//         false면  기본틀에서 overflow: hidden
+  #{$bannerName} { $count:$c;  width:$w; height:$h; 
+    @if ($view == true){overflow: visible;}@else{overflow:hidden;}
+    .guide{width: 100% * $count; height: 100%; background-color:$sample;
+      &>div{float:left; width:(100% / $count); height: 100%; 
+           padding:4rem; box-sizing:border-box;
+           background-repeat: no-repeat; background-position: 50% 50%;
+           background-size: cover;     
+       @content; 
+      }// div(개별요소)
+      }
+    }
+}// @mixin horiazontal_slide_banner
+// =======================================================
+$url:'../img/slide_01/'; // @mixin 사용전 경로 설정할것
+@mixin horizon_banner_img($count, $imgName, $url:$url, $file:'jpg' ){
+  @for $i from 1 through $count {
+    &:nth-of-type(#{$i}){
+      $n : null;
+      @if ($i < 10) {  $n : '0'+$i; } 
+      @else {  $n : $i; } 
+      background-image:url($url + $imgName + $n + '.' + $file);
+    }
+ }// @for
+}// @mixin horizon_banner_img
+
+// ===================================================================
+
+/* 
+@include horizontal_slide_banner('.my_banner',4){
+  $url:'../img/mybanner/';
+  $imgName:'mybanner_';
+  $count : 4;
+  @include  horizon_banner_img($count, $imgName, $url:$url, $file:'png');
+  // 기타 div 및 하위  내용을 삽입
+} 
+*/

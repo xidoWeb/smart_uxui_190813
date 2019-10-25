@@ -54,10 +54,14 @@ $myImg : ('mySlideImage_01.jpg',
     }
     &>div h3{font-size: 4rem; color:$white; font-weight: bold;}
     &>div p{font-size:1.2rem; color:$white; font-weight: bold; margin-bottom:1rem;}
-    &>div .link_btn{width: 260px; height: 40px; 
-                   padding: 0.5rem; background-color: $primary;
-                   border-radius:40px; line-height: 40px; text-align: center;
-      &>a{color:$white; font-weight:900; font-size:1.3rem;}
+    &>div .link_btn{width: 260px; height: 50px; 
+                   margin-left:5rem; padding: 0.2rem; 
+                   line-height: 50px; text-align: center;
+                   background-color: $primary; border-radius:40px; 
+      &>a{@include link; color:$white; font-weight:900; font-size:1.3rem;            
+          background-color: $primary; border-radius:40px; }
+      &>a:hover, 
+      &>a:focus{background-color: $black;}
     }
   }
 }// .slide_form
