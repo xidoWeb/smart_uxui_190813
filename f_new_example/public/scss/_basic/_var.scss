@@ -1,0 +1,19 @@
+// var.scss
+
+// color
+$primary : #f06;
+$sub1 : #333;
+$black : $sub1;
+$white : #fff;
+$yellow: #fa0;
+$green : #7f7;
+$gray : #ccc;
+$sample : $yellow;
+
+// line
+$line : (1px, 3px, 10px, 30px); // ntn($line, 2);
+$border1 : nth($line,1) solid $black;
+
+
+// font
+

@@ -1,0 +1,49 @@
+// mixin.scss
+// framework ========================================================
+
+// 내부에 있는 text 숨기는 기능 처리하기
+@mixin hiddenText(){
+  display: block; width: 0; height: 0; 
+  position: absolute; z-index: -1; overflow: hidden;
+}
+
+// a요소 사이트 설정, 내부 span요소를 숨기게 만들기
+@mixin link($w:100%, $h:100%){
+  display:block; width:$w; height:$h;
+  @content;
+  &>span{ @include hiddenText; }
+}// @mixin link()
+
+
+// indicator_type_01
+@mixin indicator_type_01( $select, $myW){
+  // 하단에 존재하는 인디케이터형태로, 
+  // focus처리되면 해당버튼이 가로로 길게 늘어나는 형태
+  // OPTION: 1. 인디케이터 버튼하나의 크기 $myW 로 설정,
+  //         2. class선택자의 이름을 설정 $select  => 선택자지칭
+  // 기본구조는: $select > ul > li > a 순서로 되어있음.
+
+  //* interpolation(보간) : 형태그대로 대입시키도록 처리하는 것
+
+// indicator
+   #{$select} {  $w:$myW; $f:100%;  
+    position:absolute; left:50%; bottom:$w; transform:translateX(-50%);
+    width:auto; min-width:135px; height:$w; background-color: $white; 
+    padding:5px; border-radius:$w;
+  & > ul {width:$f; height:$f;
+    & > li {float:left; width:auto; height:$w; margin-left:5px;
+          &:first-child{margin-left:0;}
+          }
+    & a{@include link($w:$w, $h:$f);        
+        background-color:$gray; border-radius:$w;
+        transition:all 300ms ease;
+      
+      &:hover{background-color: lighten($primary, 30%);}
+      &.action, &:focus{background-color: $primary; width:($w * 3);}
+    & > span{ @include hiddenText; }
+      }
+    } 
+  } // .view_indicator
+
+} // @mixin indicator_type_01
+// ===================================================================

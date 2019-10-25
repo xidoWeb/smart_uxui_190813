@@ -1,0 +1,55 @@
+/* main.css */
+@import url("../_basic/var");
+@import url("../_basic/mixin");
+@import url("../_basic/etc");
+#wrap { width: 100%; height: 100%; background-color: #cfa; }
+
+.slide_temp { position: relative; width: 90%; height: 600px; min-width: 1200px; margin: auto; border: 1px solid #333; background-color: #fa0; }
+
+.view_btn { position: absolute; top: 50%; width: 100%; height: 0; }
+
+.view_btn > button { width: 100px; height: 100px; background-color: #333; float: left; transform: translateY(-50%); }
+
+.view_btn > button.next { float: right; }
+
+.view_btn > button:hover, .view_btn > button:focus { background-color: #f06; }
+
+.view_indicator { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); width: auto; min-width: 135px; height: 30px; background-color: #fff; padding: 5px; border-radius: 30px; }
+
+.view_indicator > ul { width: 100%; height: 100%; }
+
+.view_indicator > ul > li { float: left; width: auto; height: 30px; margin-left: 5px; }
+
+.view_indicator > ul > li:first-child { margin-left: 0; }
+
+.view_indicator > ul a { display: block; width: 30px; height: 100%; background-color: #ccc; border-radius: 30px; transition: all 300ms ease; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.view_indicator > ul a:hover { background-color: #ff99c2; }
+
+.view_indicator > ul a.action, .view_indicator > ul a:focus { background-color: #f06; width: 90px; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.slide_form { width: 100%; height: 100%; /* overflow: hidden; */ }
+
+.slide_form .guide { width: 400%; height: 100%; background-color: #fa0; }
+
+.slide_form .guide > div { float: left; width: 25%; height: 100%; padding: 4rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+
+.slide_form .guide > div:nth-of-type(1) { background-image: url("../img/slide_01/mySlideImage_01.jpg"); }
+
+.slide_form .guide > div:nth-of-type(2) { background-image: url("../img/slide_01/mySlideImage_02.jpg"); }
+
+.slide_form .guide > div:nth-of-type(3) { background-image: url("../img/slide_01/mySlideImage_03.jpg"); }
+
+.slide_form .guide > div:nth-of-type(4) { background-image: url("../img/slide_01/mySlideImage_04.jpg"); }
+
+.slide_form .guide > div h3 { font-size: 4rem; color: #fff; font-weight: bold; }
+
+.slide_form .guide > div p { font-size: 1.2rem; color: #fff; font-weight: bold; margin-bottom: 1rem; }
+
+.slide_form .guide > div .link_btn { width: 260px; height: 40px; padding: 0.5rem; background-color: #f06; border-radius: 40px; line-height: 40px; text-align: center; }
+
+.slide_form .guide > div .link_btn > a { color: #fff; font-weight: 900; font-size: 1.3rem; }

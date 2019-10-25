@@ -1,0 +1,64 @@
+// _slide_01.scss
+
+@import url("../_basic/var");
+@import url("../_basic/mixin");
+@import url("../_basic/etc");
+
+// url() 을입력하면 해당 파일을 별도의 파일로 첨부(link)하는 의미 
+// url() 없이 ""로 사용하면(scss파일), 해당파일을 하나의 파일로 합치는 현상
+
+.slide_temp{position:relative; width: 90%; height:600px; min-width:1200px;
+  margin:auto; border:$border1; background-color: $sample;
+}
+
+// .view_btn 좌우 버튼
+.view_btn{position: absolute; top:50%; width:100%; height:0;   
+  & > button{width:100px; height:100px; background-color: $black; float:left;
+            transform:translateY(-50%);
+   &.next{float:right;}
+   &:hover,
+   &:focus{background-color: $primary;}
+  }
+}
+
+// indicator
+@include indicator_type_01('.view_indicator', 30px);
+
+
+$url :'../img/slide_01/';
+$myImg : ('mySlideImage_01.jpg', 
+          'mySlideImage_02.jpg', 
+          'mySlideImage_03.jpg', 
+          'mySlideImage_04.jpg');
+
+// 가로형 슬라이드 배너 
+.slide_form{ $count:4;
+  width:100%; height:100%; /* overflow: hidden; */
+  .guide{width: 100% * $count; height: 100%; background-color:$sample;
+    &>div{float:left; width:(100% / $count); height: 100%; 
+         padding:4rem; box-sizing:border-box;
+         background-repeat: no-repeat; background-position: 50% 50%;
+         background-size: cover;
+
+     @for $i from 1 through $count {
+        &:nth-of-type(#{$i}){
+          $n : null;
+          // background-color:darken($white, $i * 10% );
+          // background-image:url($url + "mySlideImage_0" + $i + ".jpg");
+          // background-image:url($url + nth($myImg, $i));
+          @if ($i < 10) {  $n : '0'+$i; } 
+          @else {  $n : $i; } 
+          background-image:url($url + 'mySlideImage_#{$n}.jpg');
+        }
+     }// @for
+    }
+    &>div h3{font-size: 4rem; color:$white; font-weight: bold;}
+    &>div p{font-size:1.2rem; color:$white; font-weight: bold; margin-bottom:1rem;}
+    &>div .link_btn{width: 260px; height: 40px; 
+                   padding: 0.5rem; background-color: $primary;
+                   border-radius:40px; line-height: 40px; text-align: center;
+      &>a{color:$white; font-weight:900; font-size:1.3rem;}
+    }
+  }
+}// .slide_form
+// ==========================================================
