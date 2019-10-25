@@ -1,17 +1,6 @@
 @charset "UTF-8";
 /* main.css */
-/* 
-@include horizontal_slide_banner('.my_banner',4){
-  $url:'../img/mybanner/';
-  $imgName:'mybanner_';
-  $count : 4;
-  @include  horizon_banner_img($count, $imgName, $url:$url, $file:'png');
-  // 기타 div 및 하위  내용을 삽입
-} 
-*/
-@import url("../_basic/var");
-@import url("../_basic/mixin");
-@import url("../_basic/etc");
+
 #wrap { width: 100%; height: 100%; background-color: #cfa; }
 
 .slide_temp { position: relative; width: 90%; height: 600px; min-width: 1200px; margin: auto; border: 1px solid #333; background-color: #fa0; }
