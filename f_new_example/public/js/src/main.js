@@ -10,11 +10,15 @@
   // 광고 영역 생성 ======================================================
   wrap.append('<section id="viewBox"></section>'); // #viewBox생성
   const viewBox = $('#viewBox');
-
   viewBox.load('./temp/slide_01.html', () => {
-    JsLink('slide_01');
+    return JsLink('slide_01');
   });
 // ======================================================
-
+// 광고영역2 생성
+wrap.append('<section id="viewBox_02"></section>');
+const vB2 = $('#viewBox_02');
+vB2.load('./temp/slide_02.html', function(){
+  return JsLink('slide_02');
+});
 
 })(jQuery);

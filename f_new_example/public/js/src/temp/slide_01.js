@@ -13,11 +13,11 @@
   const slideForm = viewBox.find('.slide_form');
   const guideBox  = viewBox.find('.guide');
 
-  slideForm.css({'overflow':'hidden'});
-  indicator.css({'zIndex': 500});  
+  // slideForm.css({'overflow':'hidden'});
+  // indicator.css({'zIndex': 500});  
   guideBox.css({'position':'relative','top':0,'left':0});
 
-  indiLink.on('click focus', function(evt){
+  indiLink.on('focus', function(evt){
     evt.preventDefault();
     // let parLi = $(this).parent('li');
     let i = $(this).parent('li').index();
@@ -25,8 +25,7 @@
 
     indiLink.removeClass('action');
     $(this).addClass('action');
-    guideBox.stop().animate({'left':-100 * i + '%'});
-
+    guideBox.stop(true, false).animate({'marginLeft':-100 * i + '%'});
   });
 
 
