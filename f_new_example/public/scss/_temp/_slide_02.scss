@@ -53,7 +53,7 @@ $indiH :20px; //인디케이터 높이설정
     >button{display: none;}
     .play_btn{width: auto; height:$indiH;}
     .play_btn>button{float:left; width:$indiH; height:$indiH; 
-                     background-color:$blueGreen;
+                     background-color:$blueGreen; border-radius:100%;
         &>span{@include hidden;}
                     }
   }

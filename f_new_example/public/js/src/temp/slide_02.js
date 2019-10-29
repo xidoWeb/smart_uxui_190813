@@ -14,9 +14,20 @@
 
   let timed = 500,
       myn = 0, maxn = slideEach.length,
-      mybool = true,
-      go;
-
+      mybool = true, linkFocus = true,  go;
+// ---------------------------------------------------------------
+// action class이름 첨부기능수행
+const MoveSlide = function(n){
+  indiLiLink.removeClass('action');
+  indiLi.eq(n).children('a').addClass('action');
+  slideGuide.animate({'marginLeft':(-100 * n)+'%'}, function(){
+    slideEach.removeClass('action');  
+    setTimeout(function(){
+      slideEach.eq(n).addClass('action');
+    }, timed);
+  }); 
+};// MoveSlide()   //=========================================
+MoveSlide(0);
 // ------------------------------------------------------------
 // 일정시간마다 광고배너 움직이게하기
 
@@ -27,7 +38,9 @@ const GoSlide = function(){
     MoveSlide(myn);
   }, timed * 4);
 }; // GoSlide();---------------------------------------
+
 const StopSlide = function(){ clearInterval(go); };
+
 const PlayBanner = function(bool){
   if(bool){ 
     GoSlide(); 
@@ -52,34 +65,23 @@ const showBtn = function(bool){
     play.show();   
     console.log('stop');
   }
- PlayBanner(mybool);
 };// showBtn(true);
 showBtn(mybool);
+PlayBanner(mybool);
 
-// action class이름 첨부기능수행
-const MoveSlide = function(n){
-  indiLiLink.removeClass('action');
-  indiLi.eq(n).children('a').addClass('action');
-  slideGuide.animate({'marginLeft':(-100 * n)+'%'}, function(){
-    slideEach.removeClass('action');  
-    setTimeout(function(){
-      slideEach.eq(n).addClass('action');
-    }, timed);
-  }); 
-};// MoveSlide()   //=========================================
-MoveSlide(0);
-// -----------------------------------------------------------
+// ----------------------------------------------------------
 viewBox2.on('mouseenter',function(){ 
-  mybool = false;  showBtn(mybool); 
+  PlayBanner(false);
 });
 viewBox2.on('mouseleave',function(){ 
-  mybool = true;  showBtn(mybool); 
+  (linkFocus) ? PlayBanner(true) :PlayBanner(false);
+  console.log(linkFocus);
 });
-pause.on('click', function(){ 
-  mybool = false;  showBtn(mybool); 
+pause.on('click', function(){
+  showBtn(false); play.show().focus();
 });
 play.on('click', function(){  
-  mybool = true;  showBtn(mybool);
+  showBtn(true); pause.show().focus();
 });
 
 // -----------------------------------------------------------
@@ -88,10 +90,14 @@ indiLiLink.on('click focus', function(e){
   e.preventDefault();
   e.stopPropagation();
   myn = $(this).parent('li').index();
-  mybool = false;
-  PlayBanner(mybool);
+  linkFocus = false;
+  PlayBanner(false);
   MoveSlide(myn);
 });
+
+indiLiLink.off('focus', function(){
+  linkFocus = false;
+})
 // -----------------------------------------------------------
 
 })(jQuery);

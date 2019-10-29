@@ -103,7 +103,7 @@
 
 #viewBox_02 .view_btn .play_btn { width: auto; height: 20px; }
 
-#viewBox_02 .view_btn .play_btn > button { float: left; width: 20px; height: 20px; background-color: #0c9; }
+#viewBox_02 .view_btn .play_btn > button { float: left; width: 20px; height: 20px; background-color: #0c9; border-radius: 100%; }
 
 #viewBox_02 .view_btn .play_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
 
