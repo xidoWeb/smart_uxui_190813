@@ -49,5 +49,12 @@ $indiH :20px; //인디케이터 높이설정
       }// a
     }// li
   }// .indicator
-  .view_btn{display:none; float:right; width:auto; height:100%; }
+  .view_btn{float:right; position:static; width:auto; height:100%; 
+    >button{display: none;}
+    .play_btn{width: auto; height:$indiH;}
+    .play_btn>button{float:left; width:$indiH; height:$indiH; 
+                     background-color:$blueGreen;
+        &>span{@include hidden;}
+                    }
+  }
 }// #viewBox_02

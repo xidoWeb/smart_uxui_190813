@@ -4,45 +4,89 @@
   const indicator = viewBox2.find('.indicator');
   const indiLi = indicator.find('li');
   const indiLiLink = indiLi.children('a');
+  const viewBtn = viewBox2.find('.view_btn');
+  const pause  = viewBtn.find('.pause');
+  const play  = viewBtn.find('.play');
 
   const slideForm = viewBox2.find('.slide_02_form');
   const slideGuide = slideForm.children('.guide');
   const slideEach = slideGuide.children('.banner_area');
 
   let timed = 500;
+  let myn = 0, maxn = slideEach.length;
+  let mybool = true;
+// ------------------------------------------------------------
+// 일정시간마다 광고배너 움직이게하기
+let go;
+const GoSlide = function(){
+  go = setInterval(function(){
+    myn++;
+    if(myn >= maxn){ myn = 0; }
+    MoveSlide(myn);
+  }, timed * 4);
+}; // GoSlide();
+const StopSlide = function(){ clearInterval(go); };
+const PlayBanner = function(bool){
+  if(bool){ GoSlide(); }else{ StopSlide(); }
+};// PlayBanner()
 
-  // ------------------------------------------------------------
-  slideEach.eq(0).addClass('action');
-  indiLi.eq(0).children(indiLiLink).addClass('action');
+// ----------------------------------------------------------
+// 공통기능 수행 
 
-  indiLiLink.on('click', function(e){
-    e.preventDefault();
-    let myThis    = $(this);
-    let myThisPar = myThis.parent('li');
-    let i         = myThisPar.index();
+// 버튼부 수행
+const showBtn = function(bool){
+ // play, stop 버튼 동작유무 판단
+ if(bool){  
+    play.hide();  
+    pause.show(); 
+    PlayBanner(bool);
+  }else{  
+    pause.hide();  
+    play.show(); 
+    PlayBanner(bool);
+    console.log('stop')
+  }
+};// showBtn(true);
+showBtn(true);
 
-    indiLiLink.removeClass('action');
-    myThis.addClass('action');
-    slideGuide.animate({'marginLeft':(-100 * i)+'%'}, function(){
-      slideEach.removeClass('action');  
-      setTimeout(function(){
-        slideEach.eq(i).addClass('action');
-      }, timed);
-    });
+// action class이름 첨부기능수행
+const MoveSlide = function(n){
+  indiLiLink.removeClass('action');
+  indiLi.eq(n).children('a').addClass('action');
+  slideGuide.animate({'marginLeft':(-100 * n)+'%'}, function(){
+    slideEach.removeClass('action');  
+    setTimeout(function(){
+      slideEach.eq(n).addClass('action');
+    }, timed);
   });
+ 
+};// MoveSlide()   //=========================================
+MoveSlide(0);
+// -----------------------------------------------------------
+viewBox2.on('mouseenter',function(){ 
+  showBtn(false); 
+});
+viewBox2.on('mouseleave',function(){ 
+  showBtn(mybool); 
+});
+pause.on('click', function(){ 
+  mybool = false;
+  showBtn(false); 
+});
+play.on('click', function(){  
+  mybool = true;
+  showBtn(true);
+});
 
-  // 변수 i는 외부에서 공용으로 사용할 수 있도록, 전역변수로 처리
-  // 인디케이터, 광고배너이동후 처리하는 부분 등의 내용은 별도 함수처리
-  // setInterval(), clearInterval()
-/* 
-  let go;
-  const Goslide = function(){
-    go = setInterval(function(){//기능
-    }, timed*5);
-  };
-  const StopSlide = clearInterval(go);
-  viewBox2.on('mouseenter', StopSlide);
-  viewBox2.on('mouseleave', Goslide);
- */
+// -----------------------------------------------------------
+// 클릭시 배너 움직이게 만들기
+indiLiLink.on('click focus', function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  myn = $(this).parent('li').index();
+  MoveSlide(myn);
+  PlayBanner(false);
+});
+// -----------------------------------------------------------
 
 })(jQuery);
