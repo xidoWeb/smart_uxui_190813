@@ -39,13 +39,13 @@ const showBtn = function(bool){
  if(bool){  
     play.hide();  
     pause.show(); 
-    PlayBanner(bool);
+    console.log('play')
   }else{  
     pause.hide();  
-    play.show(); 
-    PlayBanner(bool);
+    play.show();   
     console.log('stop')
   }
+  PlayBanner(bool);
 };// showBtn(true);
 showBtn(true);
 
@@ -64,18 +64,19 @@ const MoveSlide = function(n){
 MoveSlide(0);
 // -----------------------------------------------------------
 viewBox2.on('mouseenter',function(){ 
-  showBtn(false); 
+  mybool = false;
+  showBtn(mybool); 
 });
 viewBox2.on('mouseleave',function(){ 
   showBtn(mybool); 
 });
 pause.on('click', function(){ 
   mybool = false;
-  showBtn(false); 
+  showBtn(mybool); 
 });
 play.on('click', function(){  
   mybool = true;
-  showBtn(true);
+  showBtn(mybool);
 });
 
 // -----------------------------------------------------------
@@ -84,7 +85,7 @@ indiLiLink.on('click focus', function(e){
   e.preventDefault();
   e.stopPropagation();
   myn = $(this).parent('li').index();
-  MoveSlide(myn);
+  // MoveSlide(myn);
   PlayBanner(false);
 });
 // -----------------------------------------------------------
