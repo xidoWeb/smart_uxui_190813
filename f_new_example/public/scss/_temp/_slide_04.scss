@@ -3,12 +3,19 @@
 
 #viewBox_04{width:500px; height:250px; margin:10rem auto;
           background-color:$sample;
-  > .slide_form{width: 100%; height:100%; overflow: visible;
+  > .slide_form{width: 100%; height:100%; overflow: hidden;
       position:relative; z-index: 0; 
     > ul{height: 100%; margin-left:-100%; 
       position: relative; z-index:0;
         >li{float:left; height: 100%; 
-          background-repeat: no-repeat; background-size:100%;}
-      }
-    }
-  }
+          background-repeat: no-repeat; background-size:100%;
+          @import './slide_04_insert_01';
+        }
+      }// ul
+    }// .slide_form
+  }// #viewBox_04
+// --------------------------------------------------------------
+
+
+ 
+
