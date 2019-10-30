@@ -5,7 +5,7 @@
   const slideGuide = slideForm.children('ul');
   let slideLi = slideGuide.find('li');
 
-  slideForm.css('overflow', 'hidden');
+
 // ---------------------------------------
 //li에 이름을 부여 (.slide_03_con_0$)
 for(let i=0; i < slideLi.length; i++){
@@ -36,21 +36,28 @@ const prevBtn = slide03Btn.children('.prev');
 slideLi = slideGuide.find('li');  // li가 새로 갱신된 내용으로 처리(6개)
 
 let myn = 0;
-const bannerLen = slideLi.length;
-console.log(bannerLen);
+const bannerLen = slideLi.length; //
+console.log(bannerLen); //
  
-nextBtn.on('click', function(e){
+nextBtn.on('click', function(e){   
   e.preventDefault();
   myn++;
-  if(myn >= bannerLen-1){ myn = 0; }
-  slideGuide.stop().animate({'left':-100*myn + '%'});
+  if(myn >= bannerLen-1){ 
+    slideGuide.css({'left':'100%'});
+    myn = 0; }
+  let per = -100*myn + '%';
+  slideGuide.stop().animate({'left':per},1000);
 });
 
 prevBtn.on('click', function(e){
   e.preventDefault();
   myn--;
-  if(myn <= -1){ myn = bannerLen-2; }
-  slideGuide.stop().animate({'left':-100*myn + '%'});
+  let per = -100*myn + '%';
+  slideGuide.stop().animate({'left':per},1000,function(){
+    if(myn <= -1){ myn = bannerLen-2; }  //-600%
+    per = -100*myn + '%';
+    slideGuide.css({'left':per});
+  }); 
 });
 
 })(jQuery);

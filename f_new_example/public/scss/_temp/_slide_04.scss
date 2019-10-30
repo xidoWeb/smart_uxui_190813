@@ -1,0 +1,14 @@
+// _slide_04.scss
+/* slide_04.css */
+
+#viewBox_04{width:500px; height:250px; margin:10rem auto;
+          background-color:$sample;
+  > .slide_form{width: 100%; height:100%; overflow: visible;
+      position:relative; z-index: 0; 
+    > ul{height: 100%; margin-left:-100%; 
+      position: relative; z-index:0;
+        >li{float:left; height: 100%; 
+          background-repeat: no-repeat; background-size:100%;}
+      }
+    }
+  }

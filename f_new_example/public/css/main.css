@@ -115,7 +115,7 @@
 
 .slide_03_btn > button.next { float: right; }
 
-.slide_03_form { width: 100%; height: 100%; }
+.slide_03_form { width: 100%; height: 100%; overflow: hidden; }
 
 .slide_03_form > ul { position: relative; width: 600%; height: 100%; margin-left: -100%; }
 
@@ -130,3 +130,12 @@
 .slide_03_form > ul > li.slide_03_con_4 { background-image: url("../img/slide_01/mySlideImage_04.jpg"); }
 
 .slide_03_form > ul > li.slide_03_con_5 { background-image: url("../img/slide_01/mySlideImage_05.jpg"); }
+
+/* slide_04.css */
+#viewBox_04 { width: 500px; height: 250px; margin: 10rem auto; background-color: #fa0; }
+
+#viewBox_04 > .slide_form { width: 100%; height: 100%; overflow: visible; position: relative; z-index: 0; }
+
+#viewBox_04 > .slide_form > ul { height: 100%; margin-left: -100%; position: relative; z-index: 0; }
+
+#viewBox_04 > .slide_form > ul > li { float: left; height: 100%; background-repeat: no-repeat; background-size: 100%; }
