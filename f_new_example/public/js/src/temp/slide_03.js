@@ -31,12 +31,12 @@ for(let i=0; i < slideLi.length; i++){
   */
 //----------------------------------------------------------------
 const slide03Btn = $('.slide_03_btn');
-const nextBtn = slide03Btn.children('.next');
-const prevBtn = slide03Btn.children('.prev');
-slideLi = slideGuide.find('li');  // li가 새로 갱신된 내용으로 처리(6개)
+const nextBtn    = slide03Btn.children('.next');
+const prevBtn    = slide03Btn.children('.prev');
+      slideLi    = slideGuide.find('li');  // li가 새로 갱신된 내용으로 처리(6개)
 
-let myn = 0;
-const bannerLen = slideLi.length; //
+let myn          = 0;
+const bannerLen  = slideLi.length; //
 console.log(bannerLen); //
  
 nextBtn.on('click', function(e){   

@@ -2,36 +2,17 @@
 (function($){
 // 이미지 경로, 이미지파일명
   const url = "../img/slide_01/";
-  let sample = {title:'slide title _01',
-                content:'slide content .......',
-                linkTest:'바로가기',
-                link:'http://naver.com',
-                bgimg:'mySlideImage_01.jpg'};
 
-
-
-
-  const imgList = [
-     {title:'slide title _01', content:'slide content _01',
-      linkTest:'첫번째 바로가기', link:'http://naver.com',
-      bgimg:'mySlideImage_01.jpg'},
-
-     {title:'slide title _02', content:'slide content 02',
-      linkTest:'두번째 바로가기', link:'http://daum.net',
-      bgimg:'mySlideImage_02.jpg'},
-
-     {title:'slide title _03', content:'slide content 03',
-      linkTest:'세번째 바로가기', link:'http://google.com',
-      bgimg:'mySlideImage_03.jpg'},
-
-     {title:'slide title _04', content:'slide content 04',
-      linkTest:'네번째 바로가기', link:'http://xidoweb.com',
-      bgimg:'mySlideImage_04.jpg'},
-
-     {title:'slide title _05', content:'slide content 05',
-      linkTest:'네번째 바로가기', link:'http://w3c.org',
-      bgimg:'mySlideImage_05.jpg'}
-    ];
+  let imgList;  
+  $.ajax({
+    async:false,
+    type:'GET',
+    url:'../data/slide_04.json',
+    dataType:'json',
+    error:function(){ console.log('data error'); },
+    success:function(data){ return imgList = data; }
+  });  
+  console.log(imgList);
 // -----------------------------------------------------
 // 기본선택자 및 내용(기본틀) 생성
 
@@ -91,13 +72,10 @@ btn.eq(0).css({'float':'right'});
 btn.eq(1).css({'float':'left','marginRight':'10px'});
 // -------------------------------------------------------------
 // 생성된 버튼을 이용하여, 좌우 슬라이드 기능수행
-// btn.on('click', function(e){
-//   e.preventDefault();
-//   $(this).index() == 0;
-// });
 
 
 let num = 0;
+/*
 // next버튼 클릭
 btn.eq(0).on('click', function(e){  
   e.preventDefault();
@@ -119,12 +97,48 @@ btn.eq(1).on('click', function(e){
      // -----------------------------
       if(num <= -1){
         num = imglen-2;
-        slideGuide.stop().css({'left':-100 * num +'%'}, 600);
+        slideGuide.css({'left':-100 * num +'%'}, 600);
       }
   // -----------------------------
   });
 });
-
-
+*/
+// next, prev 버튼을 하나로 구현
+btn.on('click', function(e){
+  e.preventDefault();
+  if($(this).index() == 0){ num++;
+    if(num >= imglen-1){ slideGuide.css({'left':'100%'});  num = 0; }
+  }else{ num--;   }
+  
+  slideGuide.stop().animate({'left':-100 * num +'%'}, 600,function(){
+    if(num <= -1){num = imglen-2;
+      slideGuide.css({'left':-100 * num +'%'}, 600);}
+  });
+});
 // ------------------------------------------------------
 }(jQuery));
+
+
+
+/*
+  $.post()      : 서버에 데이터를 HTTP POST방식(보안처리)으로 전송한 후 서버측 응답 받을때 사용
+  $.get()       : 서버에 데이터를 HTTP GET방식(오픈방식)으로 전송후 서버측 응답을 받을때
+  $.getJSON()   : 서버에 데이터를 HTTP GET방식(오픈방식+json)으로 전송후 서버측 응답을 JSON형식으로받을때
+  $.ajax()      : HTTP,POST,GET,JSON 등 모든 방식 전송가능한 통합함수(다양한파라미터존재)
+  $.ajaxSetup() : 공통기본ajax요청을 미리 설정
+  $.load()      : 외부컨텐츠를 가져올때
+
+  $.ajax({
+    async:false // 동기, 비동기
+    type:'data방식',
+    url:'data주소값',
+    dataType:'data문서 형식(xml, json, html, text 등) 작성'
+    error : function(){
+      // data 에러시 발생하는 내용처리방법
+    },
+    success : function(){
+      // data 불러오는 값 성공시 처리하는방법
+    }
+  });
+
+ */

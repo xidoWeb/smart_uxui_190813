@@ -1,0 +1,21 @@
+[
+  {"title":"slide title _01", "content":"slide content _01",
+   "linkTest":"첫번째 바로가기", "link":"http://naver.com",
+   "bgimg":"mySlideImage_01.jpg"},
+
+  {"title":"slide title _02", "content":"slide content 02",
+   "linkTest":"두번째 바로가기", "link":"http://daum.net",
+   "bgimg":"mySlideImage_02.jpg"},
+
+  {"title":"slide title _03", "content":"slide content 03",
+   "linkTest":"세번째 바로가기", "link":"http://google.com",
+   "bgimg":"mySlideImage_03.jpg"},
+
+  {"title":"slide title _04", "content":"slide content 04",
+   "linkTest":"네번째 바로가기", "link":"http://xidoweb.com",
+   "bgimg":"mySlideImage_04.jpg"},
+
+  {"title":"slide title _05", "content":"slide content 05",
+   "linkTest":"네번째 바로가기", "link":"http://w3c.org",
+   "bgimg":"mySlideImage_05.jpg"}
+ ]
