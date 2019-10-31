@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* 
+@include horizontal_slide_banner('.my_banner',4){
+  $url:'../img/mybanner/';
+  $imgName:'mybanner_';
+  $count : 4;
+  @include  horizon_banner_img($count, $imgName, $url:$url, $file:'png');
+  // 기타 div 및 하위  내용을 삽입
+} 
+*/
+#wrap { width: 100%; height: 100%; background-color: #fa0; }
+
+#headBox { display: none; }
+
+#viewBox { position: relative; width: 100%; height: 100%; background-color: #ffcc66; }
+
+#viewBox > h2 { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+#viewBox .indicator { position: absolute; right: 1.5rem; top: 0; bottom: 0; z-index: 500; margin: auto; width: 150px; height: 130px; background-color: rgba(255, 255, 255, 0.4); }
+
+#viewBox .indicator > p { width: 100%; height: 70px; font-size: 3rem; padding-bottom: 10px; color: #fff; text-align: center; }
+
+#viewBox .indicator > p > em { font-style: normal; font-weight: 900; }
+
+#viewBox .indicator > p > em:after { content: "/"; }
+
+#viewBox .indicator > p > span { font-size: 1.5rem; color: #cccccc; }
+
+#viewBox .indicator .view_btn { width: 100%; height: auto; }
+
+#viewBox .indicator .view_btn > button { width: 40%; height: 40px; float: right; background-color: transparent; font-size: 2rem; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.2); }
+
+#viewBox .indicator .view_btn > button:last-of-type { float: left; }
+
+#viewBox .indicator .view_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+#viewBox .indicator .view_btn > button:hover, #viewBox .indicator .view_btn > button:focus { color: #f06; }
+
+#viewBox .slide_form { width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.2); }
+
+#viewBox .slide_form > ul { width: 100%; height: 100%; }
+
+#viewBox .slide_form > ul > li { position: absolute; width: 100%; height: 100%; }
+
+#viewBox .slide_form > ul > li:nth-child(1) { background-color: #11ff11; top: 0; }
+
+#viewBox .slide_form > ul > li:nth-child(2) { background-color: #00aa00; top: 20%; }
+
+#viewBox .slide_form > ul > li:nth-child(3) { background-color: #004400; top: 40%; }

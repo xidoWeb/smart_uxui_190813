@@ -1,0 +1,34 @@
+// _paul_viewBox.scss
+#viewBox{position:relative; width: 100%; height: 100%; 
+        background-color:lighten($sample, 20%);
+ > h2{@include hidden;}
+  .indicator{position: absolute; right:1.5rem; top: 0; bottom: 0; z-index:500;
+   margin:auto; width: 150px; height: 130px; background-color:rgba($white, 0.4);
+   >p{width:100%; height:70px; font-size:3rem; padding-bottom:10px; color:$white;
+      text-align: center;
+    >em{font-style: normal; font-weight: 900; 
+      &:after{content:"/"}
+    }// em    
+    >span{font-size: 1.5rem; color:darken($white, 20%);}
+   }// p
+   
+   .view_btn{width: 100%; height:auto; 
+    >button{width:40%; height:40px; float: right; background-color:transparent; 
+            font-size: 2rem; text-shadow:0.2rem 0.2rem 0.2rem rgba($black, 0.2);
+        &:last-of-type{float:left;}
+        &>span{@include hidden;}
+        &:hover,&:focus{color:$primary;}
+      }// button
+      }// .view_btn
+   }// .indicator
+   
+  .slide_form{width: 100%; height: 100%; background-color:rgba($black, 0.2);
+    >ul{width: 100%; height: 100%;
+      >li{position:absolute; width: 100%; height: 100%; 
+        &:nth-child(1){background-color:darken($green, 20%); top: 0; }
+        &:nth-child(2){background-color:darken($green, 40%); top: 20%;}
+        &:nth-child(3){background-color:darken($green, 60%); top: 40%;}
+      }
+    }
+  }
+}// #viewBox
