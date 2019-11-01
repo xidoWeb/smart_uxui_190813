@@ -36,14 +36,40 @@
 
 #viewBox .indicator .view_btn > button:hover, #viewBox .indicator .view_btn > button:focus { color: #f06; }
 
+#viewBox .indicator .view_btn > button.action { color: #f06; }
+
+#viewBox .indicator .fake_btn { position: absolute; width: 100%; height: 100%; bottom: 0; cursor: pointer; }
+
 #viewBox .slide_form { width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.2); }
 
 #viewBox .slide_form > ul { width: 100%; height: 100%; }
 
-#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; word-break: break-all; white-space: nowrap; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.5); }
+#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; overflow: hidden; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; word-break: break-all; white-space: nowrap; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.5); box-sizing: border-box; /* padding:5vw;  */ background-repeat: no-repeat; background-position: 100% 50%; background-size: 150%; }
+
+#viewBox .slide_form > ul > li > dl { width: 100%; height: 50%; padding-top: 8vw; }
+
+#viewBox .slide_form > ul > li > dl dt { opacity: 0; font-size: 8rem; text-transform: capitalize; }
+
+#viewBox .slide_form > ul > li > dl dd { opacity: 0; font-size: 1.3rem; text-shadow: none; margin: 5rem 0; }
+
+#viewBox .slide_form > ul > li > dl dd.link { text-transform: uppercase; text-decoration: underline; }
+
+#viewBox .slide_form > ul > li > dl.action dt, #viewBox .slide_form > ul > li > dl.action dd.con, #viewBox .slide_form > ul > li > dl.action dd.link { opacity: 1; transform: translateY(-50px); }
+
+#viewBox .slide_form > ul > li > dl.action dt { transition: all 500ms ease 100ms; }
+
+#viewBox .slide_form > ul > li > dl.action dd.con { transition: all 500ms ease 300ms; }
+
+#viewBox .slide_form > ul > li > dl.action dd.link { transition: all 500ms ease  500ms; }
 
 #viewBox .slide_form > ul > li:nth-child(1) { background-color: #11ff11; }
 
 #viewBox .slide_form > ul > li:nth-child(2) { background-color: #00aa00; }
 
 #viewBox .slide_form > ul > li:nth-child(3) { background-color: #004400; }
+
+#conBox { width: 100%; height: 100%; background-color: #ccc; }
+
+#conBox > button { width: 100px; height: 40px; background-color: #0c9; }
+
+#conBox > .bar { width: 100%; height: 100px; background-color: #fa0; background-image: linear-gradient(90deg, #fa0, #0c9); }

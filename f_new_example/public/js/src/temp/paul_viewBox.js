@@ -28,15 +28,16 @@
 //-----------------------------------------
 // li 첫번째만 보이고 나머지는 사라지게 만들기
 slideLi.eq(0).siblings().hide();
-
+slideLi.eq(0).find('dl').addClass('action');
 
 //-----------------------------------------
+const fakeBtn = $('.fake_btn');
+fakeBtn.hide();
 
 // 버튼클릭
 indiBtn.on('click', function(e){
   e.preventDefault();
-
-  indiBtn.hide();
+  fakeBtn.show();
   
  if($(this).index() == 0){ // next버튼
    textN++;
@@ -63,19 +64,17 @@ indiBtn.on('click', function(e){
  
 // 가로로 늘어나는 현상  
  let slideThis = slideLi.eq(textN);
- slideThis.css({zIndex: liLen+2, width:0, overflow:'hidden'});
- slideThis.stop().show(function(){
-    slideThis.animate({width:100+'%'},
-                       1000,'easeOutCubic', 
-                       function(){
-      slideThis.siblings().hide();
-      slideZindexSet();
-      
-      indiBtn.show();
-      
-    });// slideThis.animate
- }); // slideThis.slideDown
- 
+ slideThis.css({zIndex: liLen+2, width:0, padding:0});
+ slideThis.css({display:'block'});
+  slideThis.stop().animate({width:100+'%', paddingLeft:'5vw'},
+                      1000,'easeOutCubic', function(){
+    slideThis.siblings().hide();
+    slideZindexSet();
+    fakeBtn.hide();
+    slideThis.siblings().find('dl').removeClass('action');
+    slideThis.find('dl').addClass('action');
+    
+  }); // slideThis.animate()
 });    // indiBtn.on('click')
 
 // ------------------------------------------
