@@ -40,10 +40,10 @@
 
 #viewBox .slide_form > ul { width: 100%; height: 100%; }
 
-#viewBox .slide_form > ul > li { position: absolute; width: 100%; height: 100%; }
+#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; word-break: break-all; white-space: nowrap; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.5); }
 
-#viewBox .slide_form > ul > li:nth-child(1) { background-color: #11ff11; top: 0; }
+#viewBox .slide_form > ul > li:nth-child(1) { background-color: #11ff11; }
 
-#viewBox .slide_form > ul > li:nth-child(2) { background-color: #00aa00; top: 20%; }
+#viewBox .slide_form > ul > li:nth-child(2) { background-color: #00aa00; }
 
-#viewBox .slide_form > ul > li:nth-child(3) { background-color: #004400; top: 40%; }
+#viewBox .slide_form > ul > li:nth-child(3) { background-color: #004400; }
