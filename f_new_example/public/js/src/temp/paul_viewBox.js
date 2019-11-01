@@ -35,6 +35,9 @@ slideLi.eq(0).siblings().hide();
 // 버튼클릭
 indiBtn.on('click', function(e){
   e.preventDefault();
+
+  indiBtn.hide();
+  
  if($(this).index() == 0){ // next버튼
    textN++;
    if(textN >= liLen){ textN = 0; }
@@ -67,6 +70,9 @@ indiBtn.on('click', function(e){
                        function(){
       slideThis.siblings().hide();
       slideZindexSet();
+      
+      indiBtn.show();
+      
     });// slideThis.animate
  }); // slideThis.slideDown
  
