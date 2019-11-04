@@ -10,7 +10,7 @@
   
   slideEach       = slideWrap.children('div');
   let slideLen    = slideEach.length;
-  console.log(slideLen);
+  // console.log(slideLen);
   slideWrap.css({width:100 * slideLen + '%', 
                  marginLeft:'-100%'});
   slideEach.css({width:100 / slideLen + '%'});
@@ -30,6 +30,7 @@
             <span>이전내용 보기</span>\
             </button>\
           </div>'); }
+          
   };
   slideBtn(true);
   
@@ -43,8 +44,56 @@ for(let i=0; i < slideLen-1; i++){
   indiLi.find('span').css({display:'block',width:0,height:0,overflow:'hidden'});
 }
 
+const indiLi = indi.children('li');
+indiLi.eq(0).addClass('action');
+// --------------------------------------------------
+// 좌우 버튼 클릭시 이동
+let n = 0;
+const viewBtn = viewBox.find('.view_btn').find('button');
 
+viewBtn.on('click', function(e){
+  e.preventDefault();
+  // console.log( $(this) );
+  let has = $(this).hasClass('next');
+  
+  if( has ){ // 다음 버튼 클릭
+    n++;
+    if(n >= slideLen-1){ n = 0; 
+      slideWrap.css({left: '100%'});
+    }    
+  }else{// 이전 버튼 클릭
+    n--;    
+  }  
+  
+  slideWrap.animate({left: -100 * n +'%'}, function(){
+    if(n <= -1){
+      n = slideLen-2; 
+      slideWrap.css({left:-100 * n +'%'});
+    }   
+  });
+  
+  indiLi.eq(n).siblings().removeClass('action');
+  indiLi.eq(n).addClass('action');
+  
+}); // viewBtn.on('click')
 
+// ----------------------------------------------
+// 인디케이터 선택시
+indiLi.children('a').on('focus' ,function(e){
+  e.preventDefault();
+  n = $(this).parent('li').index();
+  
+  slideWrap.animate({left: -100 * n +'%'});
+  indiLi.eq(n).siblings().removeClass('action');
+  indiLi.eq(n).addClass('action');
+  
+  // a를 클릭시에는 해당하는 광고배너로 포커스처리하게 만들어라
+  $(this).on('click', function(e){
+    e.preventDefault();
+    slideEach.eq(n+1).find('a').focus();
+  });
+  
+});// indiLi.children('a').on('focus')
 
   
   
