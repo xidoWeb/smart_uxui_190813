@@ -1,0 +1,23 @@
+// slide_all.scss
+
+@import "./_basic/var";
+@import "./_basic/mixin_02";
+@import "./_basic/etc";
+ 
+// ===========================================
+#wrap{ @include fullBox($bg:transparent); }
+ 
+#viewBox{@include fullBox($h:90%,$bg:#fcf);}  
+.slide_form{@include fullBox($bg:#acf);}
+.slide_wrap{$count:5;  @include fullBox($w:100% * $count);
+  >div{float:left;  width:100% / $count; height: 100%;
+  $c : (#acc, #fac, #13f, #fa9, #ccc);  
+  @for $i from 1 through $count {
+    @if ($count < 10) {
+      &.slide_0#{$i}{background-color:nth($c,$i);}
+    }@else{
+      &.slide_#{$i}{background-color:nth($c,$i);}
+    }
+   }     
+  }
+}

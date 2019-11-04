@@ -10,6 +10,12 @@
 */
 #wrap { width: 100%; height: 100%; background-color: #fa0; }
 
+#conBox2 { width: 100%; height: 100%; background-color: #996600; }
+
+#conBox3 { width: 100%; height: 100%; background-color: black; }
+
+#footBox { width: 100%; height: 100%; background-color: #fa0; }
+
 #headBox { display: none; }
 
 #viewBox { position: relative; width: 100%; height: 100%; background-color: #ffcc66; }

@@ -1,0 +1,19 @@
+#wrap { width: 100%; height: 100%; margin: auto; background-color: transparent; }
+
+#viewBox { width: 100%; height: 90%; margin: auto; background-color: #fcf; }
+
+.slide_form { width: 100%; height: 100%; margin: auto; background-color: #acf; }
+
+.slide_wrap { width: 500%; height: 100%; margin: auto; background-color: #fa0; }
+
+.slide_wrap > div { float: left; width: 20%; height: 100%; }
+
+.slide_wrap > div.slide_01 { background-color: #acc; }
+
+.slide_wrap > div.slide_02 { background-color: #fac; }
+
+.slide_wrap > div.slide_03 { background-color: #13f; }
+
+.slide_wrap > div.slide_04 { background-color: #fa9; }
+
+.slide_wrap > div.slide_05 { background-color: #ccc; }

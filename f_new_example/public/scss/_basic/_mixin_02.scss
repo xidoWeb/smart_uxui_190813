@@ -1,0 +1,6 @@
+// mixin_02
+
+@mixin fullBox($w:100%, $h:100%, $bg:$sample){
+  width:$w; height:$h; margin:auto; 
+  background-color:$bg;
+}// @mixin fullBox()
