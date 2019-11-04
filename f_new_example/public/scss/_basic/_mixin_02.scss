@@ -4,3 +4,16 @@
   width:$w; height:$h; margin:auto; 
   background-color:$bg;
 }// @mixin fullBox()
+
+
+$rootUnit: 16;
+// -----------------------------------------
+// unit px, rem 처리
+@function unit($u){
+  @return $u / $rootUnit;
+}// @function()
+
+@mixin conUnit($pro, $u){
+  #{$pro}:$u + px;
+  #{$pro}:unit($u) + rem;
+}

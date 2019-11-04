@@ -7,9 +7,40 @@
 // ===========================================
 #wrap{ @include fullBox($bg:transparent); }
  
-#viewBox{@include fullBox($h:90%,$bg:#fcf);}  
+#viewBox{position: relative;
+        @include fullBox($h:90%,$bg:#fcf); }  
+
+ .view_btn{position: absolute; z-index: 500;
+           width: 90%; height: 0; top:50%; left:5%;
+           >button{float:left; width: 50px; height: 50px; 
+                   transform:translateY(-50%);}
+           >.next{float:right;}
+           }
+ 
+ .indicator{$myRel:30;
+            position: absolute; left:50%; 
+            @include conUnit(bottom, 16); 
+            @include conUnit(height,30);
+            z-index:500; width:auto; 
+            transform:translateX(-50%);
+            @include conUnit(padding,6);
+            @include conUnit(border-radius,36);
+             background-color: #fff;
+            >li{float:left; 
+              @include conUnit(width,$myRel);
+              @include conUnit(height,$myRel);
+              @include conUnit(margin-left,16);         
+              &:first-child{margin-left: 0;}
+              &.action{width:100px}
+                >a{display: block; 
+                  @include fullBox; @include conUnit(border-radius,$myRel);
+                  }
+              }
+            }
+
 .slide_form{@include fullBox($bg:#acf);}
-.slide_wrap{$count:5;  @include fullBox($w:100% * $count);
+.slide_wrap{$count:5;  position:relative; 
+            @include fullBox($w:100% * $count);
   >div{float:left;  width:100% / $count; height: 100%;
   $c : (#acc, #fac, #13f, #fa9, #ccc);  
   @for $i from 1 through $count {
