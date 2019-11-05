@@ -10,8 +10,9 @@
 }
 
 //======================================
- #wrap{width: 100%; height: 100%;}
- #miniProduct{width: 450px; height: 320px; margin:100px auto; }
+ #wrap{width: 100%; height: 100%;}  
+ #miniProduct{position:relative; 
+          width: 450px; height: 320px; margin:100px auto; }
  .indicator{position: absolute; left: 50%;bottom:0; 
         transform:translateX(-50%); width:150px; height:40px; 
         >li{float: left; width:40px; height:40px; margin-left: 15px;
@@ -23,18 +24,19 @@
           &.active > a{background-color:darken($gray, 40%);}
          }// li
         }// .indicator
-        
+  $url:'../img/slide_test_01/';
  .product{width: 100%; height: 250px; background-color:$sample;
-    >ul{ $count:3;
+        overflow: hidden;
+        background-repeat: no-repeat; background-position: 50% 50%;
+        background-size: cover; background-image: url($url + 'wood.jpg');
+     >ul{ $count:3;
          width:100% * $count; height:100%;
       >li{float: left; width:100% / $count; height:100%;
           box-sizing: border-box; padding: 20px;
         >a{display:block; width:100%; height:100%;
           background-repeat: no-repeat; background-position:50% 50%;
           background-size: contain;
-            >span{ @include hidden; }          }
-
-        $url:'../img/slide_test_01/';
+            >span{ @include hidden; }}        
         &:nth-child(1)>a{background-image: url($url+"slide_01.png");}  
         &:nth-child(2)>a{background-image: url($url+"slide_02.png");}  
         &:nth-child(3)>a{background-image: url($url+"slide_03.png");}  
