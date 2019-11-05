@@ -1,0 +1,44 @@
+// indicator_test_01.scss
+/* indicator_test_01.css */
+
+@import "./_basic/var";
+@import "./_basic/mixin";
+@import "./_basic/etc";
+
+@mixin hidden(){
+  display: block; width: 0; height: 0; overflow: hidden;
+}
+
+//======================================
+ #wrap{width: 100%; height: 100%;}
+ #miniProduct{width: 450px; height: 320px; margin:100px auto; }
+ .indicator{position: absolute; left: 50%;bottom:0; 
+        transform:translateX(-50%); width:150px; height:40px; 
+        >li{float: left; width:40px; height:40px; margin-left: 15px;
+          &:nth-child(1){margin-left: 0;}
+          >a{display: block; width: 100%; height: 100%; 
+            background-color:$gray; border-radius:100%;
+            span{ @include hidden; }
+            }
+          &.active > a{background-color:darken($gray, 40%);}
+         }// li
+        }// .indicator
+        
+ .product{width: 100%; height: 250px; background-color:$sample;
+    >ul{ $count:3;
+         width:100% * $count; height:100%;
+      >li{float: left; width:100% / $count; height:100%;
+          box-sizing: border-box; padding: 20px;
+        >a{display:block; width:100%; height:100%;
+          background-repeat: no-repeat; background-position:50% 50%;
+          background-size: contain;
+            >span{ @include hidden; }          }
+
+        $url:'../img/slide_test_01/';
+        &:nth-child(1)>a{background-image: url($url+"slide_01.png");}  
+        &:nth-child(2)>a{background-image: url($url+"slide_02.png");}  
+        &:nth-child(3)>a{background-image: url($url+"slide_03.png");}  
+      }// li
+    }// ul    
+  }//.product       
+ 

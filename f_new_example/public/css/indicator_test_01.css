@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* indicator_test_01.css */
+/* 
+@include horizontal_slide_banner('.my_banner',4){
+  $url:'../img/mybanner/';
+  $imgName:'mybanner_';
+  $count : 4;
+  @include  horizon_banner_img($count, $imgName, $url:$url, $file:'png');
+  // 기타 div 및 하위  내용을 삽입
+} 
+*/
+#wrap { width: 100%; height: 100%; }
+
+#miniProduct { width: 450px; height: 320px; margin: 100px auto; }
+
+.indicator { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 150px; height: 40px; }
+
+.indicator > li { float: left; width: 40px; height: 40px; margin-left: 15px; }
+
+.indicator > li:nth-child(1) { margin-left: 0; }
+
+.indicator > li > a { display: block; width: 100%; height: 100%; background-color: #ccc; border-radius: 100%; }
+
+.indicator > li > a span { display: block; width: 0; height: 0; overflow: hidden; }
+
+.indicator > li.active > a { background-color: #666666; }
+
+.product { width: 100%; height: 250px; background-color: #fa0; }
+
+.product > ul { width: 300%; height: 100%; }
+
+.product > ul > li { float: left; width: 33.33333%; height: 100%; box-sizing: border-box; padding: 20px; }
+
+.product > ul > li > a { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; }
+
+.product > ul > li > a > span { display: block; width: 0; height: 0; overflow: hidden; }
+
+.product > ul > li:nth-child(1) > a { background-image: url("../img/slide_test_01/slide_01.png"); }
+
+.product > ul > li:nth-child(2) > a { background-image: url("../img/slide_test_01/slide_02.png"); }
+
+.product > ul > li:nth-child(3) > a { background-image: url("../img/slide_test_01/slide_03.png"); }

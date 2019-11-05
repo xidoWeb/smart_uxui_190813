@@ -54,8 +54,7 @@ const viewBtn = viewBox.find('.view_btn').find('button');
 viewBtn.on('click', function(e){
   e.preventDefault();
   // console.log( $(this) );
-  let has = $(this).hasClass('next');
-  
+  let has = $(this).hasClass('next');  
   if( has ){ // 다음 버튼 클릭
     n++;
     if(n >= slideLen-1){ n = 0; 
@@ -63,18 +62,15 @@ viewBtn.on('click', function(e){
     }    
   }else{// 이전 버튼 클릭
     n--;    
-  }  
-  
+  }    
   slideWrap.animate({left: -100 * n +'%'}, function(){
     if(n <= -1){
       n = slideLen-2; 
       slideWrap.css({left:-100 * n +'%'});
     }   
-  });
-  
+  });  
   indiLi.eq(n).siblings().removeClass('action');
-  indiLi.eq(n).addClass('action');
-  
+  indiLi.eq(n).addClass('action');  
 }); // viewBtn.on('click')
 
 // ----------------------------------------------
@@ -92,7 +88,6 @@ indiLi.children('a').on('focus' ,function(e){
     e.preventDefault();
     slideEach.eq(n+1).find('a').focus();
   });
-  
 });// indiLi.children('a').on('focus')
 
   
