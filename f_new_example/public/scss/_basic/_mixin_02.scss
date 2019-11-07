@@ -1,4 +1,6 @@
 // mixin_02
+$url:'../';
+
 
 @mixin fullBox($w:100%, $h:100%, $bg:$sample){
   width:$w; height:$h; margin:auto; 
@@ -22,12 +24,26 @@ $rootUnit: 16;
   display: block; width: 0; height: 0; overflow: hidden;
 }
 
-@mixin image($i, $w:100%, $h:100%, $r:no-repeat, $p:0 0, $s:contain){
-  // display:block; 
+@mixin image($v , $i:none, $w:100%, $h:100%, $r:no-repeat, $p:0 0, $s:contain){
+  @if($v = block){
+    display:block; 
+  }@else if ($v == none){
+    display:none; 
+  }@else if ($v == inline-block){
+    display:inline-block; 
+  }
   width:$w; height:$h; 
-  background-image:url($url + $i);
+  @if($i != none){
+    background-image:url($url + $i);
+  }
   background-repeat:$r;
   background-position:$p;
   background-size:$s;
   @content;
+  
+}
+
+// ----------------------------------------
+@function img($i){
+  @return url($url + $i);
 }

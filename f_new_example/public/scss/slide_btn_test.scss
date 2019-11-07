@@ -25,18 +25,15 @@ $url:'../img/slide_test_01/';
            >li{float:left; width:100% / $count; 
               height: 100%; padding:30px; 
               box-sizing:border-box;   
-   // "slide_0#{$n}.png" 
-  
-    &.product_01>a{display:block; 
-                   @include image($i:'slide_01.png');}
-    &.product_02>a{display:block; 
-                   @include image($i:'slide_02.png');}
-    &.product_03>a{display:block; 
-                   @include image($i:'slide_03.png');}
+
+    >a{@include image($v:block);
+      >span{@include hidden;} }
     
+    &.product_01>a{background-image:img('slide_01.png');}
+    &.product_02>a{background-image:img('slide_02.png');}
+    &.product_03>a{background-image:img('slide_03.png');}
+    
+        }// li
+        }// ul
+      }// .product
           
-          
-            }// li
-            
-           }// ul
-          }// .product
