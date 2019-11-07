@@ -1,0 +1,42 @@
+// slide_btn_test.scss
+@import "./_basic/var";
+@import "./_basic/mixin_02";
+@import "./_basic/etc";
+ 
+// -------------------------------------
+$url:'../img/slide_test_01/';
+
+#miniProduct{position: relative; width:500px; height:400px; 
+            margin:10rem auto;}
+  .btn{width: 150px; height:70px; 
+       position:absolute; bottom: 0; right:1rem;
+       >button{float:left; width:70px; height:70px;
+            font-size:4rem; background-color: transparent;
+            color:$blueGreen;
+        &.next{float:right; }
+        > span{ @include hidden;}
+      }
+      >button.action{color:$primary;}
+      }// .btn
+  .product{width: 100%; height: 300px; 
+           background-color: $gray;
+           >ul{$count : 3; 
+          width: 100% * $count; height: 100%; 
+           >li{float:left; width:100% / $count; 
+              height: 100%; padding:30px; 
+              box-sizing:border-box;   
+   // "slide_0#{$n}.png" 
+  
+    &.product_01>a{display:block; 
+                   @include image($i:'slide_01.png');}
+    &.product_02>a{display:block; 
+                   @include image($i:'slide_02.png');}
+    &.product_03>a{display:block; 
+                   @include image($i:'slide_03.png');}
+    
+          
+          
+            }// li
+            
+           }// ul
+          }// .product

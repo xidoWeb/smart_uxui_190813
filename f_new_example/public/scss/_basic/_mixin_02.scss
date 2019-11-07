@@ -17,3 +17,17 @@ $rootUnit: 16;
   #{$pro}:$u + px;
   #{$pro}:unit($u) + rem;
 }
+
+@mixin hidden{
+  display: block; width: 0; height: 0; overflow: hidden;
+}
+
+@mixin image($i, $w:100%, $h:100%, $r:no-repeat, $p:0 0, $s:contain){
+  // display:block; 
+  width:$w; height:$h; 
+  background-image:url($url + $i);
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s;
+  @content;
+}
