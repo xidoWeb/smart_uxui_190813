@@ -1,6 +1,6 @@
 #miniProduct { position: relative; width: 500px; height: 400px; margin: 10rem auto; }
 
-.btn { width: 150px; height: 70px; position: absolute; bottom: 0; right: 1rem; }
+.btn { width: 150px; height: 70px; position: absolute; bottom: 0; right: 1rem; z-index: 500; }
 
 .btn > button { float: left; width: 70px; height: 70px; font-size: 4rem; background-color: transparent; color: #0c9; }
 
