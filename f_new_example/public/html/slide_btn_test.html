@@ -36,10 +36,55 @@
         </ul>
       </div>
     </div>
+    
+    <div class="subSlide">
+      <div  class="product">
+        <ul style="font-size:5rem">
+          <li>001</li>
+          <li>002</li>
+          <li>003</li>
+          <li>004</li>
+          <li>005</li>
+          <li>006</li>
+          <li>007</li>
+          <li>008</li>
+          <li>009</li>
+          <li>010</li>
+        </ul>
+      </div>
+    </div>
   </div>
 <!-- script ======================================= -->
   <script src="../js/base/jquery-3.4.1.min.js"></script>
   <script src="../js/base/jquery-ui.min.js"></script>
-  <script src="../js/src/slide_btn_test.js"></script>
+  <!-- <script src="../js/src/slide_btn_test.js"></script> -->
+  <script src="../js/src/slide_plug_sample_01.js"></script>
+  <script>
+    (function($){
+        $('.subSlide').mySlide().fade();
+    })(jQuery);
+  </script>
+  
+  <script>
+  /*
+    let fn = function(n){
+      let rel = n + 10;
+      return rel;
+    }    
+    console.log( fn(10) );
+  */
+  /* 
+// this : window, new에의해 생성된 변수
+  let t = function(n, r){
+     this.name = n;
+     this.rel  = r;
+  }   
+  let myt = new t('xido', 'this란?');
+  console.log( myt.name, myt.rel );
+   */
+   
+   
+   
+  </script>
 </body>
 </html>

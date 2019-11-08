@@ -128,5 +128,17 @@ const ZIndexSlide = function(){
 }; // ZIndexSlide()
 // ---------------------------------------------
 // product.css({overflow:'hidden'});
+// ----------------------------------------------
+const slideList = {
+  basic : BasicSlide,
+  fade  : ZIndexSlide,
+  horizon :HorizonSlide,
+  vertical : VerticalSlide
+};
+
+slideList.fade();
+
+
+
 
 })(jQuery);
