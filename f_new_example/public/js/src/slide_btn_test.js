@@ -1,11 +1,16 @@
 (function($){
-
+  const slide   = $('#miniProduct');
   const product = $('.product');
   const productUl = product.find('ul');
   let   productLi = productUl.find('li');  
-  const btn = $('.btn').find('button');  
+    
 // =============================================
-  
+// 버튼 생성
+let btnIn = '<div class="btn"><button type="button" class="next"><i class="fas fa-angle-right"></i><span>다음내용보기</span></button><button type="button" class="prev"><i class="fas fa-angle-left"></i><span>이전내용보기</span></button></div>';
+slide.prepend(btnIn);
+
+const btn = $('.btn').find('button');
+// =============================================  
 // 가로형 슬라이드 기능
 const HorizonSlide = function(){
     productLi.eq(-1).clone().prependTo(productUl);
@@ -94,6 +99,34 @@ const BasicSlide = function(){
     productUl.css({marginLeft: -100 * i +'%'});  
   });
 }; // BasicSlide() // ============================
-product.css({overflow:'hidden'});
+// z-index 기능을 통해 fadeIn 처리되게 만들기
+const ZIndexSlide = function(){
+  productUl.css({'position':'relative', width:'100%'});
+  productLi.css({'position':'absolute', width:'100%'});
+  productLi.eq(0).nextAll().hide();
+
+  let productLen = productLi.length;
+  let i = 0;
+  btn.on('click', function(e){
+    e.preventDefault();
+    let btnL = $(this).hasClass('next');
+    if(btnL){
+    // next
+      i++;
+      if(i >= productLen){ i = 0; }
+    }else{
+    // prev
+      i--;
+      if(i < 0){ i = productLen-1 }  
+    }
+    productLi.eq(i).css({'zIndex':100});
+    productLi.eq(i).fadeIn();
+    productLi.eq(i).siblings().fadeOut(function(){
+      productLi.css({zIndex:0});
+    });  
+  });// btn.on('click')
+}; // ZIndexSlide()
+// ---------------------------------------------
+// product.css({overflow:'hidden'});
 
 })(jQuery);
