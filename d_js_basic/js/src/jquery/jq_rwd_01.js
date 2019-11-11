@@ -52,7 +52,6 @@
       location.reload(); // 새로고침
     }
   });
-  
 
 
 })(jQuery);
