@@ -10,10 +10,14 @@
   
   let winH     = win.outerHeight(); //브라우저의 높이값
   let headBoxH = headBox.outerHeight();
-  let con_01_offset = con_01.offset().top;
   
-  // con_01의 위치에서 브라우저의 2/3 높이만큼 전에서 구동처리
-  let myCon01_offset = con_01_offset - (winH/3*2);
+  // con_01의 위치에서 브라우저의 1/2 높이만큼 전에서 구동처리
+  let con_01_offset = con_01.offset().top;
+  let myCon01_offset = con_01_offset - (winH/2);
+  
+  // con_02의 위치에서 브라우저의 1/2 높이만큼 전에서 구동처리
+  let con_02_offset = con_02.offset().top;
+  let myCon02_offset = con_02_offset - (winH/2);
   
   win.on('scroll', function(){
    let winScroll = win.scrollTop();
@@ -39,6 +43,15 @@
       conImg.removeClass('action');
       conNar.removeClass('action');
    }
+   // --------------------------------------------
+   if(winScroll > myCon02_offset){
+      setTimeout(function(){
+        $('.con_02').addClass('action');
+      }, 200);
+    }else{
+      $('.con_02').removeClass('action');
+   }
+   
   });
   
   

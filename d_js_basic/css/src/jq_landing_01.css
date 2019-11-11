@@ -45,13 +45,19 @@
 
 .narr:nth-of-type(2n+1) > .img_box.action{left:0;}                        
 .narr:nth-of-type(2n) > .img_box.action{right:0;}                        
-.narr> .img_box.action{opacity: 1; transition:all 500ms ease;}
+.narr> .img_box.action{opacity: 1; transition:all 500ms ease 100ms;}
 .narr> .nar_box.action{transform:translateX(0);  opacity:1; 
-                       transition:all 500ms ease;}
+                       transition:all 500ms ease 200ms;}
 /*------------------------------------- */
   #conBox_02{width:80%; min-width:1200px; 
             height:200%; min-height:1000px; margin:auto;
             background-color: #fcf}
+  #conBox_02 > .con_02{width:800px; height:500px; margin:10rem auto;
+            background-color: #f7f; 
+            transform:perspective(1000px) rotateX(45deg);
+            transition:all 1000ms linear;}
+  #conBox_02 > .con_02.action{transform:rotateX(0); }
+  
   #conBox_03{width: 100%; min-width:1280px; 
              height: 100%; min-height:600px;
              background-color: #0af;}
