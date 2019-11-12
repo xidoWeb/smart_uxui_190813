@@ -1,0 +1,18 @@
+#wrap{width: 100%; height: 100%; }
+  #headBox{position:fixed; top:0; left:0; right:0; margin:auto;
+     z-index:1000; width: 80%; height: 100px; padding:1rem;
+     box-sizing:border-box; background-color: #ccc; 
+     border-radius:0 0 0.5rem 0.5rem;}
+  h1{float: left; width: 100px; height: 100px; overflow: hidden;}   
+  #gnb{float:right; width: 60%; height:auto;}
+  #gnb>h2{width: 0; height: 0; overflow: hidden;}
+  #gnb>ul{width:100%; height:auto;}
+  #gnb>ul>li{float:left; width:100px; height:50px; margin-right:10px; 
+            background-color:#fff;}
+  #gnb>ul>li>a{display: block; width: 100%; height: 100%;}
+  
+  #viewBox{width: 100%; height: 100%; background-color: #acf;}
+  #conBox_01{width: 100%; height: 100%; background-color: #fca;}
+  #conBox_02{width: 100%; height: 100%; background-color: #aff;}
+  #conBox_03{width: 100%; height: 100%; background-color: #ffa;}
+  #footBox{width: 100%; height: 300px; background-color: #777;}
