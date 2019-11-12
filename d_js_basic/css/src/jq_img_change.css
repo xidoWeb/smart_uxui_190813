@@ -7,8 +7,10 @@
           background-position:50% 50%;
           background-size: cover;}
           
-.mouse_location{width:800px; height:10px; background-color:#333;
-         margin:auto; position: relative; border-radius:10px;}
-.mouse_location>button{width: 20px; height:20px; background-color: #fff;
+.mouse_location{width:800px; height:30px;
+         margin:auto; position: relative; z-index:0; border-radius:10px;
+         cursor: pointer;}
+.mouse_location:before{content:" "; display: block; width: 102%; height: 0; border-bottom:2px solid #333; position: absolute; z-index:-200; top: 50%; left:-1%;}
+.mouse_location:after{content:""; display:block; width: 20px; height:20px; background-color: #fff;
 border:2px solid #fa0; box-sizing: border-box; border-radius: 100%;
-position: absolute; top: 0; bottom: 0; margin:auto;}
+position: absolute; top:5px; z-index:-100;}
