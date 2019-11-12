@@ -27,7 +27,9 @@ let myStatus = true, n, useN=0;
 // ================================================
 const ScrollMagic = function(){
   htmlEl.animate({scrollTop:myScrollElTop[useN]},
+
                  timed,'easeOutSine',function(){
+
                 myStatus = true;
   });
  };// ScrollMagic() 
@@ -67,12 +69,14 @@ let startP,endP;
 $(window).on('touchstart', function(e){
   startP = e.originalEvent.touches[0].pageY;  
 });// touchstart---------------------------------------
+
 $(window).on('touchmove', function(){ 
   htmlEl.animate({scrollTop:myScrollElTop[useN]},0);
 });// touchmove
 
 $(window).on('touchend', function(e){
   endP = e.originalEvent.changedTouches[0].pageY;
+
   if(myStatus){
     myStatus = false;
     if(startP > endP){
@@ -85,7 +89,8 @@ $(window).on('touchend', function(e){
       if(useN < 0){useN = 0;}  
       ScrollMagic(); 
     }
-  }
+  }  
 });// touchend-----------------------------------------
+
 // -------------------------------------------
 })(jQuery);
