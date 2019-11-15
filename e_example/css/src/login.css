@@ -1,4 +1,6 @@
 /* login.css */
+@import url("../../font/icomoon/style.css");
+
 #wrap{background-color: #fdfdfd;}
 h1{text-align: center; font-size: 3rem; 
    border-bottom:1px solid #000;}
@@ -13,7 +15,16 @@ h1{text-align: center; font-size: 3rem;
 .sns_login>ul>li{float:left; width:42px; height: 42px;
        margin-left:10px;}
 .sns_login>ul>li:first-child{margin-left: 0;}
-.sns_login>ul>li>a{display: block; width: 100%; height: 100%; background-color: #ccc;}
+
+.sns_login>ul>li:first-child i{font-family: "icomoon"; font-style: normal;}
+.sns_login>ul>li:first-child i:before{content:"\e900";}
+
+.sns_login>ul>li>a{display: block; width: 100%; height: 100%;
+                   text-align: center; line-height:1.2;}
+
+.sns_login i{font-size: 2.5rem; color:#f06;}
+.sns_login li:first-child i{font-size: 2.2rem;}
+
   
 /* ----------------------------- */
 .join{float:right; width:303px; height:284px;
