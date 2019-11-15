@@ -44,7 +44,33 @@
           <span class="hidden">구글 로그인</span>
           </a></li>
         </ul>
-        <form action="" method=""></form>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>log in</legend>
+            <div class="in_form">
+              <label for="userId" class="hidden">
+                로그인 계정을 입력하세요.
+              </label>
+              <input type="text" name="userId" id="userId"
+                      value="" placeholder="이메일/아이디">
+                      
+              <label for="userPw" class="hidden">
+                계정에대한 비밀번호를 입력하세요.
+              </label>
+              <input type="password" name="userPw" id="userPw"
+                    value="" placeholder="비밀번호">
+            </div>
+            <div class="btn_form">
+              <!-- <button type="submit">log in</button> -->
+              <input type="submit" name="memberBtn" value="log in" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>회원가입 및 계정찾기</legend>
+            <a href="#">회원가입</a>
+            <a href="#">아이디 및 비밀번호 찾기</a>
+          </fieldset>
+        </form>
       </div>
       <!-- ======================== -->
       <div class="join">
