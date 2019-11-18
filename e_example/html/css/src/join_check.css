@@ -18,15 +18,11 @@ body{background-color: #fafafa;}
         font-size: 1.6rem; color:#777;}
 .check i{font-size:1.2rem; cursor:pointer;color:#aaa;}
 /* 전체동의체크 ----------------------- */  
-  .all_check>input:focus+p i{color:#333; text-shadow:0.1rem 0.1rem 0 #f06;}    
   .all_check>input:checked+p i{color:#08a600;}
-  
-/* 각각의동의 체크 ------------------------*/
-
-
-
-
 /* ---------------------------------------- */
+/* 각각의동의 체크 ------------------------*/
+  .check input:checked + dl i,
+  .check input:checked + p i{color:#08a600;}  
   .check>p{font-size: 1rem; font-weight: bold;          
           word-break:keep-all; letter-spacing:-0.05rem;}
   .check>dl{width: 100%; height:auto;
