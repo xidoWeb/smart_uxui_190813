@@ -1,0 +1,55 @@
+/* join_check.css */
+body{background-color: #fafafa;}
+#wrap{width:460px; height:auto; margin:auto; }
+  #wrap>h2{width:100%; height:auto; margin-bottom:1rem; text-align: center; }
+  form{width: 100%; height:auto;}
+  #wrap fieldset:first-of-type{width: 100%; height:auto; 
+    min-height:50px; }
+    
+  .check{width: 100%; height:auto; min-height:50px;margin-bottom:20px;}
+  .check:last-of-type{margin-bottom: 0;}   
+  
+  .all_check>p{text-decoration:underline;}
+  .all_check{position:relative; padding-left:24px;}
+  .all_check>input{width: 0; height: 0; overflow: hidden;
+      border:0; position: absolute; z-index:-1;}
+  .all_check i{position: absolute; top:5px; left: 0;
+        font-size: 1.4rem; color:#777;
+        cursor: pointer;}
+  .all_check>input:focus+p i{color:#333;}    
+  .all_check>input:checked+p i{color:#08a600;}
+  
+  /* ---------------------------------------- */
+  .check>p{font-size: 1rem; font-weight: bold;          
+          word-break:keep-all; letter-spacing:-0.05rem;}
+  .check>dl{width: 100%; height:auto;
+    margin-bottom: 20px;}
+  .check>dl>dt{font-size: 1rem; font-weight: bold;   
+    word-break:keep-all; letter-spacing:-0.05rem;}
+  .check>dl>dd{width: 100%; height: 90px;
+          border:1px solid #777; box-sizing:border-box;
+          padding:10px; 
+          overflow-x: hidden; overflow-y:auto;
+          margin:5px 0; background-color: #fff;}
+  .check strong{font-size:0.875rem; font-weight:normal;
+      color:#08a600;}
+  .check em{font-size:0.875rem; font-weight:normal;
+      color:#777; font-style:normal;}
+  /* ------------------------------------------ */
+  #wrap fieldset:last-of-type{width: 100%; height:auto; min-height:50px; margin-top:30px;}
+  #wrap fieldset:last-of-type>input{width:220px; 
+       height:60px; color:#fff; font-size:1.5rem;
+       border:0;}
+  
+  input[type="reset"]{float:left; background-color: #555; }
+  input[type="submit"]{float:right; background-color: #08a600;}
+  
+  input[type="reset"]:focus,
+  input[type="submit"]:focus{outline:3px solid #333;
+      font-weight: bold; text-decoration:underline;
+      text-decoration-color:brown;}
+  
+  #wrap fieldset:last-of-type>p{width: 100%; height:auto; clear:both;
+      padding-top:20px; font-size:0.875rem; text-align: center;}
+      
+/* ====================================== */

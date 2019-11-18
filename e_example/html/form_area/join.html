@@ -27,11 +27,62 @@
 <!-- layout ======================================= -->
   <div id="wrap">
     <h1>쿠팡</h1>
-    <h2>쿠팡 회원가입 페이지</h2>
+    <h2 class="hidden">쿠팡 회원가입 페이지</h2>
     <article id="joinBox">
       <form action="" method="post">
-        <fieldset class="input_area"></fieldset>
+        <fieldset class="input_area">
+        <legend>회원가입 인적사항 작성하기</legend>
+        <ul>
+        <!-- ===================== -->
+        <li><dl><dt>
+              <label for="userName">
+                <i class="far fa-envelope"></i>
+                <span class="hidden">
+                  로그인에 필요한 계정을 입력하세요.
+                </span>
+              </label></dt>
+            <dd>
+              <input type="email" 
+                     name="userName" 
+                     id="userName" 
+                     value=""
+                     placeholder="이메일..." 
+                     required="required" />
+            </dd>
+          </dl>
+          <span class="narr">이메일을 입력하세요.</span>
+        </li>
+        <li><dl><dt>
+          <label for="userName">
+            <i class="far fa-envelope"></i>
+            <span class="hidden">
+              로그인에 필요한 계정을 입력하세요.
+            </span>
+          </label></dt>
+        <dd>
+          <input type="email" 
+                 name="userName" 
+                 id="userName" 
+                 value=""
+                 placeholder="이메일..." 
+                 required="required" />
+        </dd>
+      </dl>
+      <span class="narr">이메일을 입력하세요.</span>
+    </li>
+        <!-- ===================== -->
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+        </fieldset>
+        <!-- ====================================== -->
         <fieldset class="confirm_area">
+        <legend>회원가입 내용 확인 및 동의</legend>
           <input type="submit" name="confirmCheck" value="동의하고 가입하기" />
           <p>
             본인은 <strong>만 14세 이상</strong>이며, 
