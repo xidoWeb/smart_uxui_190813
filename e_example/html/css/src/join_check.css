@@ -11,15 +11,22 @@ body{background-color: #fafafa;}
   
   .all_check>p{text-decoration:underline;}
   .all_check{position:relative; padding-left:24px;}
-  .all_check>input{width: 0; height: 0; overflow: hidden;
-      border:0; position: absolute; z-index:-1;}
-  .all_check i{position: absolute; top:5px; left: 0;
-        font-size: 1.4rem; color:#777;
-        cursor: pointer;}
-  .all_check>input:focus+p i{color:#333;}    
+  .check>input{width: 0; height: 0; overflow: hidden;
+      border:0; position: absolute; z-index:-1;
+      left:-9999rem;}
+.check.all_check i{position:absolute; top:2px; left:0;
+        font-size: 1.6rem; color:#777;}
+.check i{font-size:1.2rem; cursor:pointer;color:#aaa;}
+/* 전체동의체크 ----------------------- */  
+  .all_check>input:focus+p i{color:#333; text-shadow:0.1rem 0.1rem 0 #f06;}    
   .all_check>input:checked+p i{color:#08a600;}
   
-  /* ---------------------------------------- */
+/* 각각의동의 체크 ------------------------*/
+
+
+
+
+/* ---------------------------------------- */
   .check>p{font-size: 1rem; font-weight: bold;          
           word-break:keep-all; letter-spacing:-0.05rem;}
   .check>dl{width: 100%; height:auto;
@@ -35,7 +42,7 @@ body{background-color: #fafafa;}
       color:#08a600;}
   .check em{font-size:0.875rem; font-weight:normal;
       color:#777; font-style:normal;}
-  /* ------------------------------------------ */
+/* ------------------------------------------ */
   #wrap fieldset:last-of-type{width: 100%; height:auto; min-height:50px; margin-top:30px;}
   #wrap fieldset:last-of-type>input{width:220px; 
        height:60px; color:#fff; font-size:1.5rem;
