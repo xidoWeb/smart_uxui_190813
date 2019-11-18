@@ -37,8 +37,12 @@
   // --------------------------------------  
     for(let i=0; i<cbSel.length; i++){
       ck = cbSel.eq(i).is(':checked');      
-      (ck) ? allCheck.prop('checked',true).attr('checked',true):
-      allCheck.prop('checked',false).attr('checked',false); break;
+      if(ck) {
+        allCheck.prop('checked',true).attr('checked',true)
+      }else{
+        allCheck.prop('checked',false).attr('checked',false); 
+        break;
+      }
     }
    }); // cbSel.on('click')   
 })(jQuery);
