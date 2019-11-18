@@ -24,7 +24,7 @@
   // -------------------------------------------
   allCheck.on('click', function(e){
     ck = allCheck.is(':checked');
-    allCheckT();
+    allCheckT(ck);
   });
   // ----------------------------------------------------------
   cbSel.on('click', function(){
@@ -42,3 +42,15 @@
     }
    }); // cbSel.on('click')   
 })(jQuery);
+
+
+// () ? 참 : 거짓;
+// ( idnIs ) ? 
+// idN.attr('checked',true).prop('checked',true):
+// idN.attr('checked', false).prop('checked', false); 
+// // -----------------------------------------------
+// if(idnIs){
+//   idN.attr('checked',true).prop('checked',true);
+// }else{
+//   idN.attr('checked', false).prop('checked', false); 
+// }
