@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- main.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <h1>js를 이용한 반응형 웹만들기</h1>
+    <p>jquery를 이용하여 각 파트별로 html문서가 다르다면,<br />
+       파일을 따로 불러와야한다.</p>
+    <!-- html문서가 변경되지 않을때 -->
+    <section id="viewBox"></section>
+    
+    <!-- 각 디바이스에 따라 다른 파일을 불러올때 -->
+    <article id="conBox"></article>
+  </div>
+  <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js">
+  </script>
+  <script src="../js/rwd_check.js"></script>
+</body>
+</html>
