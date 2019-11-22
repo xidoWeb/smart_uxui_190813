@@ -5,13 +5,12 @@ h1{width: 0; height: 0; overflow: hidden;}
          background-color:#FFBD1B;
 background-image: url("../img/parallax/keyart-mobile.jpg");
 background-repeat: no-repeat; background-position:50% 0;
-background-size: cover;}
+background-size: cover; overflow: hidden;}
 
 #viewBox>div{position:absolute; top: 0; left: 0; 
              width: 100%; height: 100%;
              background-repeat: no-repeat;
-             background-position:50% 0;
-             }
+             background-position:50% 0;}
 .par_00{z-index:1; 
         background-image:url("../img/parallax/parallax0.png");}
 .par_01{z-index:1; 
@@ -30,6 +29,40 @@ background-size: cover;}
        background-image:url("../img/parallax/parallax7.png");}
 .par_08{z-index:8; 
        background-image:url("../img/parallax/parallax8.png");}
+       
+.par_08:after{content:" "; display:block; 
+   position: absolute; z-index:-1; top:100%;
+   width:100%; height:150%; background-color:#210002;}
+/* ------------------------------ */
+#conBox{width:100%; height:auto; background-color:#fff;}
+#conBox>h2{width: 100%; height: 30rem; 
+background-image:linear-gradient(#210002 30%, #fff 90%);
+text-align: center; color:#fff;}
+#conBox>ul{width: 80%; height:auto; margin:auto; padding:2rem 0;
+  border:2px solid #ccc; border-left:0; border-right:0;}
+#conBox>ul>li{width: 100%; height: 20rem; margin-bottom:10rem;
+             background-color:#fff; 
+             box-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);
+             border-radius:0.3rem; overflow: hidden;}             
+#conBox p{float:left; width: 60%; height: 100%; 
+         box-sizing:border-box; padding:1rem; font-size:2rem;}
+#conBox .img{float: left; width: 40%; height:100%;}
+#conBox .img>span{display: block; width: 100%; height: 100%;
+            background-position:50% 50%; 
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-color: #acf;}
+            
+#conBox li:nth-child(2n) p{float:right;}
 
+#conBox li:nth-child(1) span{background-image: url("../img/coffee/menu_1.png");}
+#conBox li:nth-child(2) span{background-image: url("../img/coffee/menu_2.png");}
+#conBox li:nth-child(3) span{background-image: url("../img/coffee/menu_3.png");}
+#conBox li:nth-child(4) span{background-image: url("../img/coffee/menu_4.png");}
+#conBox li:nth-child(5) span{background-image: url("../img/coffee/menu_5.png");}
+#conBox li:nth-child(6) span{background-image: url("../img/coffee/menu_6.png");}
+#conBox li:nth-child(7) span{background-image: url("../img/coffee/menu_7.png");}
+#conBox li:nth-child(8) span{background-image: url("../img/coffee/menu_8.png");}
+#conBox li:nth-child(9) span{background-image: url("../img/coffee/menu_9.png");}
+#conBox li:nth-child(10) span{background-image: url("../img/coffee/menu_1.png");}
 
-#conBox{width:100%; height:100%; background-color:#210002;}
