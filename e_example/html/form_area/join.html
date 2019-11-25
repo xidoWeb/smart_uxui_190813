@@ -42,34 +42,49 @@
                 </span>
               </label></dt>
             <dd>
-              <input type="email" 
-                     name="userName" 
-                     id="userName" 
-                     value=""
-                     placeholder="이메일..." 
-                     required="required" />
+              <input type="email"  name="userName"  id="userName"  value="" placeholder="이메일..."  required="required" />
             </dd>
           </dl>
           <span class="narr">이메일을 입력하세요.</span>
         </li>
         <li><dl><dt>
-          <label for="userName">
+          <label for="userPw">
             <i class="far fa-envelope"></i>
             <span class="hidden">
-              로그인에 필요한 계정을 입력하세요.
+              비밀번호를 입력하세요.<br />
+              최대 15자 이내입니다.
             </span>
           </label></dt>
         <dd>
           <input type="email" 
-                 name="userName" 
-                 id="userName" 
+                 name="userPw" 
+                 id="userPw" 
                  value=""
-                 placeholder="이메일..." 
+                 placeholder="비밀번호입력 6자이상 ~ 15자이내" 
                  required="required" />
         </dd>
       </dl>
-      <span class="narr">이메일을 입력하세요.</span>
+      <span class="narr">비밀번호를 입력해주세요.</span>
     </li>
+    <li><dl><dt>
+      <label for="userPwre">
+        <i class="far fa-envelope"></i>
+        <span class="hidden">
+          비밀번호를 한번더 입력하세요.<br />
+          최대 15자 이내입니다.
+        </span>
+      </label></dt>
+    <dd>
+      <input type="email" 
+              name="userPwre" 
+              id="userPwre" 
+              value=""
+              placeholder="비밀번호 재입력" 
+              required="required" />
+    </dd>
+  </dl>
+  <span class="narr">이전 비밀번호와 일치하지 않습니다.</span>
+</li>
         <!-- ===================== -->
         </ul>
         
