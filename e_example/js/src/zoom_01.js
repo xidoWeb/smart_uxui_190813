@@ -1,14 +1,19 @@
 (function($){
-  let url = "../img/money/";
-  const thumnailImg = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];
-  
-  const big      = $('.big');
-  const smallLi  = $('.small').find('li');
-  const view     = $('.view');
+  const thumnailImg = ['b1.jpg', 'b2.jpg', 'b3.jpg', 'b4.jpg'];  
+  const big        = $('.big');
+  const smallLi    = $('.small').find('li');
+  const view       = $('.view');
+  const mylocation = $('.location');
+  const mLocation  = $('.mouse_location');  
+  const myper      = $('.per');  
+  let bigW         = big.outerWidth();
+  let bigH         = big.outerHeight();
+  let url          = "../img/money/";
   
   const imgSet = function(i){
     big.css({backgroundImage:'url('+ url + thumnailImg[i] + ')'});
     view.css({backgroundImage:`url('${url+thumnailImg[i]}')`});
+    mLocation.css({backgroundImage:`url('${url+thumnailImg[i]}')`});
   }
   imgSet(0);
 
@@ -17,7 +22,7 @@
     imgSet(i);
   });
   
-  const mylocation = $('.location');
+  
   // offsetX(), offsetY()
   // pageX(), pageY()
   // clientX(), clientY()
@@ -26,9 +31,7 @@
   // 위치값 %로 전환  
   // 좌표 / 기준크기 * 100
   
-  let bigW = big.outerWidth();
-  let bigH = big.outerHeight();
-  const myper = $('.per');
+
   
   big.on('mousemove', function(e){
     let ofx = e.offsetX;
@@ -40,6 +43,8 @@
     myper.find('span').text(perX + ' , ' + perY);
     
     view.css({backgroundPosition: perX +'%' + ' ' + perY + '%' });
+    mLocation.css({backgroundPosition: perX +'%' + ' ' + perY + '%' });
+    
   });
   // Math함수
   /*  Math.round()  -> 반올림
