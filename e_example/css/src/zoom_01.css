@@ -1,0 +1,23 @@
+#wrap{width:100%; min-width:1200px; background-color:#dfdfdf;}
+  .thumnail{float: left; width:50%; min-width:500px; height:800px;
+      box-sizing: border-box; padding:2rem;}
+      
+    .big{width:100%; height:400px; margin:auto; margin-bottom:1rem; 
+         background-color:#faa; border-radius:0.5rem;
+         background-repeat: no-repeat; background-position:50% 50%;
+         background-size:100% auto;}
+    .small{width: 100%; height: 130px; margin:auto;}
+    .small>li{float:left; width:120px; height:120px; margin-left:1rem;
+            background-repeat: no-repeat; background-position:50% 50%;
+            background-size:cover; border-radius:0.5rem;}
+    .small>li:nth-child(1){margin-left: 0; background-color: #1fa;
+                           background-image:url("../../img/money/m1.jpg");}
+    .small>li:nth-child(2){background-image:url("../../img/money/m2.jpg");}
+    .small>li:nth-child(3){background-image:url("../../img/money/m3.jpg");}
+    .small>li:nth-child(4){background-image:url("../../img/money/m4.jpg");}
+    .small>li:focus, .small>li:hover{transform:scale(1.2);}  
+    
+  .view{float:right; width:50%; min-width:500px; height:800px;
+        background-color: #acf;
+        background-repeat: no-repeat; background-position:50% 50%;
+        background-size:100% auto;}
