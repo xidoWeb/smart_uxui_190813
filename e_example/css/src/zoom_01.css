@@ -8,9 +8,9 @@
          background-repeat: no-repeat; background-position:50% 50%;
          background-size:100% auto;}
       .mouse_location{position:absolute;
-          width:120px; height:120px; border:5px solid #333;
+          width:150px; height:150px; border:5px solid #333;
           border-radius:10px; background-color: #fff;
-          background-repeat: no-repeat; background-size:1000%;
+          background-repeat: no-repeat; background-size:1500%;
         }
         
     .small{width: 100%; height: 130px; margin:auto;}

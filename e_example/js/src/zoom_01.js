@@ -10,6 +10,8 @@
   let bigH         = big.outerHeight();
   let url          = "../img/money/";
   
+  mLocation.hide();
+  
   const imgSet = function(i){
     big.css({backgroundImage:'url('+ url + thumnailImg[i] + ')'});
     view.css({backgroundImage:`url('${url+thumnailImg[i]}')`});
@@ -43,9 +45,15 @@
     myper.find('span').text(perX + ' , ' + perY);
     
     view.css({backgroundPosition: perX +'%' + ' ' + perY + '%' });
-    mLocation.css({backgroundPosition: perX +'%' + ' ' + perY + '%' });
-    
+    mLocation.show();
+    mLocation.css({top:(ofy + 10) +'px', left:(ofx + 10) + 'px',
+                   backgroundPosition: perX +'%' + ' ' + perY + '%' });
   });
+  
+  big.on('mouseleave', function(){
+    mLocation.fadeOut();
+  });
+  
   // Math함수
   /*  Math.round()  -> 반올림
       Math.ceil()   -> 올림
