@@ -39,6 +39,7 @@
     let perY = Math.floor(ofy / bigH * 100);
     myper.find('span').text(perX + ' , ' + perY);
     
+    view.css({backgroundPosition: perX +'%' + ' ' + perY + '%' });
   });
   // Math함수
   /*  Math.round()  -> 반올림
