@@ -9,17 +9,26 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
 #viewBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
         margin-bottom:3rem; }
         
-.title{width: 100%;  height: auto; margin-bottom: 2rem;
+.title{
+       width: 100%;  height: auto; margin-bottom: 2rem;
        text-align: center; padding-top:1rem; line-height:0.9;
        letter-spacing:-0.1rem;}
+       
   .title>h3{font-size:2rem;}
   .title>p{font-size:6.5rem; font-weight:900;}
 .fix_img{width:70%; height:auto; min-height:350px; 
     margin:auto; margin-top:5rem; margin-bottom:5rem;
     background-color: #fa0;}
 .fix_img ~ p{width: 66%; height:auto; margin:auto; 
-          font-size:2.2rem; font-weight:800; letter-spacing:-0.1rem;
+          font-size:2.2rem; font-weight:800; 
+          letter-spacing:-0.1rem;
           color:#777; line-height:1.2;}
+
+#viewBox .title{position:relative; z-index:100;}
+#viewBox .fix_img{position:relative; }
+#viewBox .fix_img>img{display: none; 
+                      position:absolute; bottom:0; left:0;
+                      width:100%; height:auto;}
 
 #sub_conBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
         margin-bottom:3rem; padding-bottom: 30rem;}

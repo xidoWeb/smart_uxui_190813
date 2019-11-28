@@ -8,9 +8,17 @@
   
   // 이미지 담기
   const viewFix = viewBox.find('.fix_img');
-  let url = '../img/apple/';
-  
-  
+  let url = '../img/apple/large_';
+  let j;
+  for(let i=0; i<122; i++){
+    if(i < 10){ j='000'+i; }else if(i < 100){
+      j='00'+i; }else if(i < 1000){ j='0'+i; }      
+    j += '.jpg';    
+  viewFix.append(`<img src="${url+j}" alt="0001이미지">`);
+  viewFix.children('img').eq(i).css({zIndex:122-i});
+  }// for
+  viewFix.css({zIndex:50});
+  viewFix.children('img').eq(0).show();
   
   
   //-- 스크롤기능
