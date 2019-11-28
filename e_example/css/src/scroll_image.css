@@ -1,1 +1,36 @@
 /* scroll_image.css */
+
+#wrap{width: 100%; height:100%; background-color: #ccc;}
+h1{padding: 2rem; font-size: 4rem; text-align: center;}
+h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
+  padding: 2rem; font-size:2.5rem; text-align:center;}
+  
+#viewBox{width:100%; height:auto; min-height:150%; margin:auto; 
+        margin-bottom:3rem; background-color:#acf;}
+        
+.title{width: 100%;  height: auto; margin-bottom: 2rem;
+       text-align: center; padding-top:1rem; line-height:0.9;
+       letter-spacing:-0.1rem;}
+  .title>h3{font-size:2rem;}
+  .title>p{font-size:6.5rem; font-weight:900;}
+.fix_img{width:70%; height:auto; min-height:350px; 
+    margin:auto; margin-top:5rem; margin-bottom:5rem;
+    background-color: #fa0;}
+.fix_img ~ p{width: 66%; height:auto; margin:auto; 
+          font-size:2.2rem; font-weight:800; letter-spacing:-0.1rem;
+          color:#777; line-height:1.2;}
+
+#sub_conBox{width:100%; height:auto; min-height:150%; margin:auto; 
+        margin-bottom:3rem; background-color:#acf;}
+.sub_title .title{width:70%; margin:auto; line-height:1.1;}        
+.sub_title .title>h3{font-size:4.5rem; font-weight:900; 
+                      text-align:left; color:#777;}        
+.sub_title .title>p{font-size:4.5rem; font-weight:900; 
+                      text-align:left;}
+        
+#video_conBox{width:100%; height:auto; min-height:150%; margin:auto; 
+        margin-bottom:3rem; background-color:#acf;}
+#graph_conBox{width:100%; height:auto; min-height:150%; margin:auto; 
+        margin-bottom:3rem; background-color:#acf;}
+#os_conBox{width:100%; height:auto; min-height:150%; margin:auto; 
+        margin-bottom:3rem; background-color:#acf;}
