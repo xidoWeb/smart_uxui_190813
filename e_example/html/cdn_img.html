@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+    
+</head>
+<body>
+  <h1>강제로 이미지 다운받기</h1>
+  <div class="img_down"></div>
+  
+  <script src="../js/base/jquery-3.4.1.min.js"></script>
+  <script>
+    let addr = 'https://www.apple.com/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/anim/hero/large/large_';
+    let iDown = $('.img_down'), j, img;
+    for(let i=0; i<122; i++){
+      if(i < 10){  j = '000' + i;
+      }else if(i < 100){  j = '00' + i;
+      }else if(i < 1000){  j = '0' + i; }    
+      img = addr + j + '.jpg';  
+      iDown.append(`<img src="${img}" alt=".">`);
+    }
+    $('img').css({width:'50px'});
+    
+  </script>
+</body>
+</html>

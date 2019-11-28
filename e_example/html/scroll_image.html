@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- scroll_image.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../font/notosans/stylesheet.css">
+  <link rel="stylesheet" href="../font/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/scroll_image.css">
+  <!--[if lte IE 9]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/PIE/PIE.js"></script>
+    <script src="../ie/respond/dest/respond.min.js"></script>
+  <![endif]-->
+  <title>scroll image</title>
+</head>
+<body>
+<!-- noscript ====================================== -->
+  <noscript>
+    <p>현재 사용되고있는 브라우저는 일부기능이 원활하게 처리되지 않습니다.</p>
+    <p><a href="http://google.com/chrome">최신브라우저</a>를 사용하시기 바랍니다.</p>
+  </noscript>
+<!-- //noscript ====================================== -->
+<!-- layout ======================================= -->
+  <div id="wrap">
+    <h1>스크롤에 따른 이미지 만들기</h1>
+    <h2>참고: apple 16인치 노트북 이미지</h2>
+    
+    <section id="viewBox">
+      <div class="title">
+        <h3>MacBook Pro</h3>
+        <p>The best for the brightest</p>
+      </div>
+      <div class="fix_img"></div>
+      <p>Designed for those who defy limits and change the world, the new MacBook Pro is by far the most powerful notebook we’ve ever made. With an immersive 16-inch Retina display, superfast processors, next-generation graphics, the largest battery capacity ever in a MacBook Pro, a new Magic Keyboard, and massive storage, it’s the ultimate pro notebook for the ultimate user.
+      </p>
+    </section>
+    <article id="sub_conBox">
+      <div class="title">
+        <h3>Retina 디스플레이</h3>
+        <p>아이디어를 광활하게 펼칠 아름답고 광활한 작업 공간.</p>
+      </div>
+      <div class="fix_img">
+        <div class="people_view"></div>
+        <div class="product_view"></div>
+      </div>
+      <p>새로운 MacBook Pro는 매혹적인 16형 Retina 디스플레이를 갖추고 있습니다. 이는 Mac 노트북 사상 가장 큰 Retina 디스플레이죠. 500 니트 밝기로 극적인 하이라이트와 밝은 화이트를 보여주는 동시에, 정교한 광배향 기술이 적용된 액정 분자들을 통해 짙은 블랙을 구현합니다. 여기에 P3급 넓은 색영역으로 사진과 동영상에 선명하고 생생한 느낌을 선사하죠. 이제 어디에서든 당신의 작업물을 가능한 한 최고의 모습으로 확인할 수 있습니다.</p>      
+    </article>
+    
+    <article id="video_conBox">
+      <div class="title">
+        <h3>그래픽</h3>
+        <p>상상이 현실이 되는 처리 능력.</p>
+      </div>
+      <div class="fix_img">
+        <div class="people_view"><!-- 작가내용 -->
+         <!--  Charmaine Chan          
+          시각 효과 아티스트
+          Industrial Light & Magic -->
+          </div>
+        <div class="product_view"><!-- 영상파트 --></div>
+      </div>
+      <p>AMD Radeon Pro 5000M 시리즈가 MacBook Pro 사상 최강의 그래픽 성능을 선사합니다. 16형 MacBook Pro 기본 모델은 이전 세대의 기본 모델보다 두 배 이상 더 빠르기 때문에 UHD 동영상을 보다 매끄럽게 재생하고, 렌더링도 더욱 빠르게 할 수 있죠. 여기에 옵션으로 선택할 수 있는 8GB GDDR6 VRAM을 장착하면 DaVinci Resolve에서 색상 보정 등의 작업을 할 때 Radeon Pro Vega 20보다 최대 80% 더 빠른 성능을 발휘합니다.</p>
+    </article>
+    <article id="graph_conBox">
+      <div class="title">
+        <h3>system phisycs</h3>
+        <p>Unity Editor / Fortnite / Rise of the Tomb Raider / Final Cut Pro X / Blackmagic DaVinci Resolve Studio</p>
+      </div>
+      <div class="phisycs">
+        <div class="base_model">
+          <h4>기본 모델</h4>
+          <div class="now">
+            <div class="gr"></div>
+            <p>Radeon Pro 5500M 및 4GB GDDR6 장착<br />
+              8코어 16형 MacBook Pro</p>
+          </div>
+          <div class="before">
+            <div class="gr"></div>
+            <p>Radeon Pro 560X 및 4GB GDDR5 장착<br />
+              8코어 15형 MacBook Pro(기준치)</p>
+          </div>
+          <div class="result">
+            <p>
+              <strong>2.1배</strong><br /> 
+              <span>더 빠른 데모 플라이스루15</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="os_conBox">
+      <h3>macOS Catalina</h3>
+      <dl>
+        <dt>Mac의 능력,<br />더 높은 곳으로.</dt>
+        <dd>음악과 팟캐스트 각각을 위한 전용 앱. Sidecar를 비롯한 스마트한 신기능.</dd>
+        <dd>개발자들을 위한 강력한 기술. 이제 iPad 인기 앱들까지도 Mac에서.</dd>
+        <dd>
+          <a href="#">
+          <span class="hidden">카탈리나 OS </span>
+          더 알아보기</a>
+          <i>&gt;</i>
+        </dd>
+      </dl>
+    </article>
+  </div>
+<!-- script ======================================= -->
+  <script src="../js/base/jquery-3.4.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/src/scroll_image.js"></script>
+</body>
+</html>
