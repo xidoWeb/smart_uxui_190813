@@ -3,6 +3,24 @@
   const wrap = $('#wrap');
   
   const viewBox = $('#viewBox');
+  const subConBox = $('#sub_conBox');  
+  const videoConBox = $('#video_conBox');
+  const graphConBox = $('#graph_conBox');
+  const osConBox = $('#os_conBox');
+
+  subConBox.css({ position: 'fixed', bottom: '100%', zIndex:4});
+  videoConBox.css({ position: 'fixed', bottom: '100%', zIndex:3});
+  graphConBox.css({ position: 'fixed', bottom: '100%', zIndex:2});
+  osConBox.css({ position: 'fixed', bottom: '100%', zIndex:1});
+
+  let totalH = viewBox.outerHeight(true) +
+               subConBox.outerHeight(true) +
+               videoConBox.outerHeight(true) +
+               graphConBox.outerHeight(true) +
+               osConBox.outerHeight(true);
+
+  wrap.css({ height: totalH });
+
   viewBox.css({position:'fixed', top:0, backgroundColor:'#fff'});
   viewBox.find('.title').css({position:'relative', top:0});
   
@@ -20,18 +38,41 @@
   viewFix.css({zIndex:50});
   viewFix.children('img').eq(0).show();
   
-  
+  let winH  = win.outerHeight();
+  let viewH = viewBox.outerHeight();
+  let viewOfH =  viewH + 122;
+  console.log(viewOfH);
+// ---------------------------------------------------------
+
+
+
   //-- 스크롤기능
-  win.on('scroll',function(){
+
+  win.on('mousewheel',function(){
     let thisS = $(this).scrollTop();
     
     // 글씨 투명해지게 만들기
     let op = 1 - ( thisS *  0.001);
     if(op < 0){op = 0}    
-    viewBox.find('.title').css({top:(-thisS / 4)+'px', opacity:op});    
+    viewBox.find('.title').css({top:(-thisS / 3)+'px', opacity:op});    
     // -----------------------------------------------------------
-    
-    
+    let indI = Math.ceil(thisS / (viewH+122) * 100);
+    let indIP = parseInt(indI);
+    viewFix.children('img').eq(indIP).show();
+    viewFix.children('img').eq(indIP).siblings().hide();
+
+    let viewMv = 0;
+    if (thisS >= viewOfH){
+      viewMv = (thisS - viewOfH) / 2;
+      viewBox.css({top:-viewMv + 'px'});
+    }
+    console.log(thisS, viewOfH);
+
+    // -----------------------------------------------------
+    let viewEndOffset =  viewBox.offset().top - winH;
+    if (thisS >= viewEndOffset){
+      subConBox.css({ top: -viewMv+ 'px'});
+    }
   });
   
 })(jQuery);
