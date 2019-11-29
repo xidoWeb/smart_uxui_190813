@@ -6,8 +6,7 @@ h1{padding: 2rem; font-size: 4rem; text-align: center;}
 h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
   padding: 2rem; font-size:2.5rem; text-align:center;}
   
-#viewBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
-        margin-bottom:3rem; }
+#viewBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; margin-bottom:3rem; padding-top:15rem; }
         
 .title{
        width: 100%;  height: auto; margin-bottom: 2rem;
