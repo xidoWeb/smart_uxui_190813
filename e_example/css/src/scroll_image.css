@@ -6,7 +6,9 @@ h1{padding: 2rem; font-size: 4rem; text-align: center;}
 h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
   padding: 2rem; font-size:2.5rem; text-align:center;}
   
-#viewBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; margin-bottom:3rem; padding-top:15rem; }
+#viewBox{width:100%; min-width:1400px; height:auto; 
+     min-height:150%; margin:auto; 
+     margin-bottom:3rem; padding-top:15rem; }
         
 .title{
        width: 100%;  height: auto; margin-bottom: 2rem;
@@ -24,9 +26,11 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
           color:#777; line-height:1.2;}
 
 #viewBox .title{position:sticky; z-index:100;}
-#viewBox .fix_img{height:800px;}
+#viewBox .fix_img{height:800px; position:sticky; top: 50px;
+                transform:translateY(-400px);}
 #viewBox .fix_img>img{display: none; margin:auto;
-                      width:auto; height:100%; margin-left:50%; transform:translateX(-50%);}
+                      width:auto; height:100%; margin-left:50%; 
+                      transform:translateX(-50%);}
 
 #sub_conBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
         margin-bottom:3rem; padding-bottom: 30rem;}
