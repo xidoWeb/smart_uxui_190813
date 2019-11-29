@@ -16,18 +16,17 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
   .title>h3{font-size:2rem;}
   .title>p{font-size:6.5rem; font-weight:900;}
 .fix_img{width:70%; height:auto; min-height:350px; 
-    margin:auto; margin-top:5rem; margin-bottom:5rem;
-    background-color: #fa0;}
-.fix_img ~ p{width: 66%; height:auto; margin:auto; 
+    margin:auto; margin-top:5rem; margin-bottom:5rem;}
+    
+.fix_img ~ p, .outer_wrap ~ p{width: 66%; height:auto; margin:auto; 
           font-size:2.2rem; font-weight:800; 
-          letter-spacing:-0.1rem;
+          letter-spacing:-0.1rem; padding-bottom:10rem;
           color:#777; line-height:1.2;}
 
-#viewBox .title{position:relative; z-index:100;}
-#viewBox .fix_img{position:relative; }
-#viewBox .fix_img>img{display: none; 
-                      position:absolute; bottom:0; left:0;
-                      width:100%; height:auto;}
+#viewBox .title{position:sticky; z-index:100;}
+#viewBox .fix_img{height:800px;}
+#viewBox .fix_img>img{display: none; margin:auto;
+                      width:auto; height:100%; margin-left:50%; transform:translateX(-50%);}
 
 #sub_conBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
         margin-bottom:3rem; padding-bottom: 30rem;}
@@ -36,7 +35,7 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
                       text-align:left; color:#777;}        
 .sub_title .title>p{font-size:4.5rem; font-weight:900; 
                       text-align:left;}
-.sub_title .fix_img{ height:auto; min-height:800px;}       
+.sub_title .fix_img{ height:auto; min-height:800px; background-color: #acf;}       
 
 #video_conBox{width:100%; min-width:1400px; height:auto; min-height:150%; margin:auto; 
         margin-bottom:3rem;  padding-bottom: 15rem;}
@@ -57,8 +56,7 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
 .check{float: left; width:70%; height:auto;}
 .check>div{width: 100%; height: 7rem; margin-bottom: 5rem;}
 .check>div:last-of-type{width: 100%; height: 10rem; margin-bottom:0;}
-  .gr{width: 100%; height:1rem; border:1px solid #777;
-      border-radius:1rem; margin:1rem 0;}
+  .gr{width: 100%; height:1rem; border:1px solid #777; border-radius:1rem; margin:1rem 0;}
       
   .check>div>p{font-size:1.1rem; line-height:1.5; font-weight: bold;}
   .now{color:#000;}
@@ -76,8 +74,7 @@ h2{width: 80%; height:auto; margin:auto; border-top:1px solid #777;
 #os_conBox{width:70%; min-width:1400px; height:auto; min-height:30rem; margin:auto; 
         margin-bottom:30rem; background-color:#03a;
         text-align: center; box-sizing:border-box; 
-        padding-top:8rem; padding-bottom: 8rem; 
-        color:#fff;}
+        padding-top:8rem; padding-bottom: 8rem; color:#fff;}
 #os_conBox>h3{font-size:1.5rem; font-weight:200;}
 #os_conBox>h3>em{font-style: normal; font-weight:500;}
 #os_conBox>dl{width:70%; height:auto; margin:auto;
