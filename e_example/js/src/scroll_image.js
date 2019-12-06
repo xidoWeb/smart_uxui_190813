@@ -52,9 +52,5 @@
       viewFix.children('img').eq(imgI).siblings().hide();
       viewFix.children('img').eq(imgI).show();   
     }
-    
-   
-
   });
-  
 })(jQuery);
