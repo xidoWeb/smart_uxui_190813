@@ -7,17 +7,18 @@
     "@babel/register": "^7.7.4",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "browser-sync": "^2.26.7",
-    "filedel": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-sass": "^4.0.2",
     "mk-dirs": "^2.0.0",
+    "webpack": "^4.41.4",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
     "write": "^2.0.0"
   },
   "dependencies": {
     "core-js": "2",
-    "del": "^5.1.0",
     "gulp-watch": "^5.0.1",
     "jquery": "^3.4.1",
     "jqueryui": "^1.11.1"
@@ -27,6 +28,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node util.js"
+    "dev": "gulp --require babel-register --gulpfile tasks",
+    "build": "NODE_ENV=production gulp build --require babel-register --gulpfile tasks"
   }
 }
